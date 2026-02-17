@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pac-Man Game — Ziwei's Coding Blog</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #3d0f2f;
+      min-height: 100vh;
+    }
+    #game-container {
+      max-width: 672px;
+      margin: 1.2rem auto 2rem;
+      text-align: center;
+      font-family: 'Fredoka One', cursive;
+    }
+    #game-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0.25rem;
+      color: #ffb6c1;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+    }
+    #game-header span {
+      min-width: 120px;
+    }
+    #score { text-align: left; }
+    #level { text-align: center; }
+    #lives { text-align: right; }
+    #game-canvas {
+      display: block;
+      margin: 0 auto;
+      border: 3px solid #d63384;
+      border-radius: 6px;
+      box-shadow: 0 0 24px #d6338466, 0 0 60px #d633841a;
+      background: #1a0612;
+    }
+    #overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffb6c1;
+      font-family: 'Fredoka One', cursive;
+      pointer-events: none;
+    }
+    #canvas-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    #overlay h1 {
+      font-size: 1.9rem;
+      color: #ff69b4;
+      text-shadow: 0 0 18px #d6338488;
+      margin-bottom: 0.3rem;
+    }
+    #overlay p {
+      font-size: 1rem;
+      margin: 0.3rem 0;
+    }
+    #overlay .prompt {
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    #overlay .controls {
+      font-size: 0.8rem;
+      color: #c98fb5;
+      margin-top: 0.5rem;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    footer { color: #c98fb5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="brand">Ziwei's Coding Blog</span>
+    <ul class="nav-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="./">Pac-Man</a></li>
+      <li><a href="../arxiv/">arXiv Feed</a></li>
+    </ul>
+  </nav>
+
+  <div id="game-container">
+    <div id="game-header">
+      <span id="score">Score: 0</span>
+      <span id="level">Level 1</span>
+      <span id="lives"></span>
+    </div>
+    <div id="canvas-wrapper">
+      <canvas id="game-canvas" width="672" height="736"></canvas>
+      <div id="overlay"></div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Ziwei Zhang &middot; BST 236, Harvard University
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>

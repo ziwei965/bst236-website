@@ -1,6 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/xdcIkjOc)
 # Homework 1: Code with AI
 
+**Homepage**: [https://hsph-bst236-2026.github.io/homework-1-ziwei965/](https://hsph-bst236-2026.github.io/homework-1-ziwei965/)
+
 The due date is Feb 13 at midnight. If you are using the late days, please note in the head of README.md that “I used XX late days this time, and I have XX days remaining”.
 
 The main purpose of this homework is to help you:

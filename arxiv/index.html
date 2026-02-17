@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arXiv Paper Feed — Ziwei's Coding Blog</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">Ziwei's Coding Blog</span>
+    <ul class="nav-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="../pacman/">Pac-Man</a></li>
+      <li><a href="./">arXiv Feed</a></li>
+    </ul>
+  </nav>
+
+  <div class="paper-feed-header">
+    <h1>arXiv Paper Feed</h1>
+    <p>Latest research in statistical genetics, multi-omics, single-cell, and more.</p>
+    <p class="last-updated" id="lastUpdated"></p>
+    <div class="category-badges">
+      <span class="badge">q-bio.GN</span>
+      <span class="badge">q-bio.QM</span>
+      <span class="badge">stat.AP</span>
+      <span class="badge">stat.ML</span>
+      <span class="badge">stat.ME</span>
+    </div>
+  </div>
+
+  <div class="feed-container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Filter papers by keyword...">
+    </div>
+
+    <div id="paperList" class="paper-list">
+      <p class="loading">Loading papers...</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Ziwei Zhang &middot; BST 236, Harvard University
+  </footer>
+
+  <script>
+    let allPapers = [];
+
+    async function loadPapers() {
+      try {
+        const resp = await fetch('papers.json');
+        const data = await resp.json();
+        allPapers = data.papers || [];
+        document.getElementById('lastUpdated').textContent =
+          'Last updated: ' + (data.last_updated || 'unknown');
+        renderPapers(allPapers);
+      } catch (e) {
+        document.getElementById('paperList').innerHTML =
+          '<p class="loading">Failed to load papers.</p>';
+      }
+    }
+
+    function renderPapers(papers) {
+      const container = document.getElementById('paperList');
+      if (papers.length === 0) {
+        container.innerHTML = '<p class="loading">No papers found.</p>';
+        return;
+      }
+      container.innerHTML = papers.map((p, i) => {
+        const authors = p.authors.length > 5
+          ? p.authors.slice(0, 5).join(', ') + ', et al.'
+          : p.authors.join(', ');
+        const abstractShort = p.abstract.length > 300;
+        const abstractText = abstractShort
+          ? p.abstract.slice(0, 300) + '...'
+          : p.abstract;
+        const cats = (p.categories || []).slice(0, 4)
+          .map(c => '<span class="badge">' + c + '</span>').join(' ');
+        return `
+          <div class="paper-card">
+            <a class="paper-title" href="${p.abs_url}" target="_blank" rel="noopener">${p.title}</a>
+            <div class="paper-authors">${authors}</div>
+            <div class="paper-meta">
+              <span class="paper-date">${p.published}</span>
+              ${cats}
+            </div>
+            <div class="paper-abstract" id="abs-${i}">
+              <span class="abs-text">${abstractText}</span>
+              ${abstractShort ? `<button class="toggle-abstract" onclick="toggleAbstract(${i}, this)">Show more</button>` : ''}
+            </div>
+            <a class="pdf-link" href="${p.pdf_url}" target="_blank" rel="noopener">PDF</a>
+          </div>`;
+      }).join('');
+    }
+
+    function toggleAbstract(i, btn) {
+      const paper = allPapers[i];
+      const textEl = document.querySelector(`#abs-${i} .abs-text`);
+      if (btn.textContent === 'Show more') {
+        textEl.textContent = paper.abstract;
+        btn.textContent = 'Show less';
+      } else {
+        textEl.textContent = paper.abstract.slice(0, 300) + '...';
+        btn.textContent = 'Show more';
+      }
+    }
+
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const q = this.value.toLowerCase();
+      if (!q) { renderPapers(allPapers); return; }
+      const filtered = allPapers.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        p.authors.join(' ').toLowerCase().includes(q) ||
+        p.abstract.toLowerCase().includes(q)
+      );
+      renderPapers(filtered);
+    });
+
+    loadPapers();
+  </script>
+</body>
+</html>
