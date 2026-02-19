@@ -1,6 +1,70 @@
 {
-  "last_updated": "2026-02-17 12:42 UTC",
+  "last_updated": "2026-02-19 02:00 UTC",
   "papers": [
+    {
+      "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
+      "authors": [
+        "Huan Souza",
+        "Pankaj Mehta"
+      ],
+      "abstract": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
+      "published": "2026-02-18",
+      "arxiv_id": "2602.16696v1",
+      "abs_url": "https://arxiv.org/abs/2602.16696v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16696v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Factor-Adjusted Multiple Testing for High-Dimensional Individual Mediation Effects",
+      "authors": [
+        "Chen Shi",
+        "Zhao Chen",
+        "Christina Dan Wang"
+      ],
+      "abstract": "Identifying individual mediators is a central goal of high-dimensional mediation analysis, yet pervasive dependence among mediators can invalidate standard debiased inference and lead to substantial false discovery rate (FDR) inflation. We propose a Factor-Adjusted Debiased Mediation Testing (FADMT) framework that enables large-scale inference for individual mediation effects with FDR control under complex dependence structures. Our approach posits an approximate factor structure on the unobserved errors of the mediator model, extracts common latent factors, and constructs decorrelated pseudo-mediators for the subsequent inferential procedure. We establish the asymptotic normality of the debiased estimator and develop a multiple testing procedure with theoretical FDR control under mild high-dimensional conditions. By adjusting for latent factor induced dependence, FADMT also improves robustness to spurious associations driven by shared latent variation in observational studies. Extensive simulations demonstrate the superior finite-sample performance across a wide range of correlation structures. Applications to TCGA-BRCA multi-omics data and to China's stock connect study further illustrate the practical utility of the proposed method.",
+      "published": "2026-02-18",
+      "arxiv_id": "2602.16497v1",
+      "abs_url": "https://arxiv.org/abs/2602.16497v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16497v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Bayesian Nonparametrics for Gene-Gene and Gene-Environment Interactions in Case-Control Studies: A Synthesis and Extension",
+      "authors": [
+        "Durba Bhattacharya",
+        "Sourabh Bhattacharya"
+      ],
+      "abstract": "Gene-gene and gene-environment interactions are widely believed to play significant roles in explaining the variability of complex traits. While substantial research exists in this area, a comprehensive statistical framework that addresses multiple sources of uncertainty simultaneously remains lacking. In this article, we synthesize and propose extension of a novel class of Bayesian nonparametric approaches that account for interactions among genes, loci, and environmental factors while accommodating uncertainty about population substructure. Our contribution is threefold: (1) We provide a unified exposition of hierarchical Bayesian models driven by Dirichlet processes for genetic interactions, clarifying their conceptual advantages over traditional regression approaches; (2) We shed light on new computational strategies that combine transformation-based MCMC with parallel processing for scalable inference; and (3) We present enhanced hypothesis testing procedures for identifying disease-predisposing loci.Through applications to myocardial infarction data, we demonstrate how these methods offer biological insights not readily obtainable from standard approaches. Our synthesis highlights the advantages of Bayesian nonparametric thinking in genetic epidemiology while providing practical guidance for implementation.",
+      "published": "2026-02-17",
+      "arxiv_id": "2602.15387v1",
+      "abs_url": "https://arxiv.org/abs/2602.15387v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.15387v1",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Scaling Laws for Masked-Reconstruction Transformers on Single-Cell Transcriptomics",
+      "authors": [
+        "Ihor Kendiukhov"
+      ],
+      "abstract": "Neural scaling laws -- power-law relationships between loss, model size, and data -- have been extensively documented for language and vision transformers, yet their existence in single-cell genomics remains largely unexplored. We present the first systematic study of scaling behaviour for masked-reconstruction transformers trained on single-cell RNA sequencing (scRNA-seq) data. Using expression profiles from the CELLxGENE Census, we construct two experimental regimes: a data-rich regime (512 highly variable genes, 200,000 cells) and a data-limited regime (1,024 genes, 10,000 cells). Across seven model sizes spanning three orders of magnitude in parameter count (533 to 3.4 x 10^8 parameters), we fit the parametric scaling law to validation mean squared error (MSE). The data-rich regime exhibits clear power-law scaling with an irreducible loss floor of c ~ 1.44, while the data-limited regime shows negligible scaling, indicating that model capacity is not the binding constraint when data are scarce. These results establish that scaling laws analogous to those observed in natural language processing do emerge in single-cell transcriptomics when sufficient data are available, and they identify the data-to-parameter ratio as a critical determinant of scaling behaviour. A preliminary conversion of the data-rich asymptotic floor to information-theoretic units yields an estimate of approximately 2.30 bits of entropy per masked gene position. We discuss implications for the design of single-cell foundation models and outline the additional measurements needed to refine this entropy estimate.",
+      "published": "2026-02-16",
+      "arxiv_id": "2602.15253v1",
+      "abs_url": "https://arxiv.org/abs/2602.15253v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.15253v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN"
+      ]
+    },
     {
       "title": "CellMaster: Collaborative Cell Type Annotation in Single-Cell Analysis",
       "authors": [
@@ -580,76 +644,6 @@
         "q-bio.GN",
         "cs.AI",
         "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Statistical Inference for Fuzzy Clustering",
-      "authors": [
-        "Qiuyi Wu",
-        "Zihan Zhu",
-        "Anru R. Zhang"
-      ],
-      "abstract": "Clustering is a central tool in biomedical research for discovering heterogeneous patient subpopulations, where group boundaries are often diffuse rather than sharply separated. Traditional methods produce hard partitions, whereas soft clustering methods such as fuzzy $c$-means (FCM) allow mixed memberships and better capture uncertainty and gradual transitions. Despite the widespread use of FCM, principled statistical inference for fuzzy clustering remains limited.   We develop a new framework for weighted fuzzy $c$-means (WFCM) for settings with potential cluster size imbalance. Cluster-specific weights rebalance the classical FCM criterion so that smaller clusters are not overwhelmed by dominant groups, and the weighted objective induces a normalized density model with scale parameter $\u03c3$ and fuzziness parameter $m$. Estimation is performed via a blockwise majorize--minimize (MM) procedure that alternates closed-form membership and centroid updates with likelihood-based updates of $(\u03c3,\\bw)$. The intractable normalizing constant is approximated by importance sampling using a data-adaptive Gaussian mixture proposal. We further provide likelihood ratio tests for comparing cluster centers and bootstrap-based confidence intervals.   We establish consistency and asymptotic normality of the maximum likelihood estimator, validate the method through simulations, and illustrate it using single-cell RNA-seq and Alzheimer disease Neuroimaging Initiative (ADNI) data. These applications demonstrate stable uncertainty quantification and biologically meaningful soft memberships, ranging from well-separated cell populations under imbalance to a graded AD versus non-AD continuum consistent with disease progression.",
-      "published": "2026-01-06",
-      "arxiv_id": "2601.02656v1",
-      "abs_url": "https://arxiv.org/abs/2601.02656v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.02656v1",
-      "categories": [
-        "stat.ME",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Bayesian Multiple Multivariate Density-Density Regression",
-      "authors": [
-        "Khai Nguyen",
-        "Yang Ni",
-        "Peter Mueller"
-      ],
-      "abstract": "We propose the first approach for multiple multivariate density-density regression (MDDR), making it possible to consider the regression of a multivariate density-valued response on multiple multivariate density-valued predictors. The core idea is to define a fitted distribution using a sliced Wasserstein barycenter (SWB) of push-forwards of the predictors and to quantify deviations from the observed response using the sliced Wasserstein (SW) distance. Regression functions, which map predictors' supports to the response support, and barycenter weights are inferred within a generalized Bayes framework, enabling principled uncertainty quantification without requiring a fully specified likelihood. The inference process can be seen as an instance of an inverse SWB problem. We establish theoretical guarantees, including the stability of the SWB under perturbations of marginals and barycenter weights, sample complexity of the generalized likelihood, and posterior consistency. For practical inference, we introduce a differentiable approximation of the SWB and a smooth reparameterization to handle the simplex constraint on barycenter weights, allowing efficient gradient-based MCMC sampling. We demonstrate MDDR in an application to inference for population-scale single-cell data. Posterior analysis under the MDDR model in this example includes inference on communication between multiple source/sender cell types and a target/receiver cell type. The proposed approach provides accurate fits, reliable predictions, and interpretable posterior estimates of barycenter weights, which can be used to construct sparse cell-cell communication networks.",
-      "published": "2026-01-06",
-      "arxiv_id": "2601.02640v1",
-      "abs_url": "https://arxiv.org/abs/2601.02640v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.02640v1",
-      "categories": [
-        "stat.ME",
-        "stat.CO",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Confounder-robust causal discovery and inference in Perturb-seq using proxy and instrumental variables",
-      "authors": [
-        "Kwangmoon Park",
-        "Hongzhe Li"
-      ],
-      "abstract": "Emerging single-cell technologies that integrate CRISPR-based genetic perturbations with single-cell RNA sequencing, such as Perturb-seq, have substantially advanced our understanding of gene regulation and causal influence of genes. While Perturb-seq data provide valuable causal insights into gene-gene interactions, statistical concerns remain regarding unobserved confounders that may bias inference. These latent factors may arise not only from intrinsic molecular features of regulatory elements encoded in Perturb-seq experiments, but also from unobserved genes arising from cost-constrained experimental designs. Although methods for analyzing large-scale Perturb-seq data are rapidly maturing, approaches that explicitly account for such unobserved confounders in learning the causal gene networks are still lacking. Here, we propose a novel method to recover causal gene networks from Perturb-seq experiments with robustness to arbitrarily omitted confounders. Our framework leverages proxy and instrumental variable strategies to exploit the rich information embedded in perturbations, enabling unbiased estimation of the underlying directed acyclic graph (DAG) of gene expressions. Simulation studies and analyses of CRISPR interference experiments of K562 cells demonstrate that our method outperforms baseline approaches that ignore unmeasured confounding, yielding more accurate and biologically relevant recovery of the true gene causal DAGs.",
-      "published": "2026-01-05",
-      "arxiv_id": "2601.01830v2",
-      "abs_url": "https://arxiv.org/abs/2601.01830v2",
-      "pdf_url": "https://arxiv.org/pdf/2601.01830v2",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "A New Framework for Explainable Rare Cell Identification in Single-Cell Transcriptomics Data",
-      "authors": [
-        "Di Su",
-        "Kai Ming Ting",
-        "Jie Zhang",
-        "Xiaorui Zhang",
-        "Xinpeng Li"
-      ],
-      "abstract": "The detection of rare cell types in single-cell transcriptomics data is crucial for elucidating disease pathogenesis and tissue development dynamics. However, a critical gap that persists in current methods is their inability to provide an explanation based on genes for each cell they have detected as rare. We identify three primary sources of this deficiency. First, the anomaly detectors often function as \"black boxes\", designed to detect anomalies but unable to explain why a cell is anomalous. Second, the standard analytical framework hinders interpretability by relying on dimensionality reduction techniques, such as Principal Component Analysis (PCA), which transform meaningful gene expression data into abstract, uninterpretable features. Finally, existing explanation algorithms cannot be readily applied to this domain, as single-cell data is characterized by high dimensionality, noise, and substantial sparsity. To overcome these limitations, we introduce a framework for explainable anomaly detection in single-cell transcriptomics data which not only identifies individual anomalies, but also provides a visual explanation based on genes that makes an instance anomalous. This framework has two key ingredients that are not existed in current methods applied in this domain. First, it eliminates the PCA step which is deemed to be an essential component in previous studies. Second, it employs the state-of-art anomaly detector and explainer as the efficient and effective means to find each rare cell and the relevant gene subspace in order to provide explanations for each rare cell as well as the typical normal cell associated with the rare cell's closest normal cells.",
-      "published": "2026-01-04",
-      "arxiv_id": "2601.01358v1",
-      "abs_url": "https://arxiv.org/abs/2601.01358v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.01358v1",
-      "categories": [
-        "q-bio.GN",
         "cs.LG"
       ]
     }
