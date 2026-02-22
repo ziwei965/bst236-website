@@ -1,6 +1,21 @@
 {
-  "last_updated": "2026-02-20 01:56 UTC",
+  "last_updated": "2026-02-22 02:00 UTC",
   "papers": [
+    {
+      "title": "Systematic Evaluation of Single-Cell Foundation Model Interpretability Reveals Attention Captures Co-Expression Rather Than Unique Regulatory Signal",
+      "authors": [
+        "Ihor Kendiukhov"
+      ],
+      "abstract": "We present a systematic evaluation framework - thirty-seven analyses, 153 statistical tests, four cell types, two perturbation modalities - for assessing mechanistic interpretability in single-cell foundation models. Applying this framework to scGPT and Geneformer, we find that attention patterns encode structured biological information with layer-specific organisation - protein-protein interactions in early layers, transcriptional regulation in late layers - but this structure provides no incremental value for perturbation prediction: trivial gene-level baselines outperform both attention and correlation edges (AUROC 0.81-0.88 versus 0.70), pairwise edge scores add zero predictive contribution, and causal ablation of regulatory heads produces no degradation. These findings generalise from K562 to RPE1 cells; the attention-correlation relationship is context-dependent, but gene-level dominance is universal. Cell-State Stratified Interpretability (CSSI) addresses an attention-specific scaling failure, improving GRN recovery up to 1.85x. The framework establishes reusable quality-control standards for the field.",
+      "published": "2026-02-19",
+      "arxiv_id": "2602.17532v1",
+      "abs_url": "https://arxiv.org/abs/2602.17532v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.17532v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
       "authors": [
@@ -620,30 +635,6 @@
         "q-bio.QM",
         "cs.AI",
         "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Open World Knowledge Aided Single-Cell Foundation Model with Robust Cross-Modal Cell-Language Pre-training",
-      "authors": [
-        "Haoran Wang",
-        "Xuanyi Zhang",
-        "Shuangsang Fang",
-        "Longke Ran",
-        "Ziqing Deng",
-        "Yong Zhang",
-        "Yuxiang Li",
-        "Shaoshuai Li"
-      ],
-      "abstract": "Recent advancements in single-cell multi-omics, particularly RNA-seq, have provided profound insights into cellular heterogeneity and gene regulation. While pre-trained language model (PLM) paradigm based single-cell foundation models have shown promise, they remain constrained by insufficient integration of in-depth individual profiles and neglecting the influence of noise within multi-modal data. To address both issues, we propose an Open-world Language Knowledge-Aided Robust Single-Cell Foundation Model (OKR-CELL). It is built based on a cross-modal Cell-Language pre-training framework, which comprises two key innovations: (1) leveraging Large Language Models (LLMs) based workflow with retrieval-augmented generation (RAG) enriches cell textual descriptions using open-world knowledge; (2) devising a Cross-modal Robust Alignment (CRA) objective that incorporates sample reliability assessment, curriculum learning, and coupled momentum contrastive learning to strengthen the model's resistance to noisy data. After pretraining on 32M cell-text pairs, OKR-CELL obtains cutting-edge results across 6 evaluation tasks. Beyond standard benchmarks such as cell clustering, cell-type annotation, batch-effect correction, and few-shot annotation, the model also demonstrates superior performance in broader multi-modal applications, including zero-shot cell-type annotation and bidirectional cell-text retrieval.",
-      "published": "2026-01-09",
-      "arxiv_id": "2601.05648v1",
-      "abs_url": "https://arxiv.org/abs/2601.05648v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.05648v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.AI",
-        "cs.CL",
         "cs.LG"
       ]
     }
