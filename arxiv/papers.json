@@ -1,6 +1,55 @@
 {
-  "last_updated": "2026-02-27 01:55 UTC",
+  "last_updated": "2026-02-28 01:45 UTC",
   "papers": [
+    {
+      "title": "permApprox: a general framework for accurate permutation p-value approximation",
+      "authors": [
+        "Stefanie Peschel",
+        "Anne-Laure Boulesteix",
+        "Erika von Mutius",
+        "Christian L. M\u00fcller"
+      ],
+      "abstract": "Permutation procedures are common practice in hypothesis testing when distributional assumptions about the test statistic are not met or unknown. With only few permutations, empirical p-values lie on a coarse grid and may even be zero when the observed test statistic exceeds all permuted values. Such zero p-values are statistically invalid and hinder multiple testing correction. Parametric tail modeling with the Generalized Pareto Distribution (GPD) has been proposed to address this issue, but existing implementations can again yield zero p-values when the estimated shape parameter is negative and the fitted distribution has a finite upper bound.   We introduce a method for accurate and zero-free p-value approximation in permutation testing, embedded in the permApprox workflow and R package. Building on GPD tail modeling, the method enforces a support constraint during parameter estimation to ensure valid extrapolation beyond the observed statistic, thereby strictly avoiding zero p-values. The workflow further integrates robust parameter estimation, data-driven threshold selection, and principled handling of hybrid p-values that are discrete in the bulk and continuous in the extreme tail.   Extensive simulations using two-sample t-tests and Wilcoxon rank-sum tests show that permApprox produces accurate, robust, and zero-free p-value approximations across a wide range of sample and effect sizes. Applications to single-cell RNA-seq and microbiome data demonstrate its practical utility: permApprox yields smooth and interpretable p-value distributions even with few permutations. By resolving the zero-p-value problem while preserving accuracy and computational efficiency, permApprox enables reliable permutation-based inference in high-dimensional and computationally intensive settings.",
+      "published": "2026-02-26",
+      "arxiv_id": "2602.22975v1",
+      "abs_url": "https://arxiv.org/abs/2602.22975v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22975v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "What Topological and Geometric Structure Do Biological Foundation Models Learn? Evidence from 141 Hypotheses",
+      "authors": [
+        "Ihor Kendiukhov"
+      ],
+      "abstract": "When biological foundation models such as scGPT and Geneformer process single-cell gene expression, what geometric and topological structure forms in their internal representations? Is that structure biologically meaningful or a training artifact, and how confident should we be in such claims? We address these questions through autonomous large-scale hypothesis screening: an AI-driven executor-brainstormer loop that proposed, tested, and refined 141 geometric and topological hypotheses across 52 iterations, covering persistent homology, manifold distances, cross-model alignment, community structure, and directed topology, all with explicit null controls and disjoint gene-pool splits.   Three principal findings emerge. First, the models learn genuine geometric structure. Gene embedding neighborhoods exhibit non-trivial topology, with persistent homology significant in 11 of 12 transformer layers at p < 0.05 in the weakest domain and 12 of 12 in the other two. A multi-level distance hierarchy shows that manifold-aware metrics outperform Euclidean distance for identifying regulatory gene pairs, and graph community partitions track known transcription factor target relationships. Second, this structure is shared across independently trained models. CCA alignment between scGPT and Geneformer yields canonical correlation of 0.80 and gene retrieval accuracy of 72 percent, yet none of 19 tested methods reliably recover gene-level correspondences. The models agree on the global shape of gene space but not on precise gene placement. Third, the structure is more localized than it first appears. Under stringent null controls applied across all null families, robust signal concentrates in immune tissue, while lung and external lung signals weaken substantially.",
+      "published": "2026-02-25",
+      "arxiv_id": "2602.22289v1",
+      "abs_url": "https://arxiv.org/abs/2602.22289v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22289v1",
+      "categories": [
+        "q-bio.QM",
+        "cs.LG",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "Multi-Dimensional Spectral Geometry of Biological Knowledge in Single-Cell Transformer Representations",
+      "authors": [
+        "Ihor Kendiukhov"
+      ],
+      "abstract": "Single-cell foundation models such as scGPT learn high-dimensional gene representations, but what biological knowledge these representations encode remains unclear. We systematically decode the geometric structure of scGPT internal representations through 63 iterations of automated hypothesis screening (183 hypotheses tested), revealing that the model organizes genes into a structured biological coordinate system rather than an opaque feature space.   The dominant spectral axis separates genes by subcellular localization, with secreted proteins at one pole and cytosolic proteins at the other. Intermediate transformer layers transiently encode mitochondrial and ER compartments in a sequence that mirrors the cellular secretory pathway. Orthogonal axes encode protein-protein interaction networks with graded fidelity to experimentally measured interaction strength (Spearman rho = 1.000 across n = 5 STRING confidence quintiles, p = 0.017).   In a compact six-dimensional spectral subspace, the model distinguishes transcription factors from their target genes (AUROC = 0.744, all 12 layers significant). Early layers preserve which specific genes regulate which targets, while deeper layers compress this into a coarser regulator versus regulated distinction. Repression edges are geometrically more prominent than activation edges, and B-cell master regulators BATF and BACH2 show convergence toward the B-cell identity anchor PAX5 across transformer depth. Cell-type marker genes cluster with high fidelity (AUROC = 0.851). Residual-stream geometry encodes biological structure complementary to attention patterns. These results indicate that biological transformers learn an interpretable internal model of cellular organization, with implications for regulatory network inference, drug target prioritization, and model auditing.",
+      "published": "2026-02-24",
+      "arxiv_id": "2602.22247v1",
+      "abs_url": "https://arxiv.org/abs/2602.22247v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22247v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Systematic Evaluation of Single-Cell Foundation Model Interpretability Reveals Attention Captures Co-Expression Rather Than Unique Regulatory Signal",
       "authors": [
@@ -569,73 +618,6 @@
       "pdf_url": "https://arxiv.org/pdf/2601.10995v1",
       "categories": [
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Detecting Batch Heterogeneity via Likelihood Clustering",
-      "authors": [
-        "Austin Talbot",
-        "Yue Ke"
-      ],
-      "abstract": "Batch effects represent a major confounder in genomic diagnostics. In copy number variant (CNV) detection from NGS, many algorithms compare read depth between test samples and a reference sample, assuming they are process-matched. When this assumption is violated, with causes ranging from reagent lot changes to multi-site processing, the reference becomes inappropriate, introducing false CNV calls or masking true pathogenic variants. Detecting such heterogeneity before downstream analysis is critical for reliable clinical interpretation. Existing batch effect detection methods either cluster samples based on raw features, risking conflation of biological signal with technical variation, or require known batch labels that are frequently unavailable. We introduce a method that addresses both limitations by clustering samples according to their Bayesian model evidence. The central insight is that evidence quantifies compatibility between data and model assumptions, technical artifacts violate assumptions and reduce evidence, whereas biological variation, including CNV status, is anticipated by the model and yields high evidence. This asymmetry provides a discriminative signal that separates batch effects from biology. We formalize heterogeneity detection as a likelihood ratio test for mixture structure in evidence space, using parametric bootstrap calibration to ensure conservative false positive rates. We validate our approach on synthetic data demonstrating proper Type I error control, three clinical targeted sequencing panels (liquid biopsy, BRCA, and thalassemia) exhibiting distinct batch effect mechanisms, and mouse electrophysiology recordings demonstrating cross-modality generalization. Our method achieves superior clustering accuracy compared to standard correlation-based and dimensionality-reduction approaches while maintaining the conservativeness required for clinical usage.",
-      "published": "2026-01-14",
-      "arxiv_id": "2601.09758v1",
-      "abs_url": "https://arxiv.org/abs/2601.09758v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.09758v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Histopathology-centered Computational Evolution of Spatial Omics: Integration, Mapping, and Foundation Models",
-      "authors": [
-        "Ninghui Hao",
-        "Xinxing Yang",
-        "Boshen Yan",
-        "Dong Li",
-        "Junzhou Huang",
-        "Xintao Wu",
-        "Emily S. Ruiz",
-        "Arlene Ruiz de Luzuriaga",
-        "Chen Zhao",
-        "Guihong Wan"
-      ],
-      "abstract": "Spatial omics (SO) technologies enable spatially resolved molecular profiling, while hematoxylin and eosin (H&E) imaging remains the gold standard for morphological assessment in clinical pathology. Recent computational advances increasingly place H&E images at the center of SO analysis, bridging morphology with transcriptomic, proteomic, and other spatial molecular modalities, and pushing resolution toward the single-cell level. In this survey, we systematically review the computational evolution of SO from a histopathology-centered perspective and organize existing methods into three paradigms: integration, which jointly models paired multimodal data; mapping, which infers molecular profiles from H&E images; and foundation models, which learn generalizable representations from large-scale spatial datasets. We analyze how the role of H&E images evolves across these paradigms from spatial context to predictive anchor and ultimately to representation backbone in response to practical constraints such as limited paired data and increasing resolution demands. We further summarize actionable modeling directions enabled by current architectures and delineate persistent gaps driven by data, biology, and technology that are unlikely to be resolved by model design alone. Together, this survey provides a histopathology-centered roadmap for developing and applying computational frameworks in SO.",
-      "published": "2026-01-12",
-      "arxiv_id": "2601.07826v1",
-      "abs_url": "https://arxiv.org/abs/2601.07826v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.07826v1",
-      "categories": [
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Imaging-anchored Multiomics in Cardiovascular Disease: Integrating Cardiac Imaging, Bulk, Single-cell, and Spatial Transcriptomics",
-      "authors": [
-        "Minh H. N. Le",
-        "Tuan Vinh",
-        "Thanh-Huy Nguyen",
-        "Tao Li",
-        "Bao Quang Gia Le",
-        "Han H. Huynh",
-        "Monika Raj",
-        "Carl Yang",
-        "Min Xu",
-        "Nguyen Quoc Khanh Le"
-      ],
-      "abstract": "Cardiovascular disease arises from interactions between inherited risk, molecular programmes, and tissue-scale remodelling that are observed clinically through imaging. Health systems now routinely generate large volumes of cardiac MRI, CT and echocardiography together with bulk, single-cell and spatial transcriptomics, yet these data are still analysed in separate pipelines. This review examines joint representations that link cardiac imaging phenotypes to transcriptomic and spatially resolved molecular states. An imaging-anchored perspective is adopted in which echocardiography, cardiac MRI and CT define a spatial phenotype of the heart, and bulk, single-cell and spatial transcriptomics provide cell-type- and location-specific molecular context. The biological and technical characteristics of these modalities are first summarised, and representation-learning strategies for each are outlined. Multimodal fusion approaches are reviewed, with emphasis on handling missing data, limited sample size, and batch effects. Finally, integrative pipelines for radiogenomics, spatial molecular alignment, and image-based prediction of gene expression are discussed, together with common failure modes, practical considerations, and open challenges. Spatial multiomics of human myocardium and atherosclerotic plaque, single-cell and spatial foundation models, and multimodal medical foundation models are collectively bringing imaging-anchored multiomics closer to large-scale cardiovascular translation.",
-      "published": "2026-01-10",
-      "arxiv_id": "2601.07871v1",
-      "abs_url": "https://arxiv.org/abs/2601.07871v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.07871v1",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG"
       ]
     }
   ]
