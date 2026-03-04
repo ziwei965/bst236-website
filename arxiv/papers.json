@@ -1,6 +1,64 @@
 {
-  "last_updated": "2026-03-03 02:00 UTC",
+  "last_updated": "2026-03-04 01:54 UTC",
   "papers": [
+    {
+      "title": "Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence",
+      "authors": [
+        "Ihor Kendiukhov"
+      ],
+      "abstract": "Motivation: Sparse autoencoders (SAEs) decompose foundation model activations into interpretable features, but causal feature-to-feature interactions across network depth remain unknown for biological foundation models.   Results: We introduce causal circuit tracing by ablating SAE features and measuring downstream responses, and apply it to Geneformer V2-316M and scGPT whole-human across four conditions (96,892 edges, 80,191 forward passes). Both models show approximately 53 percent biological coherence and 65 to 89 percent inhibitory dominance, invariant to architecture and cell type. scGPT produces stronger effects (mean absolute d = 1.40 vs. 1.05) with more balanced dynamics. Cross-model consensus yields 1,142 conserved domain pairs (10.6x enrichment, p < 0.001). Disease-associated domains are 3.59x more likely to be consensus. Gene-level CRISPRi validation shows 56.4 percent directional accuracy, confirming co-expression rather than causal encoding.",
+      "published": "2026-03-02",
+      "arxiv_id": "2603.01752v1",
+      "abs_url": "https://arxiv.org/abs/2603.01752v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.01752v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.CB",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "HarmonyCell: Automating Single-Cell Perturbation Modeling under Semantic and Distribution Shifts",
+      "authors": [
+        "Wenxuan Huang",
+        "Mingyu Tsoi",
+        "Yanhao Huang",
+        "Xinjie Mao",
+        "Xue Xia",
+        "Hao Wu",
+        "Jiaqi Wei",
+        "Yuejin Yang",
+        "Lang Yu",
+        "Cheng Tan",
+        "Xiang Zhang",
+        "Zhangyang Gao",
+        "Siqi Sun"
+      ],
+      "abstract": "Single-cell perturbation studies face dual heterogeneity bottlenecks: (i) semantic heterogeneity--identical biological concepts encoded under incompatible metadata schemas across datasets; and (ii) statistical heterogeneity--distribution shifts from biological variation demanding dataset-specific inductive biases. We propose HarmonyCell, an end-to-end agent framework resolving each challenge through a dedicated mechanism: an LLM-driven Semantic Unifier autonomously maps disparate metadata into a canonical interface without manual intervention; and an adaptive Monte Carlo Tree Search engine operates over a hierarchical action space to synthesize architectures with optimal statistical inductive biases for distribution shifts. Evaluated across diverse perturbation tasks under both semantic and distribution shifts, HarmonyCell achieves a 95% valid execution rate on heterogeneous input datasets (versus 0% for general agents) while matching or even exceeding expert-designed baselines in rigorous out-of-distribution evaluations. This dual-track orchestration enables scalable automatic virtual cell modeling without dataset-specific engineering.",
+      "published": "2026-03-02",
+      "arxiv_id": "2603.01396v1",
+      "abs_url": "https://arxiv.org/abs/2603.01396v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.01396v1",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Graph-Based Multi-Omics Integration Improves Subtype Recovery and Survival Prediction Over Classical Integration Strategies in TCGA-BRCA",
+      "authors": [
+        "Taha Ahmad"
+      ],
+      "abstract": "Background. Breast cancer comprises at least five molecular subtypes with distinct prognoses, yet PAM50 classification relies on transcriptomics alone. Whether integrating DNA methylation and copy number data improves subtype recovery and survival prediction over single-omic baselines remains an open question.   Methods. We applied Similarity Network Fusion (SNF) to n = 644 TCGA-BRCA patients with matched RNA-seq, 450k DNA methylation, and GISTIC2 copy number profiles. Per-modality patient similarity networks were iteratively fused (K = 20, T = 20, u = 0.5) and partitioned by spectral clustering; k = 2 was pre-specified on eigengap and silhouette criteria. SNF was benchmarked against RNA-only, CNV-only, methylation-only, and early concatenation baselines using PAM50 NMI for subtype recovery and out-of-fold concordance index (OOF C-index) from a Ridge Cox model with N = 1,000 bootstrap CIs for pairwise comparisons.   Results. SNF produced a stable two-cluster partition (stability ARI = 1.00, silhouette = 0.228), with NMI = 0.495 versus PAM50, exceeding RNA-only (0.428) and early concatenation (0.175). IHC receptor data confirmed cluster biology independently (ER+: 92.8% vs 15.6%; triple-negative: 1.0% vs 45.4%; both p < 10^-100). SNF achieved an OOF C-index of 0.681 (95% CI 0.610-0.760), significantly outperforming CNV-only (Delta = +0.122, CI 0.020-0.211); the advantage over RNA-only (Delta = +0.049, CI -0.036-0.144) did not exclude zero.   Conclusion. Graph-based multi-omics fusion recovers breast cancer subtype biology more faithfully than feature concatenation and outperforms the weakest unimodal baselines in survival prediction. The improvement over RNA-seq alone is positive in direction but not yet statistically conclusive at this cohort size, pointing to the trade-off between integration complexity and the sample sizes needed to quantify its marginal benefit.",
+      "published": "2026-02-27",
+      "arxiv_id": "2603.00212v1",
+      "abs_url": "https://arxiv.org/abs/2603.00212v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00212v1",
+      "categories": [
+        "q-bio.GN"
+      ]
+    },
     {
       "title": "permApprox: a general framework for accurate permutation p-value approximation",
       "authors": [
@@ -564,58 +622,6 @@
       "arxiv_id": "2601.19002v4",
       "abs_url": "https://arxiv.org/abs/2601.19002v4",
       "pdf_url": "https://arxiv.org/pdf/2601.19002v4",
-      "categories": [
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Efficient Imputation for Patch-based Missing Single-cell Data via Cluster-regularized Optimal Transport",
-      "authors": [
-        "Yuyu Liu",
-        "Jiannan Yang",
-        "Ziyang Yu",
-        "Weishen Pan",
-        "Fei Wang",
-        "Tengfei Ma"
-      ],
-      "abstract": "Missing data in single-cell sequencing datasets poses significant challenges for extracting meaningful biological insights. However, existing imputation approaches, which often assume uniformity and data completeness, struggle to address cases with large patches of missing data. In this paper, we present CROT, an optimal transport-based imputation algorithm designed to handle patch-based missing data in tabular formats. Our approach effectively captures the underlying data structure in the presence of significant missingness. Notably, it achieves superior imputation accuracy while significantly reducing runtime, demonstrating its scalability and efficiency for large-scale datasets. This work introduces a robust solution for imputation in heterogeneous, high-dimensional datasets with structured data absence, addressing critical challenges in both biological and clinical data analysis. Our code is available at Anomalous Github.",
-      "published": "2026-01-21",
-      "arxiv_id": "2601.14653v1",
-      "abs_url": "https://arxiv.org/abs/2601.14653v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.14653v1",
-      "categories": [
-        "cs.LG",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Associating High-Dimensional Longitudinal Datasets through an Efficient Cross-Covariance Decomposition",
-      "authors": [
-        "Jianbin Tan",
-        "Pixu Shi"
-      ],
-      "abstract": "Understanding associations between paired high-dimensional longitudinal datasets is a fundamental yet challenging problem that arises across scientific domains, including longitudinal multi-omic studies. The difficulty stems from the complex, time-varying cross-covariance structure coupled with high dimensionality, which complicates both model formulation and statistical estimation. To address these challenges, we propose a new framework, termed Functional-Aggregated Cross-covariance Decomposition (FACD), tailored for canonical cross-covariance analysis between paired high-dimensional longitudinal datasets through a statistically efficient and theoretically grounded procedure. Unlike existing methods that are often limited to low-dimensional data or rely on explicit parametric modeling of temporal dynamics, FACD adaptively learns temporal structure by aggregating signals across features and naturally accommodates variable selection to identify the most relevant features associated across datasets. We establish statistical guarantees for FACD and demonstrate its advantages over existing approaches through extensive simulation studies. Finally, we apply FACD to a longitudinal multi-omic human study, revealing blood molecules with time-varying associations across omic layers during acute exercise.",
-      "published": "2026-01-19",
-      "arxiv_id": "2601.13405v1",
-      "abs_url": "https://arxiv.org/abs/2601.13405v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.13405v1",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "GP-DHT: A Dual-Head Transformer with Contras-tive Learning for Predicting Gene Regulatory Rela-tionships across Species from Single-Cell Data",
-      "authors": [
-        "Shuai Yan",
-        "Qingzhi Yu",
-        "Wengfeng Dai",
-        "Xiang Cheng"
-      ],
-      "abstract": "Gene regulatory networks (GRNs) are essential for understanding cell fate decisions and disease mechanisms, yet cross-species GRN inference from single-cell RNA-seq data remains challenging due to noise, sparsity, and cross-species distribution shifts. We propose GP-DHT (GenePair DualHeadTransformer), a cross-species single-cell GRN inference framework that models genes and cells in a heterogeneous graph with multi-level expression relations and learns structured regulatory representations via multi-relational graph attention. A dual-head Transformer further captures local gene pair regulatory dependencies and global cross-cell interaction patterns. To improve robustness under sparse and cross-species settings, GP-DHT introduces gene pair level supervised contrastive learning. Experiments on seven BEELINE benchmark datasets show consistent gains over representative baselines, improving AUROC and AUPRC by approximately 5 to 7 percent on most datasets. GP-DHT also recovers known regulatory modules and helps distinguish conserved from species-specific regulations.",
-      "published": "2026-01-16",
-      "arxiv_id": "2601.10995v1",
-      "abs_url": "https://arxiv.org/abs/2601.10995v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.10995v1",
       "categories": [
         "q-bio.GN"
       ]
