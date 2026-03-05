@@ -1,6 +1,48 @@
 {
-  "last_updated": "2026-03-04 01:54 UTC",
+  "last_updated": "2026-03-05 01:57 UTC",
   "papers": [
+    {
+      "title": "Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT",
+      "authors": [
+        "Ihor Kendiukhov"
+      ],
+      "abstract": "Background: Single-cell foundation models such as Geneformer and scGPT encode rich biological information, but whether this includes causal regulatory logic rather than statistical co-expression remains unclear. Sparse autoencoders (SAEs) can resolve superposition in neural networks by decomposing dense activations into interpretable features, yet they have not been systematically applied to biological foundation models.   Results: We trained TopK SAEs on residual stream activations from all layers of Geneformer V2-316M (18 layers, d=1152) and scGPT whole-human (12 layers, d=512), producing atlases of 82525 and 24527 features, respectively. Both atlases confirm massive superposition, with 99.8 percent of features invisible to SVD. Systematic characterization reveals rich biological organization: 29 to 59 percent of features annotate to Gene Ontology, KEGG, Reactome, STRING, or TRRUST, with U-shaped layer profiles reflecting hierarchical abstraction. Features organize into co-activation modules (141 in Geneformer, 76 in scGPT), exhibit causal specificity (median 2.36x), and form cross-layer information highways (63 to 99.8 percent). When tested against genome-scale CRISPRi perturbation data, only 3 of 48 transcription factors (6.2 percent) show regulatory-target-specific feature responses. A multi-tissue control yields marginal improvement (10.4 percent, 5 of 48 TFs), establishing model representations as the bottleneck.   Conclusions: These models have internalized organized biological knowledge, including pathway membership, protein interactions, functional modules, and hierarchical abstraction, yet they encode minimal causal regulatory logic. We release both feature atlases as interactive web platforms enabling exploration of more than 107000 features across 30 layers of two leading single-cell foundation models.",
+      "published": "2026-03-03",
+      "arxiv_id": "2603.02952v1",
+      "abs_url": "https://arxiv.org/abs/2603.02952v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.02952v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG",
+        "q-bio.CB"
+      ]
+    },
+    {
+      "title": "GPU-accelerated single-cell analysis at scale with rapids-singlecell",
+      "authors": [
+        "Severin Dicks",
+        "Lukas Heumos",
+        "Lilly May",
+        "Sara Jimenez",
+        "Philipp Angerer",
+        "Ilan Gold",
+        "Isaac Virshup",
+        "Felix Fischer",
+        "Michelle Gill",
+        "Melanie Boerries",
+        "Corey J Nolet",
+        "Tiffany J. Chen",
+        "Fabian J. Theis"
+      ],
+      "abstract": "Single-cell sequencing technologies reveal cellular heterogeneity at high resolution, advancing our understanding of biological complexity. As datasets start to scale to tens of millions of cells, computational workflows face substantial bottlenecks, with CPU-based analytical pipelines requiring hours or days for routine processing steps like filtering, normalization, and clustering. These scalability limitations fundamentally restrict common interactive data exploration and iterative hypothesis testing. Here we introduce rapids-singlecell, a GPU-accelerated framework that integrates natively with the scverse ecosystem and operates directly on the AnnData data structure, which delivers orders-of-magnitude speedups for single-cell workflows. Built on CuPy arrays and the NVIDIA CUDA-X Data Science (RAPIDS) ecosystem, rapids-singlecell provides near drop-in GPU replacements for core scanpy-based analysis steps. Across standard single-cell workflows such as preprocessing, dimensionality reduction, neighborhood graph construction, clustering, and batch correction, rapids-singlecell achieves speedups of up to several hundred-fold compared to optimized CPU baselines. This reduces analysis time from hours to minutes on standard hardware, while maintaining consistent biological interpretations. These performance improvements make it possible to analyze large data sets in close to real time, without the need for data splitting. Together with real-time parameter tuning and iterative workflows, rapids-singlecell makes interactive large-scale single-cell analysis possible.",
+      "published": "2026-03-02",
+      "arxiv_id": "2603.02402v1",
+      "abs_url": "https://arxiv.org/abs/2603.02402v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.02402v1",
+      "categories": [
+        "q-bio.GN"
+      ]
+    },
     {
       "title": "Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence",
       "authors": [
@@ -590,40 +632,6 @@
       "categories": [
         "q-bio.GN",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "WFR-MFM: One-Step Inference for Dynamic Unbalanced Optimal Transport",
-      "authors": [
-        "Xinyu Wang",
-        "Ruoyu Wang",
-        "Qiangwei Peng",
-        "Peijie Zhou",
-        "Tiejun Li"
-      ],
-      "abstract": "Reconstructing dynamical evolution from limited observations is a fundamental challenge in single-cell biology, where dynamic unbalanced optimal transport provides a principled framework for modeling coupled transport and mass variation. However, existing approaches rely on trajectory simulation at inference time, making inference a key bottleneck for scalable applications. In this work, we propose a mean-flow framework for unbalanced flow matching that summarizes both transport and mass-growth dynamics over arbitrary time intervals using mean velocity and mass-growth fields, enabling fast one-step generation without trajectory simulation. To solve dynamic unbalanced optimal transport under the Wasserstein-Fisher-Rao geometry, we further build on this framework to develop Wasserstein-Fisher-Rao Mean Flow Matching (WFR-MFM). Across synthetic and real single-cell RNA sequencing datasets, WFR-MFM achieves orders-of-magnitude faster inference than a range of existing baselines while maintaining high predictive accuracy, and enables efficient perturbation response prediction on large synthetic datasets with thousands of conditions.",
-      "published": "2026-01-28",
-      "arxiv_id": "2601.20606v1",
-      "abs_url": "https://arxiv.org/abs/2601.20606v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.20606v1",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Y-Trim: Evidence-gated Adaptase tail trimming for single-stranded bisulfite sequencing",
-      "authors": [
-        "Yihan Fang"
-      ],
-      "abstract": "Background: Single-stranded whole-genome bisulfite sequencing (ssWGBS) enables DNA methylation profiling in low-input and highly fragmented material, including cell-free DNA. In widely used post-bisulfite protocols, Adaptase-mediated tailing adds stochastic, template-free end sequence. Unlike adapter-defined junctions, these tails lack a fixed sequence template, so trimming must be decided from FASTQ-stage observables under intrinsic uncertainty.   Results: We show that bisulfite-induced compositional degeneracy implies a strictly positive error floor for any fixed per-read boundary rule under a finite nucleotide alphabet. Guided by this limit, we introduce Y-Trim, an evidence-gated framework that separates admission (should we trim) from inference (where to trim). For Read 2, Y-Trim performs per-read adaptive cut placement via a fixed, chemistry-typed matrix-linear texture scoring scheme; for Read 1, it uses automated sample-level anchoring when read-level localization is feasibility-limited. Across modules, Y-Trim is an explicit, chemistry-specific decision rule with interpretable operating points. On a curated 34-run public cohort (CCGB-34) and simulator stress tests with known latent boundaries, Y-Trim exhibits stable Read 2 operating behavior and Read 1 feasibility-limited behavior consistent with conditional read-through.   Conclusions: Template-free Adaptase tail trimming is best viewed as an evidence-limited FASTQ-stage decision rather than a generic preprocessing knob. By making admissibility and abstention explicit and exposing interpretable genomic-retention versus residual-carryover trade-offs, Y-Trim provides a practical uncertainty-aware preprocessing strategy for ssWGBS.",
-      "published": "2026-01-26",
-      "arxiv_id": "2601.19002v4",
-      "abs_url": "https://arxiv.org/abs/2601.19002v4",
-      "pdf_url": "https://arxiv.org/pdf/2601.19002v4",
-      "categories": [
-        "q-bio.GN"
       ]
     }
   ]
