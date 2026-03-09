@@ -1,6 +1,49 @@
 {
-  "last_updated": "2026-03-08 01:58 UTC",
+  "last_updated": "2026-03-09 01:59 UTC",
   "papers": [
+    {
+      "title": "Change Point Detection for Cell Populations Measured via Flow Cytometry",
+      "authors": [
+        "Yik Lun Kei",
+        "Qi Wang",
+        "Paul Parker",
+        "Francois Ribalet",
+        "Sangwon Hyun"
+      ],
+      "abstract": "The ocean is filled with phytoplankton that contribute as much photosynthesis as all land plants combined, making them vital to the carbon cycle and climate system. Recent advances in flow cytometry allow oceanographers to measure the optical traits of individual cells along research cruise tracks, generating single-cell resolution microbial data. In marine microbial ecology, detecting locations of abrupt changes in the environmental response of cytometric plankton distributions is an important task. This manuscript proposes a latent space Gaussian mixture-of-experts model, facilitating change point detection in replicated and clustered phytoplankton observations. Change points are identified through shifts in prior means of low-dimensional representations, with piecewise-constant structure enforced by a group-fused LASSO penalty. The optimization problem is then solved via Alternating Direction Method of Multipliers. Applied to flow cytometry data, the proposed method identifies a scientifically important change point that aligns with a transition zone between two marine provinces.",
+      "published": "2026-03-05",
+      "arxiv_id": "2603.05700v1",
+      "abs_url": "https://arxiv.org/abs/2603.05700v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05700v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Machine Learning for analysis of Multiple Sclerosis cross-tissue bulk and single-cell transcriptomics data",
+      "authors": [
+        "Francesco Massafra",
+        "Samuele Punzo",
+        "Silvia Giulia Galfr\u00e9",
+        "Alessandro Maglione",
+        "Simone Pernice",
+        "Stefano Forti",
+        "Simona Rolla",
+        "Marco Beccuti",
+        "Marinella Clerico",
+        "Corrado Priami",
+        "Alina S\u00eerbu"
+      ],
+      "abstract": "Multiple Sclerosis (MS) is a chronic autoimmune disease of the central nervous system whose molecular mechanisms remain incompletely understood. In this study, we developed an end-to-end machine learning pipeline to analyze transcriptomic data from peripheral blood mononuclear cells and cerebrospinal fluid, integrating both bulk microarray and single-cell RNA sequencing datasets (concentrating on CD4+ and B-cells). After rigorous preprocessing, batch correction, and gene declustering, XGBoost classifiers were trained to distinguish MS patients from healthy controls. Explainable AI tools, namely SHapley Additive exPlanations (SHAP), were employed to identify key genes driving classification, and results were compared with Differential Expression Analysis (DEA). SHAP-prioritized genes were further investigated through interaction networks and pathway enrichment analyses. The models achieved strong performance, particularly in CSF B-cells (AUC=0.94) and microarray (AUC=0.86). SHAP gene selection proved to be complementary to classical DEA. Gene clusters identified across multiple datasets highlighted immune activation, non-canonical immune checkpoints (ITK, CLEC2D, KLRG1, CEACAM1), ribosomal and translational programs, ubiquitin-proteasome regulation, lipid trafficking, and Epstein-Barr virus-related pathways. Our integrative and explainable framework reveals complementary insights beyond conventional analysis and provides novel mechanistic hypotheses and potential biomarkers for MS pathogenesis.",
+      "published": "2026-03-05",
+      "arxiv_id": "2603.05572v1",
+      "abs_url": "https://arxiv.org/abs/2603.05572v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05572v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT",
       "authors": [
@@ -125,9 +168,9 @@
       ],
       "abstract": "When biological foundation models such as scGPT and Geneformer process single-cell gene expression, what geometric and topological structure forms in their internal representations? Is that structure biologically meaningful or a training artifact, and how confident should we be in such claims? We address these questions through autonomous large-scale hypothesis screening: an AI-driven executor-brainstormer loop that proposed, tested, and refined 141 geometric and topological hypotheses across 52 iterations, covering persistent homology, manifold distances, cross-model alignment, community structure, and directed topology, all with explicit null controls and disjoint gene-pool splits.   Three principal findings emerge. First, the models learn genuine geometric structure. Gene embedding neighborhoods exhibit non-trivial topology, with persistent homology significant in 11 of 12 transformer layers at p < 0.05 in the weakest domain and 12 of 12 in the other two. A multi-level distance hierarchy shows that manifold-aware metrics outperform Euclidean distance for identifying regulatory gene pairs, and graph community partitions track known transcription factor target relationships. Second, this structure is shared across independently trained models. CCA alignment between scGPT and Geneformer yields canonical correlation of 0.80 and gene retrieval accuracy of 72 percent, yet none of 19 tested methods reliably recover gene-level correspondences. The models agree on the global shape of gene space but not on precise gene placement. Third, the structure is more localized than it first appears. Under stringent null controls applied across all null families, robust signal concentrates in immune tissue, while lung and external lung signals weaken substantially.",
       "published": "2026-02-25",
-      "arxiv_id": "2602.22289v1",
-      "abs_url": "https://arxiv.org/abs/2602.22289v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.22289v1",
+      "arxiv_id": "2602.22289v2",
+      "abs_url": "https://arxiv.org/abs/2602.22289v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.22289v2",
       "categories": [
         "q-bio.QM",
         "cs.LG",
@@ -597,41 +640,6 @@
         "cs.LG",
         "cs.AI",
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "DIA-CLIP: a universal representation learning framework for zero-shot DIA proteomics",
-      "authors": [
-        "Yucheng Liao",
-        "Han Wen",
-        "Weinan E",
-        "Weijie Zhang"
-      ],
-      "abstract": "Data-independent acquisition mass spectrometry (DIA-MS) has established itself as a cornerstone of proteomic profiling and large-scale systems biology, offering unparalleled depth and reproducibility. Current DIA analysis frameworks, however, require semi-supervised training within each run for peptide-spectrum match (PSM) re-scoring. This approach is prone to overfitting and lacks generalizability across diverse species and experimental conditions. Here, we present DIA-CLIP, a pre-trained model shifting the DIA analysis paradigm from semi-supervised training to universal cross-modal representation learning. By integrating dual-encoder contrastive learning framework with encoder-decoder architecture, DIA-CLIP establishes a unified cross-modal representation for peptides and corresponding spectral features, achieving high-precision, zero-shot PSM inference. Extensive evaluations across diverse benchmarks demonstrate that DIA-CLIP consistently outperforms state-of-the-art tools, yielding up to a 45% increase in protein identification while achieving a 12% reduction in entrapment identifications. Moreover, DIA-CLIP holds immense potential for diverse practical applications, such as single-cell and spatial proteomics, where its enhanced identification depth facilitates the discovery of novel biomarkers and the elucidates of intricate cellular mechanisms.",
-      "published": "2026-02-02",
-      "arxiv_id": "2602.01772v1",
-      "abs_url": "https://arxiv.org/abs/2602.01772v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.01772v1",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Predicting Gene Disease Associations in Type 2 Diabetes Using Machine Learning on Single-Cell RNA-Seq Data",
-      "authors": [
-        "Maria De La Luz Lomboy Toledo",
-        "Daniel Onah"
-      ],
-      "abstract": "Diabetes is a chronic metabolic disorder characterized by elevated blood glucose levels due to impaired insulin production or function. Two main forms are recognized: type 1 diabetes (T1D), which involves autoimmune destruction of insulin-producing \\b{eta}-cells, and type 2 diabetes (T2D), which arises from insulin resistance and progressive \\b{eta}-cell dysfunction. Understanding the molecular mechanisms underlying these diseases is essential for the development of improved therapeutic strategies, particularly those targeting \\b{eta}-cell dysfunction. To investigate these mechanisms in a controlled and biologically interpretable setting, mouse models have played a central role in diabetes research. Owing to their genetic and physiological similarity to humans, together with the ability to precisely manipulate their genome, mice enable detailed investigation of disease progression and gene function. In particular, mouse models have provided critical insights into \\b{eta}-cell development, cellular heterogeneity, and functional failure under diabetic conditions. Building on these experimental advances, this study applies machine learning methods to single-cell transcriptomic data from mouse pancreatic islets. Specifically, we evaluate two supervised approaches identified in the literature; Extra Trees Classifier (ETC) and Partial Least Squares Discriminant Analysis (PLS-DA), to assess their ability to identify T2D-associated gene expression signatures at single-cell resolution. Model performance is evaluated using standard classification metrics, with an emphasis on interpretability and biological relevance",
-      "published": "2026-01-30",
-      "arxiv_id": "2602.09036v1",
-      "abs_url": "https://arxiv.org/abs/2602.09036v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.09036v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG"
       ]
     }
   ]
