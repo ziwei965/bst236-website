@@ -1,6 +1,22 @@
 {
-  "last_updated": "2026-03-11 01:52 UTC",
+  "last_updated": "2026-03-12 01:57 UTC",
   "papers": [
+    {
+      "title": "Discovery of a Hematopoietic Manifold in scGPT Yields a Method for Extracting Performant Algorithms from Biological Foundation Model Internals",
+      "authors": [
+        "Ihor Kendiukhov"
+      ],
+      "abstract": "We report the discovery and extraction of a compact hematopoietic algorithm from the single-cell foundation model scGPT, to our knowledge the first biologically useful, competitive algorithm extracted from a foundation model via mechanistic interpretability. We show that scGPT internally encodes a compact hematopoietic manifold with significant developmental branch structure, validated on a strict non-overlap Tabula Sapiens external panel and confirmed via frozen-head zero-shot transfer to an independent multi-donor immune panel. To isolate this geometry, we introduce a general three-stage extraction method consisting of direct operator export from frozen attention weights, a lightweight learned adaptor, and a task-specific readout, producing a standalone algorithm without target-dataset retraining. In 88-split donor-holdout benchmarks against scVI, Palantir, DPT, CellTypist, PCA, and raw-expression baselines, the extracted algorithm achieves the strongest pseudotime-depth ordering and leads on key subtype endpoints (CD4/CD8 AUROC 0.867, mono/macro AUROC 0.951). Compared to standard probing of frozen scGPT embeddings with a 3-layer MLP, the extracted head is BH-significantly better on 6/8 classification endpoints while completing a full 12-split evaluation campaign 34.5x faster with approximately 1000x fewer trainable parameters. The exported operator compresses from three pooled attention heads to a single head without statistically significant loss, and further to a rank-64 surrogate. Mechanistic interpretability of the compact operator reveals a concentrated four-factor core explaining 66.2% of ablation impact, with factors resolving into explicit T/lymphoid, B/plasma, granulocytic, and monocyte/macrophage gene programs. A supplementary second-manifold validation (intercellular communication geometry) confirms that the extraction method generalizes beyond hematopoiesis.",
+      "published": "2026-03-10",
+      "arxiv_id": "2603.10261v1",
+      "abs_url": "https://arxiv.org/abs/2603.10261v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.10261v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.CB",
+        "q-bio.GN"
+      ]
+    },
     {
       "title": "Change Point Detection for Cell Populations Measured via Flow Cytometry",
       "authors": [
@@ -615,31 +631,6 @@
       "categories": [
         "cs.LG",
         "q-bio.QM"
-      ]
-    },
-    {
-      "title": "DOGMA: Weaving Structural Information into Data-centric Single-cell Transcriptomics Analysis",
-      "authors": [
-        "Ru Zhang",
-        "Xunkai Li",
-        "Yaxin Deng",
-        "Sicheng Liu",
-        "Daohan Su",
-        "Qiangqiang Dai",
-        "Hongchao Qin",
-        "Rong-Hua Li",
-        "Guoren Wang",
-        "Jia Li"
-      ],
-      "abstract": "Recently, data-centric AI methodology has been a dominant paradigm in single-cell transcriptomics analysis, which treats data representation rather than model complexity as the fundamental bottleneck. In the review of current studies, earlier sequence methods treat cells as independent entities and adapt prevalent ML models to analyze their directly inherited sequence data. Despite their simplicity and intuition, these methods overlook the latent intercellular relationships driven by the functional mechanisms of biological systems and the inherent quality issues of the raw sequence data. Therefore, a series of structured methods has emerged. Although they employ various heuristic rules to capture intricate intercellular relationships and enhance the raw sequencing data, these methods often neglect biological prior knowledge. This omission incurs substantial overhead and yields suboptimal graph representations, thereby hindering the utility of ML models.   To address them, we propose DOGMA, a holistic data-centric framework designed for the structural reshaping and semantic enhancement of raw data through multi-level biological prior knowledge. Transcending reliance on stochastic heuristics, DOGMA redefines graph construction by integrating Statistical Anchors with Cell Ontology and Phylogenetic Trees to enable deterministic structure discovery and robust cross-species alignment. Furthermore, Gene Ontology is utilized to bridge the feature-level semantic gap by incorporating functional priors. In complex multi-species and multi-organ benchmarks, DOGMA achieves SOTA performance, exhibiting superior zero-shot robustness and sample efficiency while operating with significantly lower computational cost.",
-      "published": "2026-02-02",
-      "arxiv_id": "2602.01839v1",
-      "abs_url": "https://arxiv.org/abs/2602.01839v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.01839v1",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "q-bio.GN"
       ]
     }
   ]
