@@ -1,6 +1,39 @@
 {
-  "last_updated": "2026-03-12 01:57 UTC",
+  "last_updated": "2026-03-13 01:56 UTC",
   "papers": [
+    {
+      "title": "ELISA: An Interpretable Hybrid Generative AI Agent for Expression-Grounded Discovery in Single-Cell Genomics",
+      "authors": [
+        "Omar Coser"
+      ],
+      "abstract": "Translating single-cell RNA sequencing (scRNA-seq) data into mechanistic biological hypotheses remains a critical bottleneck, as agentic AI systems lack direct access to transcriptomic representations while expression foundation models remain opaque to natural language. Here we introduce ELISA (Embedding-Linked Interactive Single-cell Agent), an interpretable framework that unifies scGPT expression embeddings with BioBERT-based semantic retrieval and LLM-mediated interpretation for interactive single-cell discovery. An automatic query classifier routes inputs to gene marker scoring, semantic matching, or reciprocal rank fusion pipelines depending on whether the query is a gene signature, natural language concept, or mixture of both. Integrated analytical modules perform pathway activity scoringacross 60+ gene sets, ligand--receptor interaction prediction using 280+ curated pairs, condition-aware comparative analysis, and cell-type proportion estimation all operating directly on embedded data without access to the original count matrix. Benchmarked across six diverse scRNA-seq datasets spanning inflammatory lung disease, pediatric and adult cancers, organoid models, healthy tissue, and neurodevelopment, ELISA significantly outperforms CellWhisperer in cell type retrieval (combined permutation test, $p < 0.001$), with particularly large gains on gene-signature queries (Cohen's $d = 5.98$ for MRR). ELISA replicates published biological findings (mean composite score 0.90) with near-perfect pathway alignment and theme coverage (0.98 each), and generates candidate hypotheses through grounded LLM reasoning, bridging the gap between transcriptomic data exploration and biological discovery. Code available at: https://github.com/omaruno/ELISA-An-AI-Agent-for-Expression-Grounded-Discovery-in-Single-Cell-Genomics.git (If you use ELISA in your research, please cite this work).",
+      "published": "2026-03-12",
+      "arxiv_id": "2603.11872v1",
+      "abs_url": "https://arxiv.org/abs/2603.11872v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.11872v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "A Standardized Framework For Evaluating Gene Expression Generative Models",
+      "authors": [
+        "Andrea Rubbi",
+        "Andrea Giuseppe Di Francesco",
+        "Mohammad Lotfollahi",
+        "Pietro Li\u00f2"
+      ],
+      "abstract": "The rapid development of generative models for single-cell gene expression data has created an urgent need for standardised evaluation frameworks. Current evaluation practices suffer from inconsistent metric implementations, incomparable hyperparameter choices, and a lack of biologically-grounded metrics. We present Generated Genetic Expression Evaluator (GGE), an open-source Python framework that addresses these challenges by providing a comprehensive suite of distributional metrics with explicit computation space options and biologically-motivated evaluation through differentially expressed gene (DEG)-focused analysis and perturbation-effect correlation, enabling standardized reporting and reproducible benchmarking. Through extensive analysis of the single-cell generative modeling literature, we identify that no standardized evaluation protocol exists. Methods report incomparable metrics computed in different spaces with different hyperparameters. We demonstrate that metric values vary substantially depending on implementation choices, highlighting the critical need for standardization. GGE enables fair comparison across generative approaches and accelerates progress in perturbation response prediction, cellular identity modeling, and counterfactual inference.",
+      "published": "2026-03-11",
+      "arxiv_id": "2603.11244v1",
+      "abs_url": "https://arxiv.org/abs/2603.11244v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.11244v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Discovery of a Hematopoietic Manifold in scGPT Yields a Method for Extracting Performant Algorithms from Biological Foundation Model Internals",
       "authors": [
@@ -589,48 +622,6 @@
         "cs.LG",
         "cs.AI",
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "On the consistent and scalable detection of spatial patterns",
-      "authors": [
-        "Jiayu Su",
-        "Jun Hou Fung",
-        "Haoyu Wang",
-        "Dian Yang",
-        "David A. Knowles",
-        "Raul Rabadan"
-      ],
-      "abstract": "Detecting spatial patterns is fundamental to scientific discovery, yet current methods lack statistical consensus and face computational barriers when applied to large-scale spatial omics datasets. We unify major approaches through a single quadratic form and derive general consistency conditions. We reveal that several widely used methods, including Moran's I, are inconsistent, and propose scalable corrections. The resulting test enables robust pattern detection across millions of spatial locations and single-cell lineage-tracing datasets.",
-      "published": "2026-02-02",
-      "arxiv_id": "2602.02825v1",
-      "abs_url": "https://arxiv.org/abs/2602.02825v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.02825v1",
-      "categories": [
-        "stat.AP",
-        "q-bio.QM",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "hSNMF: Hybrid Spatially Regularized NMF for Image-Derived Spatial Transcriptomics",
-      "authors": [
-        "Md Ishtyaq Mahmud",
-        "Veena Kochat",
-        "Suresh Satpati",
-        "Jagan Mohan Reddy Dwarampudi",
-        "Humaira Anzum",
-        "Kunal Rai",
-        "Tania Banerjee"
-      ],
-      "abstract": "High-resolution spatial transcriptomics platforms, such as Xenium, generate single-cell images that capture both molecular and spatial context, but their extremely high dimensionality poses major challenges for representation learning and clustering. In this study, we analyze data from the Xenium platform, which captures high-resolution images of tumor microarray (TMA) tissues and converts them into cell-by-gene matrices suitable for computational analysis. We benchmark and extend nonnegative matrix factorization (NMF) for spatial transcriptomics by introducing two spatially regularized variants. First, we propose Spatial NMF (SNMF), a lightweight baseline that enforces local spatial smoothness by diffusing each cell's NMF factor vector over its spatial neighborhood. Second, we introduce Hybrid Spatial NMF (hSNMF), which performs spatially regularized NMF followed by Leiden clustering on a hybrid adjacency that integrates spatial proximity (via a contact-radius graph) and transcriptomic similarity through a tunable mixing parameter alpha. Evaluated on a cholangiocarcinoma dataset, SNMF and hSNMF achieve markedly improved spatial compactness (CHAOS < 0.004, Moran's I > 0.96), greater cluster separability (Silhouette > 0.12, DBI < 1.8), and higher biological coherence (CMC and enrichment) compared to other spatial baselines. Availability and implementation: https://github.com/ishtyaqmahmud/hSNMF",
-      "published": "2026-02-02",
-      "arxiv_id": "2602.02638v1",
-      "abs_url": "https://arxiv.org/abs/2602.02638v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.02638v1",
-      "categories": [
-        "cs.LG",
-        "q-bio.QM"
       ]
     }
   ]
