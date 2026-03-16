@@ -1,6 +1,22 @@
 {
-  "last_updated": "2026-03-15 02:09 UTC",
+  "last_updated": "2026-03-16 02:11 UTC",
   "papers": [
+    {
+      "title": "Causal Cellular Context Transfer Learning (C3TL): An Efficient Architecture for Prediction of Unseen Perturbation Effects",
+      "authors": [
+        "Michael Scholkemper",
+        "Sach Mukherjee"
+      ],
+      "abstract": "Predicting the effects of chemical and genetic perturbations on quantitative cell states is a central challenge in computational biology, molecular medicine and drug discovery. Recent work has leveraged large-scale single-cell data and massive foundation models to address this task. However, such computational resources and extensive datasets are not always accessible in academic or clinical settings, hence limiting utility. Here we propose a lightweight framework for perturbation effect prediction that exploits the structured nature of biological interventions and specific inductive biases/invariances. Our approach leverages available information concerning perturbation effects to allow generalization to novel contexts and requires only widely-available bulk molecular data. Extensive testing, comparing predictions of context-specific perturbation effects against real, large-scale interventional experiments, demonstrates accurate prediction in new contexts. The proposed approach is competitive with SOTA foundation models but requires simpler data, much smaller model sizes and less time. Focusing on robust bulk signals and efficient architectures, we show that accurate prediction of perturbation effects is possible without proprietary hardware or very large models, hence opening up ways to leverage causal learning approaches in biomedicine generally.",
+      "published": "2026-03-13",
+      "arxiv_id": "2603.13051v1",
+      "abs_url": "https://arxiv.org/abs/2603.13051v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.13051v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "ELISA: An Interpretable Hybrid Generative AI Agent for Expression-Grounded Discovery in Single-Cell Genomics",
       "authors": [
@@ -600,28 +616,6 @@
       "categories": [
         "q-bio.GN",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "ScDiVa: Masked Discrete Diffusion for Joint Modeling of Single-Cell Identity and Expression",
-      "authors": [
-        "Mingxuan Wang",
-        "Cheng Chen",
-        "Gaoyang Jiang",
-        "Zijia Ren",
-        "Chuangxin Zhao",
-        "Lu Shi",
-        "Yanbiao Ma"
-      ],
-      "abstract": "Single-cell RNA-seq profiles are high-dimensional, sparse, and unordered, causing autoregressive generation to impose an artificial ordering bias and suffer from error accumulation. To address this, we propose scDiVa, a masked discrete diffusion foundation model that aligns generation with the dropout-like corruption process by defining a continuous-time forward masking mechanism in token space. ScDiVa features a bidirectional denoiser that jointly models discrete gene identities and continuous values, utilizing entropy-normalized serialization and a latent anchor token to maximize information efficiency and preserve global cell identity. The model is trained via depth-invariant time sampling and a dual denoising objective to simulate varying sparsity levels while ensuring precise recovery of both identity and magnitude. Pre-trained on 59 million cells, scDiVa achieves strong transfer performance across major benchmarks, including batch integration, cell type annotation, and perturbation response prediction. These results suggest that masked discrete diffusion serves as a biologically coherent and effective alternative to autoregression.",
-      "published": "2026-02-03",
-      "arxiv_id": "2602.03477v1",
-      "abs_url": "https://arxiv.org/abs/2602.03477v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.03477v1",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "q-bio.GN"
       ]
     }
   ]
