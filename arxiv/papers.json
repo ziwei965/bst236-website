@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-03-17 01:58 UTC",
+  "last_updated": "2026-03-18 02:02 UTC",
   "papers": [
+    {
+      "title": "Power Analysis for Prediction-Powered Inference",
+      "authors": [
+        "Yiqun T. Chen",
+        "Moran Guo",
+        "Shengy Li"
+      ],
+      "abstract": "Modern studies increasingly leverage outcomes predicted by machine learning and artificial intelligence (AI/ML) models, and recent work, such as prediction-powered inference (PPI), has developed valid downstream statistical inference procedures. However, classical power and sample size formulas do not readily account for these predictions. In this work, we tackle a simple yet practical question: given a new AI/ML model with high predictive power, how many labeled samples are needed to achieve a desired level of statistical power? We derive closed-form power formulas by characterizing the asymptotic variance of the PPI estimator and applying Wald test inversion to obtain the required labeled sample size. Our results cover widely used settings including two-sample comparisons and risk measures in 2x2 tables. We find that a useful rule of thumb is that the reduction in required labeled samples relative to classical designs scales roughly with the R2 between the predictions and the ground truth. Our analytical formulas are validated using Monte Carlo simulations, and we illustrate the framework in three contemporary biomedical applications spanning single-cell transcriptomics, clinical blood pressure measurement, and dermoscopy imaging. We provide our software as an R package and online calculators at https://github.com/yiqunchen/pppower.",
+      "published": "2026-03-17",
+      "arxiv_id": "2603.16041v1",
+      "abs_url": "https://arxiv.org/abs/2603.16041v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16041v1",
+      "categories": [
+        "stat.ME",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Causal Cellular Context Transfer Learning (C3TL): An Efficient Architecture for Prediction of Unseen Perturbation Effects",
       "authors": [
@@ -24,9 +41,9 @@
       ],
       "abstract": "Translating single-cell RNA sequencing (scRNA-seq) data into mechanistic biological hypotheses remains a critical bottleneck, as agentic AI systems lack direct access to transcriptomic representations while expression foundation models remain opaque to natural language. Here we introduce ELISA (Embedding-Linked Interactive Single-cell Agent), an interpretable framework that unifies scGPT expression embeddings with BioBERT-based semantic retrieval and LLM-mediated interpretation for interactive single-cell discovery. An automatic query classifier routes inputs to gene marker scoring, semantic matching, or reciprocal rank fusion pipelines depending on whether the query is a gene signature, natural language concept, or mixture of both. Integrated analytical modules perform pathway activity scoringacross 60+ gene sets, ligand--receptor interaction prediction using 280+ curated pairs, condition-aware comparative analysis, and cell-type proportion estimation all operating directly on embedded data without access to the original count matrix. Benchmarked across six diverse scRNA-seq datasets spanning inflammatory lung disease, pediatric and adult cancers, organoid models, healthy tissue, and neurodevelopment, ELISA significantly outperforms CellWhisperer in cell type retrieval (combined permutation test, $p < 0.001$), with particularly large gains on gene-signature queries (Cohen's $d = 5.98$ for MRR). ELISA replicates published biological findings (mean composite score 0.90) with near-perfect pathway alignment and theme coverage (0.98 each), and generates candidate hypotheses through grounded LLM reasoning, bridging the gap between transcriptomic data exploration and biological discovery. Code available at: https://github.com/omaruno/ELISA-An-AI-Agent-for-Expression-Grounded-Discovery-in-Single-Cell-Genomics.git (If you use ELISA in your research, please cite this work).",
       "published": "2026-03-12",
-      "arxiv_id": "2603.11872v1",
-      "abs_url": "https://arxiv.org/abs/2603.11872v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.11872v1",
+      "arxiv_id": "2603.11872v2",
+      "abs_url": "https://arxiv.org/abs/2603.11872v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.11872v2",
       "categories": [
         "q-bio.GN",
         "cs.AI"
@@ -597,25 +614,6 @@
         "cs.LG",
         "q-bio.QM",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Beyond Independent Genes: Learning Module-Inductive Representations for Gene Perturbation Prediction",
-      "authors": [
-        "Jiafa Ruan",
-        "Ruijie Quan",
-        "Zongxin Yang",
-        "Liyang Xu",
-        "Yi Yang"
-      ],
-      "abstract": "Predicting transcriptional responses to genetic perturbations is a central problem in functional genomics. In practice, perturbation responses are rarely gene-independent but instead manifest as coordinated, program-level transcriptional changes among functionally related genes. However, most existing methods do not explicitly model such coordination, due to gene-wise modeling paradigms and reliance on static biological priors that cannot capture dynamic program reorganization. To address these limitations, we propose scBIG, a module-inductive perturbation prediction framework that explicitly models coordinated gene programs. scBIG induces coherent gene programs from data via Gene-Relation Clustering, captures inter-program interactions through a Gene-Cluster-Aware Encoder, and preserves modular coordination using structure-aware alignment objectives. These structured representations are then modeled using conditional flow matching to enable flexible and generalizable perturbation prediction. Extensive experiments on multiple single-cell perturbation benchmarks show that scBIG consistently outperforms state-of-the-art methods, particularly on unseen and combinatorial perturbation settings, achieving an average improvement of 6.7% over the strongest baselines.",
-      "published": "2026-02-03",
-      "arxiv_id": "2602.04901v1",
-      "abs_url": "https://arxiv.org/abs/2602.04901v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.04901v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG"
       ]
     }
   ]
