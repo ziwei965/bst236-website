@@ -1,6 +1,52 @@
 {
-  "last_updated": "2026-03-18 02:02 UTC",
+  "last_updated": "2026-03-19 02:03 UTC",
   "papers": [
+    {
+      "title": "Bivariate deconvolution for cancer detection after surgery",
+      "authors": [
+        "Nuria Senar",
+        "Stavros Makrodimitris",
+        "Michel H. Hof",
+        "Cornelis Verhoef",
+        "Saskia M. Wilting",
+        "Mark A. van de Wiel"
+      ],
+      "abstract": "Detection of minimal residual disease (MRD) in cancer patients after surgery can provide an early marker for disease recurrence and guide subsequent treatment decisions. Accurate and sensitive estimation of tumour burden after cancer surgery may be obtained through liq- uid biopsies, measuring circulating tumour DNA (ctDNA) using, for example, mutation-based Variant Allele Frequency (VAF) values. However, to be applicable to all patients this ei- ther requires tumour-informed, patient-specific mutation panels or sensitive, tumour-agnostic genome-wide measurements. We propose a solution that accounts for patient-specific charac- teristics in genome-wide screens. For that, we introduce a bivariate deconvolution model to estimate tumour proportion from circulating cell-free DNA (cfDNA) methylation profiles of patients before and after surgery. The observations are modelled as a convolution of two bivariate latent variables, corresponding to tumour and background signals, mixed by the tumour proportion at each measurement. This bivariate approach links pre- and post-surgery measurements improving estimation of the tumour proportion after surgery, when the tumour signal is potentially very weak, or absent. We approximate likelihood of the convolution through a discretisation of the bivariate density for each latent variable into a two-dimensional grid for each pair of observations which allows for fast maximum likelihood estimation. We evaluate the predictive performance of the estimated post-surgery tumour proportions based on cfDNA methylation against available mutation-based VAF values in one-year recurrence-free survival.",
+      "published": "2026-03-18",
+      "arxiv_id": "2603.17864v1",
+      "abs_url": "https://arxiv.org/abs/2603.17864v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17864v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction",
+      "authors": [
+        "Shuizhou Chen",
+        "Lang Yu",
+        "Kedu Jin",
+        "Songming Zhang",
+        "Hao Wu",
+        "Wenxuan Huang",
+        "Sheng Xu",
+        "Quan Qian",
+        "Qin Chen",
+        "Lei Bai",
+        "Siqi Sun",
+        "Zhangyang Gao"
+      ],
+      "abstract": "Virtual cell models aim to enable in silico experimentation by predicting how cells respond to genetic, chemical, or cytokine perturbations from single-cell measurements. In practice, however, large-scale perturbation prediction remains constrained by three coupled bottlenecks: inefficient training and inference pipelines, unstable modeling in high-dimensional sparse expression space, and evaluation protocols that overemphasize reconstruction-like accuracy while underestimating biological fidelity. In this work we present a specialized large-scale foundation model SCALE for virtual cell perturbation prediction that addresses the above limitations jointly. First, we build a BioNeMo-based training and inference framework that substantially improves data throughput, distributed scalability, and deployment efficiency, yielding 12.51* speedup on pretrain and 1.29* on inference over the prior SOTA pipeline under matched system settings. Second, we formulate perturbation prediction as conditional transport and implement it with a set-aware flow architecture that couples LLaMA-based cellular encoding with endpoint-oriented supervision. This design yields more stable training and stronger recovery of perturbation effects. Third, we evaluate the model on Tahoe-100M using a rigorous cell-level protocol centered on biologically meaningful metrics rather than reconstruction alone. On this benchmark, our model improves PDCorr by 12.02% and DE Overlap by 10.66% over STATE. Together, these results suggest that advancing virtual cells requires not only better generative objectives, but also the co-design of scalable infrastructure, stable transport modeling, and biologically faithful evaluation.",
+      "published": "2026-03-18",
+      "arxiv_id": "2603.17380v1",
+      "abs_url": "https://arxiv.org/abs/2603.17380v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17380v1",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "Power Analysis for Prediction-Powered Inference",
       "authors": [
@@ -574,46 +620,6 @@
       "categories": [
         "cs.LG",
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "scDFM: Distributional Flow Matching Model for Robust Single-Cell Perturbation Prediction",
-      "authors": [
-        "Chenglei Yu",
-        "Chuanrui Wang",
-        "Bangyan Liao",
-        "Tailin Wu"
-      ],
-      "abstract": "A central goal in systems biology and drug discovery is to predict the transcriptional response of cells to perturbations. This task is challenging due to the noisy and sparse nature of single-cell measurements, as well as the fact that perturbations often induce population-level shifts rather than changes in individual cells. Existing deep learning methods typically assume cell-level correspondences, limiting their ability to capture such global effects. We present scDFM, a generative framework based on conditional flow matching that models the full distribution of perturbed cells conditioned on control states. By incorporating a maximum mean discrepancy (MMD) objective, our method aligns perturbed and control populations beyond cell-level correspondences. To further improve robustness to sparsity and noise, we introduce the Perturbation-Aware Differential Transformer (PAD-Transformer), a backbone architecture that leverages gene interaction graphs and differential attention to capture context-specific expression changes. Across multiple genetic and drug perturbation benchmarks, scDFM consistently outperforms prior methods, demonstrating strong generalization in both unseen and combinatorial settings. In the combinatorial setting, it reduces mean squared error by 19.6% relative to the strongest baseline. These results highlight the importance of distribution-level generative modeling for robust in silico perturbation prediction. The code is available at https://github.com/AI4Science-WestlakeU/scDFM",
-      "published": "2026-02-06",
-      "arxiv_id": "2602.07103v1",
-      "abs_url": "https://arxiv.org/abs/2602.07103v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.07103v1",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Group Contrastive Learning for Weakly Paired Multimodal Data",
-      "authors": [
-        "Aditya Gorla",
-        "Hugues Van Assel",
-        "Jan-Christian Huetter",
-        "Heming Yao",
-        "Kyunghyun Cho",
-        "Aviv Regev",
-        "Russell Littman"
-      ],
-      "abstract": "We present GROOVE, a semi-supervised multi-modal representation learning approach for high-content perturbation data where samples across modalities are weakly paired through shared perturbation labels but lack direct correspondence. Our primary contribution is GroupCLIP, a novel group-level contrastive loss that bridges the gap between CLIP for paired cross-modal data and SupCon for uni-modal supervised contrastive learning, addressing a fundamental gap in contrastive learning for weakly-paired settings. We integrate GroupCLIP with an on-the-fly backtranslating autoencoder framework to encourage cross-modally entangled representations while maintaining group-level coherence within a shared latent space. Critically, we introduce a comprehensive combinatorial evaluation framework that systematically assesses representation learners across multiple optimal transport aligners, addressing key limitations in existing evaluation strategies. This framework includes novel simulations that systematically vary shared versus modality-specific perturbation effects enabling principled assessment of method robustness. Our combinatorial benchmarking reveals that there is not yet an aligner that uniformly dominates across settings or modality pairs. Across simulations and two real single-cell genetic perturbation datasets, GROOVE performs on par with or outperforms existing approaches for downstream cross-modal matching and imputation tasks. Our ablation studies demonstrate that GroupCLIP is the key component driving performance gains. These results highlight the importance of leveraging group-level constraints for effective multi-modal representation learning in scenarios where only weak pairing is available.",
-      "published": "2026-02-03",
-      "arxiv_id": "2602.04021v1",
-      "abs_url": "https://arxiv.org/abs/2602.04021v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.04021v1",
-      "categories": [
-        "cs.LG",
-        "q-bio.QM",
-        "stat.ML"
       ]
     }
   ]
