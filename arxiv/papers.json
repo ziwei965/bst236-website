@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-19 02:03 UTC",
+  "last_updated": "2026-03-20 01:58 UTC",
   "papers": [
     {
       "title": "Bivariate deconvolution for cancer detection after surgery",
@@ -38,9 +38,9 @@
       ],
       "abstract": "Virtual cell models aim to enable in silico experimentation by predicting how cells respond to genetic, chemical, or cytokine perturbations from single-cell measurements. In practice, however, large-scale perturbation prediction remains constrained by three coupled bottlenecks: inefficient training and inference pipelines, unstable modeling in high-dimensional sparse expression space, and evaluation protocols that overemphasize reconstruction-like accuracy while underestimating biological fidelity. In this work we present a specialized large-scale foundation model SCALE for virtual cell perturbation prediction that addresses the above limitations jointly. First, we build a BioNeMo-based training and inference framework that substantially improves data throughput, distributed scalability, and deployment efficiency, yielding 12.51* speedup on pretrain and 1.29* on inference over the prior SOTA pipeline under matched system settings. Second, we formulate perturbation prediction as conditional transport and implement it with a set-aware flow architecture that couples LLaMA-based cellular encoding with endpoint-oriented supervision. This design yields more stable training and stronger recovery of perturbation effects. Third, we evaluate the model on Tahoe-100M using a rigorous cell-level protocol centered on biologically meaningful metrics rather than reconstruction alone. On this benchmark, our model improves PDCorr by 12.02% and DE Overlap by 10.66% over STATE. Together, these results suggest that advancing virtual cells requires not only better generative objectives, but also the co-design of scalable infrastructure, stable transport modeling, and biologically faithful evaluation.",
       "published": "2026-03-18",
-      "arxiv_id": "2603.17380v1",
-      "abs_url": "https://arxiv.org/abs/2603.17380v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17380v1",
+      "arxiv_id": "2603.17380v2",
+      "abs_url": "https://arxiv.org/abs/2603.17380v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.17380v2",
       "categories": [
         "cs.LG",
         "cs.AI",
