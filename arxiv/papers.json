@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-03-24 01:56 UTC",
+  "last_updated": "2026-03-25 02:02 UTC",
   "papers": [
+    {
+      "title": "Domain Elastic Transform: Bayesian Function Registration for High-Dimensional Scientific Data",
+      "authors": [
+        "Osamu Hirose",
+        "Emanuele Rodola"
+      ],
+      "abstract": "Nonrigid registration is conventionally divided into point set registration, which aligns sparse geometries, and image registration, which aligns continuous intensity fields on regular grids. However, this dichotomy creates a critical bottleneck for emerging scientific data, such as spatial transcriptomics, where high-dimensional vector-valued functions, e.g., gene expression, are defined on irregular, sparse manifolds. Consequently, researchers currently face a forced choice: either sacrifice single-cell resolution via voxelization to utilize image-based tools, or ignore the critical functional signal to utilize geometric tools. To resolve this dilemma, we propose Domain Elastic Transform (DET), a grid-free probabilistic framework that unifies geometric and functional alignment. By treating data as functions on irregular domains, DET registers high-dimensional signals directly without binning. We formulate the problem within a rigorous Bayesian framework, modeling domain deformation as an elastic motion guided by a joint spatial-functional likelihood. The method is fully unsupervised and scalable, utilizing feature-sensitive downsampling to handle massive atlases. We demonstrate that DET achieves 92\\% topological preservation on MERFISH data where state-of-the-art optimal transport methods struggle ($<$5\\%), and successfully registers whole-embryo Stereo-seq atlases across developmental stages -- a task involving massive scale and complex nonrigid growth. The implementation of DET is available on {https://github.com/ohirose/bcpd} (since Mar, 2025).",
+      "published": "2026-03-22",
+      "arxiv_id": "2603.21235v1",
+      "abs_url": "https://arxiv.org/abs/2603.21235v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.21235v1",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV"
+      ]
+    },
     {
       "title": "Bivariate deconvolution for cancer detection after surgery",
       "authors": [
@@ -603,23 +620,6 @@
       "categories": [
         "q-bio.GN",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Bipartite Graph Attention-based Clustering for Large-scale scRNA-seq Data",
-      "authors": [
-        "Zhuomin Liang",
-        "Liang Bai",
-        "Xian Yang"
-      ],
-      "abstract": "scRNA-seq clustering is a critical task for analyzing single-cell RNA sequencing (scRNA-seq) data, as it groups cells with similar gene expression profiles. Transformers, as powerful foundational models, have been applied to scRNA-seq clustering. Their self-attention mechanism automatically assigns higher attention weights to cells within the same cluster, enhancing the distinction between clusters. Existing methods for scRNA-seq clustering, such as graph transformer-based models, treat each cell as a token in a sequence. Their computational and space complexities are $\\mathcal{O}(n^2)$ with respect to the number of cells, limiting their applicability to large-scale scRNA-seq datasets.To address this challenge, we propose a Bipartite Graph Transformer-based clustering model (BGFormer) for scRNA-seq data. We introduce a set of learnable anchor tokens as shared reference points to represent the entire dataset. A bipartite graph attention mechanism is introduced to learn the similarity between cells and anchor tokens, bringing cells of the same class closer together in the embedding space. BGFormer achieves linear computational complexity with respect to the number of cells, making it scalable to large datasets. Experimental results on multiple large-scale scRNA-seq datasets demonstrate the effectiveness and scalability of BGFormer.",
-      "published": "2026-02-07",
-      "arxiv_id": "2602.07475v1",
-      "abs_url": "https://arxiv.org/abs/2602.07475v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.07475v1",
-      "categories": [
-        "cs.LG",
-        "q-bio.GN"
       ]
     }
   ]
