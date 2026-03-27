@@ -1,6 +1,122 @@
 {
-  "last_updated": "2026-03-25 02:02 UTC",
+  "last_updated": "2026-03-27 02:09 UTC",
   "papers": [
+    {
+      "title": "Modeling the mutational dynamics of very short tandem repeats",
+      "authors": [
+        "Amos Onn",
+        "Tzipy Marx",
+        "Liming Tao",
+        "Tamir Biezuner",
+        "Ehud Shapiro",
+        "Christoph A. Klein",
+        "Peter F. Stadler"
+      ],
+      "abstract": "Short tandem repeats (STRs) are low-entropy regions in the genome, consisting of a short (1-6 bp) unit that is consecutively repeated multiple times. They are known for high mutational instability, due to so-called stutter-mutations, in which the number of units in the run increases or descreases. In particular, STRs with repeat unit length of 1-2 bp are prone to mutate even within several cell divisions. The extremely rapid accumulation of variation makes them interesting phylogenetic markers for retrospective single-cell lineage reconstruction. Here we model their mutational dynamics at the level of individual repeat unit type and then aggregate length variations over many STR loci with the aim of obtaining a very fast ``molecular clock''. We calibrate our model based on several datasets with known lineage structure prepared from cultured cells. We find that the mutational dynamics of STRs are reasonably consistent for a given cell line, but vary among different ones. This suggests that the dynamics are not entirely explained by mutations in caretaker genes, rather, various other factors play a role -- possibly tissue origin and differentiation state. Further data and research is necessary to asses their relative effects.",
+      "published": "2026-03-26",
+      "arxiv_id": "2603.25628v1",
+      "abs_url": "https://arxiv.org/abs/2603.25628v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25628v1",
+      "categories": [
+        "q-bio.PE",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells",
+      "authors": [
+        "Han Zhang",
+        "Guo-Hua Yuan",
+        "Chaohao Yuan",
+        "Tingyang Xu",
+        "Tian Bian",
+        "Hong Cheng",
+        "Wenbing Huang",
+        "Deli Zhao",
+        "Yu Rong"
+      ],
+      "abstract": "Modeling cellular states and predicting their responses to perturbations are central challenges in computational biology and the development of virtual cells. Existing foundation models for single-cell transcriptomics provide powerful static representations, but they do not explicitly model the distribution of cellular states for generative simulation. Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation. By operating directly in a discrete token space that is compatible with the sparse, non-sequential nature of single-cell transcriptomic data, Lingshu-Cell captures complex transcriptome-wide expression dependencies across approximately 18,000 genes without relying on prior gene selection, such as filtering by high variability or ranking by expression level. Across diverse tissues and species, Lingshu-Cell accurately reproduces transcriptomic distributions, marker-gene expression patterns and cell-subtype proportions, demonstrating its ability to capture complex cellular heterogeneity. Moreover, by jointly embedding cell type or donor identity with perturbation, Lingshu-Cell can predict whole-transcriptome expression changes for novel combinations of identity and perturbation. It achieves leading performance on the Virtual Cell Challenge H1 genetic perturbation benchmark and in predicting cytokine-induced responses in human PBMCs. Together, these results establish Lingshu-Cell as a flexible cellular world model for in silico simulation of cell states and perturbation responses, laying the foundation for a new paradigm in biological discovery and perturbation screening.",
+      "published": "2026-03-26",
+      "arxiv_id": "2603.25240v1",
+      "abs_url": "https://arxiv.org/abs/2603.25240v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25240v1",
+      "categories": [
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Causal Discovery on Dependent Mixed Data with Applications to Gene Regulatory Network Inference",
+      "authors": [
+        "Alex Chen",
+        "Qing Zhou"
+      ],
+      "abstract": "Causal discovery aims to infer causal relationships among variables from observational data, typically represented by a directed acyclic graph (DAG). Most existing methods assume independent and identically distributed observations, an assumption often violated in modern applications. In addition, many datasets contain a mixture of continuous and discrete variables, which further complicates causal modeling when dependence across samples is present. To address these challenges, we propose a de-correlation framework for causal discovery from dependent mixed data. Our approach formulates a structural equation model with latent variables that accommodates both continuous and discrete variables while allowing correlated Gaussian errors across units. We estimate the dependence structure among samples via a pairwise maximum likelihood estimator for the covariance matrix and develop an EM algorithm to impute latent variables underlying discrete observations. A de-correlation transformation of the recovered latent data enables the use of standard causal discovery algorithms to learn the underlying causal graph. Simulation studies demonstrate that the proposed method substantially improves causal graph recovery compared with applying standard methods directly to the original dependent data. We apply our approach to single-cell RNA sequencing data to infer gene regulatory networks governing embryonic stem cell differentiation. The inferred regulatory networks show significantly improved predictive likelihood on test data, and many high-confidence edges are supported by known regulatory interactions reported in the literature.",
+      "published": "2026-03-25",
+      "arxiv_id": "2603.24783v1",
+      "abs_url": "https://arxiv.org/abs/2603.24783v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.24783v1",
+      "categories": [
+        "stat.ME",
+        "q-bio.GN",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "i-IF-Learn: Iterative Feature Selection and Unsupervised Learning for High-Dimensional Complex Data",
+      "authors": [
+        "Chen Ma",
+        "Wanjie Wang",
+        "Shuhao Fan"
+      ],
+      "abstract": "Unsupervised learning of high-dimensional data is challenging due to irrelevant or noisy features obscuring underlying structures. It's common that only a few features, called the influential features, meaningfully define the clusters. Recovering these influential features is helpful in data interpretation and clustering. We propose i-IF-Learn, an iterative unsupervised framework that jointly performs feature selection and clustering. Our core innovation is an adaptive feature selection statistic that effectively combines pseudo-label supervision with unsupervised signals, dynamically adjusting based on intermediate label reliability to mitigate error propagation common in iterative frameworks. Leveraging low-dimensional embeddings (PCA or Laplacian eigenmaps) followed by $k$-means, i-IF-Learn simultaneously outputs influential feature subset and clustering labels. Numerical experiments on gene microarray and single-cell RNA-seq datasets show that i-IF-Learn significantly surpasses classical and deep clustering baselines. Furthermore, using our selected influential features as preprocessing substantially enhances downstream deep models such as DeepCluster, UMAP, and VAE, highlighting the importance and effectiveness of targeted feature selection.",
+      "published": "2026-03-25",
+      "arxiv_id": "2603.24025v1",
+      "abs_url": "https://arxiv.org/abs/2603.24025v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.24025v1",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "A Large-Scale Comparative Analysis of Imputation Methods for Single-Cell RNA Sequencing Data",
+      "authors": [
+        "Yuichiro Iwashita",
+        "Ahtisham Fazeel Abbasi",
+        "Muhammad Nabeel Asim",
+        "Andreas Dengel"
+      ],
+      "abstract": "Single-cell RNA sequencing (scRNA-seq) is inherently affected by sparsity caused by dropout events, in which expressed genes are recorded as zeros due to technical limitations. These artifacts distort gene expression distributions and can compromise downstream analyses. Numerous imputation methods have been proposed to address this, and these methods encompass a wide range of approaches from traditional statistical models to recently developed deep learning (DL)-based methods. However, their comparative performance remains unclear, as existing benchmarking studies typically evaluate only a limited subset of methods, datasets, and downstream analytical tasks. Here, we present a comprehensive benchmark of 15 scRNA-seq imputation methods spanning 7 methodological categories, including traditional and modern DL-based methods. These methods are evaluated across 30 datasets sourced from 10 experimental protocols and assessed in terms of 6 downstream analytical tasks. Our results show that traditional imputation methods, such as model-based, smoothing-based, and low-rank matrix-based methods, generally outperform DL-based methods, such as diffusion-based, GAN-based, GNN-based, and autoencoder-based methods. In addition, strong performance in numerical gene expression recovery does not necessarily translate into improved biological interpretability in downstream analyses. Furthermore, the performance of imputation methods varies substantially across datasets, protocols, and downstream analytical tasks, and no single method consistently outperforms others across all evaluation scenarios. Together, our results provide practical guidance for selecting imputation methods tailored to specific analytical objectives and highlight the importance of task-specific evaluation when assessing imputation performance in scRNA-seq data analysis.",
+      "published": "2026-03-25",
+      "arxiv_id": "2603.24626v1",
+      "abs_url": "https://arxiv.org/abs/2603.24626v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.24626v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Wasserstein Parallel Transport for Predicting the Dynamics of Statistical Systems",
+      "authors": [
+        "Tristan Luca Saidi",
+        "Gonzalo Mena",
+        "Larry Wasserman",
+        "Florian Gunsilius"
+      ],
+      "abstract": "Many scientific systems, such as cellular populations or economic cohorts, are naturally described by probability distributions that evolve over time. Predicting how such a system would have evolved under different forces or initial conditions is fundamental to causal inference, domain adaptation, and counterfactual prediction. However, the space of distributions often lacks the vector space structure on which classical methods rely. To address this, we introduce a general notion of parallel dynamics at a distributional level. We base this principle on parallel transport of tangent dynamics along optimal transport geodesics and call it ``Wasserstein Parallel Trends''. By replacing the vector subtraction of classic methods with geodesic parallel transport, we can provide counterfactual comparisons of distributional dynamics in applications such as causal inference, domain adaptation, and batch-effect correction in experimental settings. The main mathematical contribution is a novel notion of fanning scheme on the Wasserstein manifold that allows us to efficiently approximate parallel transport along geodesics while also providing the first theoretical guarantees for parallel transport in the Wasserstein space. We also show that Wasserstein Parallel Trends recovers the classic parallel trends assumption for averages as a special case and derive closed-form parallel transport for Gaussian measures. We deploy the method on synthetic data and two single-cell RNA sequencing datasets to impute gene-expression dynamics across biological systems.",
+      "published": "2026-03-24",
+      "arxiv_id": "2603.23736v1",
+      "abs_url": "https://arxiv.org/abs/2603.23736v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23736v1",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.PR",
+        "math.ST"
+      ]
+    },
     {
       "title": "Domain Elastic Transform: Bayesian Function Registration for High-Dimensional Scientific Data",
       "authors": [
@@ -443,183 +559,6 @@
         "q-bio.GN",
         "cs.AI",
         "cs.CV"
-      ]
-    },
-    {
-      "title": "scPilot: Large Language Model Reasoning Toward Automated Single-Cell Analysis and Discovery",
-      "authors": [
-        "Yiming Gao",
-        "Zhen Wang",
-        "Jefferson Chen",
-        "Mark Antkowiak",
-        "Mengzhou Hu",
-        "JungHo Kong",
-        "Dexter Pratt",
-        "Jieyuan Liu",
-        "Enze Ma",
-        "Zhiting Hu",
-        "Eric P. Xing"
-      ],
-      "abstract": "We present scPilot, the first systematic framework to practice omics-native reasoning: a large language model (LLM) converses in natural language while directly inspecting single-cell RNA-seq data and on-demand bioinformatics tools. scPilot converts core single-cell analyses, i.e., cell-type annotation, developmental-trajectory reconstruction, and transcription-factor targeting, into step-by-step reasoning problems that the model must solve, justify, and, when needed, revise with new evidence.   To measure progress, we release scBench, a suite of 9 expertly curated datasets and graders that faithfully evaluate the omics-native reasoning capability of scPilot w.r.t various LLMs. Experiments with o1 show that iterative omics-native reasoning lifts average accuracy by 11% for cell-type annotation and Gemini-2.5-Pro cuts trajectory graph-edit distance by 30% versus one-shot prompting, while generating transparent reasoning traces explain marker gene ambiguity and regulatory logic. By grounding LLMs in raw omics data, scPilot enables auditable, interpretable, and diagnostically informative single-cell analyses.   Code, data, and package are available at https://github.com/maitrix-org/scPilot",
-      "published": "2026-02-12",
-      "arxiv_id": "2602.11609v1",
-      "abs_url": "https://arxiv.org/abs/2602.11609v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.11609v1",
-      "categories": [
-        "cs.AI",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Representation Learning with Blockwise Missingness and Signal Heterogeneity",
-      "authors": [
-        "Ziqi Liu",
-        "Ye Tian",
-        "Weijing Tang"
-      ],
-      "abstract": "Unified representation learning for multi-source data integration faces two important challenges: blockwise missingness and blockwise signal heterogeneity. The former arises from sources observing different, yet potentially overlapping, feature sets, while the latter involves varying signal strengths across subject groups and feature sets. While existing methods perform well with fully observed data or uniform signal strength, their performance degenerates when these two challenges coincide, which is common in practice. To address this, we propose Anchor Projected Principal Component Analysis (APPCA), a general framework for representation learning with structured blockwise missingness that is robust to signal heterogeneity. APPCA first recovers robust group-specific column spaces using all observed feature sets, and then aligns them by projecting shared \"anchor\" features onto these subspaces before performing PCA. This projection step induces a significant denoising effect. We establish estimation error bounds for embedding reconstruction through a fine-grained perturbation analysis. In particular, using a novel spectral slicing technique, our bound eliminates the standard dependency on the signal strength of subject embeddings, relying instead solely on the signal strength of integrated feature sets. We validate the proposed method through extensive simulation studies and an application to multimodal single-cell sequencing data.",
-      "published": "2026-02-12",
-      "arxiv_id": "2602.11511v1",
-      "abs_url": "https://arxiv.org/abs/2602.11511v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.11511v1",
-      "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "EVA: Towards a universal model of the immune system",
-      "authors": [
-        " Scienta Team",
-        "Ethan Bandasack",
-        "Vincent Bouget",
-        "Apolline Bruley",
-        "Yannis Cattan",
-        "Charlotte Claye",
-        "Matthew Corney",
-        "Julien Duquesne",
-        "Karim El Kanbi",
-        "Aziz Fouch\u00e9",
-        "Pierre Marschall",
-        "Francesco Strozzi"
-      ],
-      "abstract": "The effective application of foundation models to translational research in immune-mediated diseases requires multimodal patient-level representations that can capture complex phenotypes emerging from multicellular interactions. Yet most current biological foundation models focus only on single-cell resolution and are evaluated on technical metrics often disconnected from actual drug development tasks and challenges. Here, we introduce EVA, the first cross-species, multimodal foundation model of immunology and inflammation, a therapeutic area where shared pathogenic mechanisms create unique opportunities for transfer learning. EVA harmonizes transcriptomics data across species, platforms, and resolutions, and integrates histology data to produce rich, unified patient representations. We establish clear scaling laws, demonstrating that increasing model size and compute translates to improvements in both pretraining and downstream tasks performance. We introduce a comprehensive evaluation suite of 39 tasks spanning the drug development pipeline: zero-shot target efficacy and gene function prediction for discovery, cross-species or cross-diseases molecular perturbations for preclinical development, and patient stratification with treatment response prediction or disease activity prediction for clinical trials applications. We benchmark EVA against several state-of-the-art biological foundation models and baselines on these tasks, and demonstrate state-of-the-art results on each task category. Using mechanistic interpretability, we further identify biological meaningful features, revealing intertwined representations across species and technologies. We release an open version of EVA for transcriptomics to accelerate research on immune-mediated diseases.",
-      "published": "2026-02-10",
-      "arxiv_id": "2602.10168v2",
-      "abs_url": "https://arxiv.org/abs/2602.10168v2",
-      "pdf_url": "https://arxiv.org/pdf/2602.10168v2",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Population-scale Ancestral Recombination Graphs with tskit 1.0",
-      "authors": [
-        "Ben Jeffery",
-        "Yan Wong",
-        "Kevin Thornton",
-        "Georgia Tsambos",
-        "Gertjan Bisschop",
-        "Yun Deng",
-        "E. Castedo Ellerman",
-        "Thomas B. Forest",
-        "Halley Fritze",
-        "Daniel Goldstein",
-        "Gregor Gorjanc",
-        "Graham Gower",
-        "Simon Gravel",
-        "Jeremy Guez",
-        "Benjamin C. Haller",
-        "Andrew D. Kern",
-        "Lloyd Kirk",
-        "Ivan Krukov",
-        "Hanbin Lee",
-        "Brieuc Lehmann",
-        "Hossameldin Loay",
-        "Matthew M. Osmond",
-        "Duncan S. Palmer",
-        "Nathaniel S. Pope",
-        "Aaron P. Ragsdale",
-        "Duncan Robertson",
-        "Murillo F. Rodrigues",
-        "Hugo van Kemenade",
-        "Clemens L. Wei\u00df",
-        "Anthony Wilder Wohns",
-        "Shing H. Zhan",
-        "Brian C. Zhang",
-        "Marianne Aspbury",
-        "Nikolas A. Baya",
-        "Saurabh Belsare",
-        "Arjun Biddanda",
-        "Francisco Campuzano Jim\u00e9nez",
-        "Ariella Gladstein",
-        "Bing Guo",
-        "Savita Karthikeyan",
-        "Warren W. Kretzschmar",
-        "In\u00e9s Rebollo",
-        "Kumar Saunack",
-        "Ruhollah Shemirani",
-        "Alexis Simon",
-        "Chris Smith",
-        "Jeet Sukumaran",
-        "Jonathan Terhorst",
-        "Per Unneberg",
-        "Ao Zhang",
-        "Peter Ralph",
-        "Jerome Kelleher"
-      ],
-      "abstract": "Ancestral recombination graphs (ARGs) are an increasingly important component of population and statistical genetics. The tskit library has become key infrastructure for the field, providing an expressive and general representation of ARGs together with a suite of efficient fundamental operations. In this note, we announce tskit version 1.0, describe its underlying rationale, and document its stability guarantees. These guarantees provide a foundation for durable computational artefacts and support long-term reproducibility of code and analyses.",
-      "published": "2026-02-10",
-      "arxiv_id": "2602.09649v2",
-      "abs_url": "https://arxiv.org/abs/2602.09649v2",
-      "pdf_url": "https://arxiv.org/pdf/2602.09649v2",
-      "categories": [
-        "q-bio.PE",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "STRAND: Sequence-Conditioned Transport for Single-Cell Perturbations",
-      "authors": [
-        "Boyang Fu",
-        "George Dasoulas",
-        "Sameer Gabbita",
-        "Xiang Lin",
-        "Shanghua Gao",
-        "Xiaorui Su",
-        "Soumya Ghosh",
-        "Marinka Zitnik"
-      ],
-      "abstract": "Predicting how genetic perturbations change cellular state is a core problem for building controllable models of gene regulation. Perturbations targeting the same gene can produce different transcriptional responses depending on their genomic locus, including different transcription start sites and regulatory elements. Gene-level perturbation models collapse these distinct interventions into the same representation.   We introduce STRAND, a generative model that predicts single-cell transcriptional responses by conditioning on regulatory DNA sequence. STRAND represents a perturbation by encoding the sequence at its genomic locus and uses this representation to parameterize a conditional transport process from control to perturbed cell states. Representing perturbations by sequence, rather than by a fixed set of gene identifiers, supports zero-shot inference at loci not seen during training and expands inference-time genomic coverage from ~1.5% for gene-level single-cell foundation models to ~95% of the genome.   We evaluate STRAND on CRISPR perturbation datasets in K562, Jurkat, and RPE1 cells. STRAND improves discrimination scores by up to 33% in low-sample regimes, achieves the best average rank on unseen gene perturbation benchmarks, and improves transfer to novel cell lines by up to 0.14 in Pearson correlation. Ablations isolate the gains to sequence conditioning and transport, and case studies show that STRAND resolves functionally alternative transcription start sites missed by gene-level models.",
-      "published": "2026-02-10",
-      "arxiv_id": "2602.10156v1",
-      "abs_url": "https://arxiv.org/abs/2602.10156v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.10156v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG",
-        "q-bio.CB"
-      ]
-    },
-    {
-      "title": "scBench: Evaluating AI Agents on Single-Cell RNA-seq Analysis",
-      "authors": [
-        "Kenny Workman",
-        "Zhen Yang",
-        "Harihara Muralidharan",
-        "Aidan Abdulali",
-        "Hannah Le"
-      ],
-      "abstract": "As single-cell RNA sequencing datasets grow in adoption, scale, and complexity, data analysis remains a bottleneck for many research groups. Although frontier AI agents have improved dramatically at software engineering and general data analysis, it remains unclear whether they can extract biological insight from messy, real-world single-cell datasets. We introduce scBench, a benchmark of 394 verifiable problems derived from practical scRNA-seq workflows spanning six sequencing platforms and seven task categories. Each problem provides a snapshot of experimental data immediately prior to an analysis step and a deterministic grader that evaluates recovery of a key biological result. Benchmark data on eight frontier models shows that accuracy ranges from 29-53%, with strong model-task and model-platform interactions. Platform choice affects accuracy as much as model choice, with 40+ percentage point drops on less-documented technologies. scBench complements SpatialBench to cover the two dominant single-cell modalities, serving both as a measurement tool and a diagnostic lens for developing agents that can analyze real scRNA-seq datasets faithfully and reproducibly.",
-      "published": "2026-02-09",
-      "arxiv_id": "2602.09063v1",
-      "abs_url": "https://arxiv.org/abs/2602.09063v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.09063v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.AI"
       ]
     }
   ]
