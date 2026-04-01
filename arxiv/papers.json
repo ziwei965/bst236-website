@@ -1,6 +1,56 @@
 {
-  "last_updated": "2026-03-29 02:12 UTC",
+  "last_updated": "2026-04-01 02:26 UTC",
   "papers": [
+    {
+      "title": "ParetoEnsembles.jl: A Julia Package for Multiobjective Parameter Estimation Using Pareto Optimal Ensemble Techniques",
+      "authors": [
+        "Jeffrey D. Varner"
+      ],
+      "abstract": "Mathematical models of natural and man-made systems often have many adjustable parameters that must be estimated from multiple, potentially conflicting datasets. Rather than reporting a single best-fit parameter vector, it is often more informative to generate an ensemble of parameter sets that collectively map out the trade-offs among competing objectives. This paper presents ParetoEnsembles.jl, an open-source Julia package that generates such ensembles using Pareto Optimal Ensemble Techniques (POETs), a simulated-annealing-based algorithm that requires no gradient information. The implementation corrects the original dominance relation from weak to strict Pareto dominance, reduces the per-iteration ranking cost from $O(n^2 m)$ to $O(nm)$ through an incremental update scheme, and adds multi-chain parallel execution for improved front coverage. We demonstrate the package on a cell-free gene expression model fitted to experimental data and a blood coagulation cascade model with ten estimated rate constants and three objectives. A controlled synthetic-data study reveals parameter identifiability structure, with individual rate constants off by several-fold yet model predictions accurate to 7%. A five-replicate coverage analysis confirms that timing features are reliably covered while peak amplitude is systematically overconfident. Validation against published experimental thrombin generation data demonstrates that the ensemble predicts held-out conditions to within 10% despite inherent model approximation error. By making ensemble generation lightweight and accessible, ParetoEnsembles.jl aims to lower the barrier to routine uncertainty characterization in mechanistic modeling.",
+      "published": "2026-03-31",
+      "arxiv_id": "2603.29986v1",
+      "abs_url": "https://arxiv.org/abs/2603.29986v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.29986v1",
+      "categories": [
+        "q-bio.QM",
+        "cs.MS"
+      ]
+    },
+    {
+      "title": "A Hierarchical Sheaf Spectral Embedding Framework for Single-Cell RNA-seq Analysis",
+      "authors": [
+        "Xiang Xiang Wang",
+        "Guo-Wei We"
+      ],
+      "abstract": "Single-cell RNA-seq data analysis typically requires representations that capture heterogeneous local structure across multiple scales while remaining stable and interpretable. In this work, we propose a hierarchical sheaf spectral embedding (HSSE) framework that constructs informative cell-level features based on persistent sheaf Laplacian analysis. Starting from scale-dependent low-dimensional embeddings, we define cell-centered local neighborhoods at multiple resolutions. For each local neighborhood, we construct a data-driven cellular sheaf that encodes local relationships among cells. We then compute persistent sheaf Laplacians over sampled filtration intervals and extract spectral statistics that summarize the evolution of local relational structure across scales. These spectral descriptors are aggregated into a unified feature vector for each cell and can be directly used in downstream learning tasks without additional model training. We evaluate HSSE on twelve benchmark single-cell RNA-seq datasets covering diverse biological systems and data scales. Under a consistent classification protocol, HSSE achieves competitive or improved performance compared with existing multiscale and classical embedding-based methods across multiple evaluation metrics. The results demonstrate that sheaf spectral representations provide a robust and interpretable approach for single-cell RNA-seq data representation learning.",
+      "published": "2026-03-27",
+      "arxiv_id": "2603.26858v1",
+      "abs_url": "https://arxiv.org/abs/2603.26858v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.26858v1",
+      "categories": [
+        "cs.LG",
+        "math.SP",
+        "q-bio.GN",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Making Multi-Axis Models Robust to Multiplicative Noise: How, and Why?",
+      "authors": [
+        "Bailey Andrew",
+        "David R. Westhead",
+        "Luisa Cutillo"
+      ],
+      "abstract": "In this paper we develop a graph-learning algorithm, MED-MAGMA, to fit multi-axis (Kronecker-sum-structured) models corrupted by multiplicative noise. This type of noise is natural in many application domains, such as that of single-cell RNA sequencing, in which it naturally captures technical biases of RNA sequencing platforms. Our work is evaluated against prior work on each and every public dataset in the Single Cell Expression Atlas under a certain size, demonstrating that our methodology learns networks with better local and global structure. MED-MAGMA is made available as a Python package (MED-MAGMA).",
+      "published": "2026-03-27",
+      "arxiv_id": "2603.26327v1",
+      "abs_url": "https://arxiv.org/abs/2603.26327v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.26327v1",
+      "categories": [
+        "stat.ME",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Modeling the mutational dynamics of very short tandem repeats",
       "authors": [
@@ -41,7 +91,9 @@
       "abs_url": "https://arxiv.org/abs/2603.25240v1",
       "pdf_url": "https://arxiv.org/pdf/2603.25240v1",
       "categories": [
-        "q-bio.QM"
+        "q-bio.QM",
+        "cs.AI",
+        "q-bio.GN"
       ]
     },
     {
@@ -500,65 +552,6 @@
       "pdf_url": "https://arxiv.org/pdf/2602.16497v1",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Bayesian Nonparametrics for Gene-Gene and Gene-Environment Interactions in Case-Control Studies: A Synthesis and Extension",
-      "authors": [
-        "Durba Bhattacharya",
-        "Sourabh Bhattacharya"
-      ],
-      "abstract": "Gene-gene and gene-environment interactions are widely believed to play significant roles in explaining the variability of complex traits. While substantial research exists in this area, a comprehensive statistical framework that addresses multiple sources of uncertainty simultaneously remains lacking. In this article, we synthesize and propose extension of a novel class of Bayesian nonparametric approaches that account for interactions among genes, loci, and environmental factors while accommodating uncertainty about population substructure. Our contribution is threefold: (1) We provide a unified exposition of hierarchical Bayesian models driven by Dirichlet processes for genetic interactions, clarifying their conceptual advantages over traditional regression approaches; (2) We shed light on new computational strategies that combine transformation-based MCMC with parallel processing for scalable inference; and (3) We present enhanced hypothesis testing procedures for identifying disease-predisposing loci.Through applications to myocardial infarction data, we demonstrate how these methods offer biological insights not readily obtainable from standard approaches. Our synthesis highlights the advantages of Bayesian nonparametric thinking in genetic epidemiology while providing practical guidance for implementation.",
-      "published": "2026-02-17",
-      "arxiv_id": "2602.15387v1",
-      "abs_url": "https://arxiv.org/abs/2602.15387v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.15387v1",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Scaling Laws for Masked-Reconstruction Transformers on Single-Cell Transcriptomics",
-      "authors": [
-        "Ihor Kendiukhov"
-      ],
-      "abstract": "Neural scaling laws -- power-law relationships between loss, model size, and data -- have been extensively documented for language and vision transformers, yet their existence in single-cell genomics remains largely unexplored. We present the first systematic study of scaling behaviour for masked-reconstruction transformers trained on single-cell RNA sequencing (scRNA-seq) data. Using expression profiles from the CELLxGENE Census, we construct two experimental regimes: a data-rich regime (512 highly variable genes, 200,000 cells) and a data-limited regime (1,024 genes, 10,000 cells). Across seven model sizes spanning three orders of magnitude in parameter count (533 to 3.4 x 10^8 parameters), we fit the parametric scaling law to validation mean squared error (MSE). The data-rich regime exhibits clear power-law scaling with an irreducible loss floor of c ~ 1.44, while the data-limited regime shows negligible scaling, indicating that model capacity is not the binding constraint when data are scarce. These results establish that scaling laws analogous to those observed in natural language processing do emerge in single-cell transcriptomics when sufficient data are available, and they identify the data-to-parameter ratio as a critical determinant of scaling behaviour. A preliminary conversion of the data-rich asymptotic floor to information-theoretic units yields an estimate of approximately 2.30 bits of entropy per masked gene position. We discuss implications for the design of single-cell foundation models and outline the additional measurements needed to refine this entropy estimate.",
-      "published": "2026-02-16",
-      "arxiv_id": "2602.15253v1",
-      "abs_url": "https://arxiv.org/abs/2602.15253v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.15253v1",
-      "categories": [
-        "cs.LG",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "CellMaster: Collaborative Cell Type Annotation in Single-Cell Analysis",
-      "authors": [
-        "Zhen Wang",
-        "Yiming Gao",
-        "Jieyuan Liu",
-        "Enze Ma",
-        "Jefferson Chen",
-        "Mark Antkowiak",
-        "Mengzhou Hu",
-        "JungHo Kong",
-        "Dexter Pratt",
-        "Zhiting Hu",
-        "Wei Wang",
-        "Trey Ideker",
-        "Eric P. Xing"
-      ],
-      "abstract": "Single-cell RNA-seq (scRNA-seq) enables atlas-scale profiling of complex tissues, revealing rare lineages and transient states. Yet, assigning biologically valid cell identities remains a bottleneck because markers are tissue- and state-dependent, and novel states lack references. We present CellMaster, an AI agent that mimics expert practice for zero-shot cell-type annotation. Unlike existing automated tools, CellMaster leverages LLM-encoded knowledge (e.g., GPT-4o) to perform on-the-fly annotation with interpretable rationales, without pre-training or fixed marker databases. Across 9 datasets spanning 8 tissues, CellMaster improved accuracy by 7.1% over best-performing baselines (including CellTypist and scTab) in automatic mode. With human-in-the-loop refinement, this advantage increased to 18.6%, with a 22.1% gain on subtype populations. The system demonstrates particular strength in rare and novel cell states where baselines often fail. Source code and the web application are available at \\href{https://github.com/AnonymousGym/CellMaster}{https://github.com/AnonymousGym/CellMaster}.",
-      "published": "2026-02-12",
-      "arxiv_id": "2602.13346v1",
-      "abs_url": "https://arxiv.org/abs/2602.13346v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.13346v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.AI",
-        "cs.CV"
       ]
     }
   ]
