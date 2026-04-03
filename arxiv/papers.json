@@ -1,6 +1,62 @@
 {
-  "last_updated": "2026-04-01 02:26 UTC",
+  "last_updated": "2026-04-03 02:08 UTC",
   "papers": [
+    {
+      "title": "QuantumXCT: Learning Interaction-Induced State Transformation in Cell-Cell Communication via Quantum Entanglement and Generative Modeling",
+      "authors": [
+        "Selim Romero",
+        "Shreyan Gupta",
+        "Robert S. Chapkin",
+        "James J. Cai"
+      ],
+      "abstract": "Inferring cell-cell communication (CCC) from single-cell transcriptomics remains fundamentally limited by reliance on curated ligand-receptor databases, which primarily capture co-expression rather than the system-level effects of signaling on cellular states. Here, we introduce QuantumXCT, a hybrid quantum-classical generative framework that reframes CCC as the problem of learning interaction-induced state transformations between cellular state distributions. By encoding transcriptomic profiles into a high-dimensional Hilbert space, QuantumXCT trains parameterized quantum circuits to learn a unitary transformation that maps a baseline non-interacting cellular state to an interacting state. This approach enables the discovery of communication-driven changes in cellular state distributions without requiring prior biological assumptions. We validate QuantumXCT using both synthetic data with known ground-truth interactions and single-cell RNA-seq data from ovarian cancer-fibroblast co-culture systems. The model accurately recovers complex regulatory dependencies, including feedback structures, and identifies dominant communication hubs such as the PDGFB-PDGFRB-STAT3 axis. Importantly, the learned quantum circuit is interpretable: its entangling topology can be translated into biologically meaningful interaction networks, while post hoc contribution analysis quantifies the relative influence of individual interactions on the observed state transitions. By shifting CCC inference from static interaction lookup to learning data-driven state transformations, QuantumXCT provides a generative framework for modeling intercellular communication. This work establishes a new paradigm for de novo discovery of communication programs in complex biological systems and highlights the potential of quantum machine learning in single-cell biology.",
+      "published": "2026-04-02",
+      "arxiv_id": "2604.02203v1",
+      "abs_url": "https://arxiv.org/abs/2604.02203v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02203v1",
+      "categories": [
+        "cs.ET",
+        "physics.bio-ph",
+        "physics.data-an",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "annbatch unlocks terabyte-scale training of biological data in anndata",
+      "authors": [
+        "Ilan Gold",
+        "Felix Fischer",
+        "Lucas Arnoldt",
+        "F. Alexander Wolf",
+        "Fabian J. Theis"
+      ],
+      "abstract": "The scale of biological datasets now routinely exceeds system memory, making data access rather than model computation the primary bottleneck in training machine-learning models. This bottleneck is particularly acute in biology, where widely used community data formats must support heterogeneous metadata, sparse and dense assays, and downstream analysis within established computational ecosystems. Here we present annbatch, a mini-batch loader native to anndata that enables out-of-core training directly on disk-backed datasets. Across single-cell transcriptomics, microscopy and whole-genome sequencing benchmarks, annbatch increases loading throughput by up to an order of magnitude and shortens training from days to hours, while remaining fully compatible with the scverse ecosystem. Annbatch establishes a practical data-loading infrastructure for scalable biological AI, allowing increasingly large and diverse datasets to be used without abandoning standard biological data formats. Github: https://github.com/scverse/annbatch",
+      "published": "2026-04-02",
+      "arxiv_id": "2604.01949v1",
+      "abs_url": "https://arxiv.org/abs/2604.01949v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01949v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "UCell: rethinking generalizability and scaling of bio-medical vision models",
+      "authors": [
+        "Nicholas Kuang",
+        "Vanessa Scalon",
+        "Ji Yu"
+      ],
+      "abstract": "The modern deep learning field is a scale-centric one. Larger models have been shown to consistently perform better than smaller models of similar architecture. In many sub-domains of biomedical research, however, the model scaling is bottlenecked by the amount of available training data, and the high cost associated with generating and validating additional high quality data. Despite the practical hurdle, the majority of the ongoing research still focuses on building bigger foundation models, whereas the alternative of improving the ability of small models has been under-explored. Here we experiment with building models with 10-30M parameters, tiny by modern standards, to perform the single-cell segmentation task. An important design choice is the incorporation of a recursive structure into the model's forward computation graph, leading to a more parameter-efficient architecture. We found that for the single-cell segmentation, on multiple benchmarks, our small model, UCell, matches the performance of models 10-20 times its size, and with a similar generalizability to unseen out-of-domain data. More importantly, we found that ucell can be trained from scratch using only a set of microscopy imaging data, without relying on massive pretraining on natural images, and therefore decouples the model building from any external commercial interests. Finally, we examined and confirmed the adaptability of ucell by performing a wide range of one-shot and few-shot fine tuning experiments on a diverse set of small datasets. Implementation is available at https://github.com/jiyuuchc/ucell",
+      "published": "2026-03-31",
+      "arxiv_id": "2604.00243v1",
+      "abs_url": "https://arxiv.org/abs/2604.00243v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.00243v1",
+      "categories": [
+        "cs.CV",
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "ParetoEnsembles.jl: A Julia Package for Multiobjective Parameter Estimation Using Pareto Optimal Ensemble Techniques",
       "authors": [
@@ -14,6 +70,22 @@
       "categories": [
         "q-bio.QM",
         "cs.MS"
+      ]
+    },
+    {
+      "title": "Genetic algorithms for multi-omic feature selection: a comparative study in cancer survival analysis",
+      "authors": [
+        "Luca Cattelani",
+        "Vittorio Fortino"
+      ],
+      "abstract": "Multi-omic datasets offer opportunities for improved biomarker discovery in cancer research, but their high dimensionality and limited sample sizes make identifying compact and effective biomarker panels challenging. Feature selection in large-scale omics can be efficiently addressed by combining machine learning with genetic algorithms, which naturally support multi-objective optimization of predictive accuracy and biomarker set size. However, genetic algorithms remain relatively underexplored for multi-omic feature selection, where most approaches concatenate all layers into a single feature space. To address this limitation, we introduce Sweeping*, a multi-view, multi-objective algorithm alternating between single- and multi-view optimization. It employs a nested single-view multi-objective optimizer, and for this study we use the genetic algorithm NSGA3-CHS. It first identifies informative biomarkers within each layer, then jointly evaluates cross-layer interactions; these multi-omic solutions guide the next single-view search. Through repeated sweeps, the algorithm progressively identifies compact biomarker panels capturing cross-modal complementary signals. We benchmark five Sweeping* strategies, including hierarchical and concatenation-based variants, using survival prediction on three TCGA cohorts. Each strategy jointly optimizes predictive accuracy and set size, measured via the concordance index and root-leanness. Overall performance and estimation error are assessed through cross hypervolume and Pareto delta under 5-fold cross-validation. Our results show that Sweeping* can improve the accuracy-complexity trade-off when sufficient survival signal is present and that integrating omic layers can enhance survival prediction beyond clinical-only models, although benefits remain cohort-dependent.",
+      "published": "2026-03-31",
+      "arxiv_id": "2604.00065v1",
+      "abs_url": "https://arxiv.org/abs/2604.00065v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.00065v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG"
       ]
     },
     {
@@ -488,70 +560,6 @@
         "q-bio.QM",
         "cs.LG",
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Multi-Dimensional Spectral Geometry of Biological Knowledge in Single-Cell Transformer Representations",
-      "authors": [
-        "Ihor Kendiukhov"
-      ],
-      "abstract": "Single-cell foundation models such as scGPT learn high-dimensional gene representations, but what biological knowledge these representations encode remains unclear. We systematically decode the geometric structure of scGPT internal representations through 63 iterations of automated hypothesis screening (183 hypotheses tested), revealing that the model organizes genes into a structured biological coordinate system rather than an opaque feature space.   The dominant spectral axis separates genes by subcellular localization, with secreted proteins at one pole and cytosolic proteins at the other. Intermediate transformer layers transiently encode mitochondrial and ER compartments in a sequence that mirrors the cellular secretory pathway. Orthogonal axes encode protein-protein interaction networks with graded fidelity to experimentally measured interaction strength (Spearman rho = 1.000 across n = 5 STRING confidence quintiles, p = 0.017).   In a compact six-dimensional spectral subspace, the model distinguishes transcription factors from their target genes (AUROC = 0.744, all 12 layers significant). Early layers preserve which specific genes regulate which targets, while deeper layers compress this into a coarser regulator versus regulated distinction. Repression edges are geometrically more prominent than activation edges, and B-cell master regulators BATF and BACH2 show convergence toward the B-cell identity anchor PAX5 across transformer depth. Cell-type marker genes cluster with high fidelity (AUROC = 0.851). Residual-stream geometry encodes biological structure complementary to attention patterns. These results indicate that biological transformers learn an interpretable internal model of cellular organization, with implications for regulatory network inference, drug target prioritization, and model auditing.",
-      "published": "2026-02-24",
-      "arxiv_id": "2602.22247v1",
-      "abs_url": "https://arxiv.org/abs/2602.22247v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.22247v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Systematic Evaluation of Single-Cell Foundation Model Interpretability Reveals Attention Captures Co-Expression Rather Than Unique Regulatory Signal",
-      "authors": [
-        "Ihor Kendiukhov"
-      ],
-      "abstract": "We present a systematic evaluation framework - thirty-seven analyses, 153 statistical tests, four cell types, two perturbation modalities - for assessing mechanistic interpretability in single-cell foundation models. Applying this framework to scGPT and Geneformer, we find that attention patterns encode structured biological information with layer-specific organisation - protein-protein interactions in early layers, transcriptional regulation in late layers - but this structure provides no incremental value for perturbation prediction: trivial gene-level baselines outperform both attention and correlation edges (AUROC 0.81-0.88 versus 0.70), pairwise edge scores add zero predictive contribution, and causal ablation of regulatory heads produces no degradation. These findings generalise from K562 to RPE1 cells; the attention-correlation relationship is context-dependent, but gene-level dominance is universal. Cell-State Stratified Interpretability (CSSI) addresses an attention-specific scaling failure, improving GRN recovery up to 1.85x. The framework establishes reusable quality-control standards for the field.",
-      "published": "2026-02-19",
-      "arxiv_id": "2602.17532v1",
-      "abs_url": "https://arxiv.org/abs/2602.17532v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.17532v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
-      "authors": [
-        "Huan Souza",
-        "Pankaj Mehta"
-      ],
-      "abstract": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
-      "published": "2026-02-18",
-      "arxiv_id": "2602.16696v1",
-      "abs_url": "https://arxiv.org/abs/2602.16696v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.16696v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Factor-Adjusted Multiple Testing for High-Dimensional Individual Mediation Effects",
-      "authors": [
-        "Chen Shi",
-        "Zhao Chen",
-        "Christina Dan Wang"
-      ],
-      "abstract": "Identifying individual mediators is a central goal of high-dimensional mediation analysis, yet pervasive dependence among mediators can invalidate standard debiased inference and lead to substantial false discovery rate (FDR) inflation. We propose a Factor-Adjusted Debiased Mediation Testing (FADMT) framework that enables large-scale inference for individual mediation effects with FDR control under complex dependence structures. Our approach posits an approximate factor structure on the unobserved errors of the mediator model, extracts common latent factors, and constructs decorrelated pseudo-mediators for the subsequent inferential procedure. We establish the asymptotic normality of the debiased estimator and develop a multiple testing procedure with theoretical FDR control under mild high-dimensional conditions. By adjusting for latent factor induced dependence, FADMT also improves robustness to spurious associations driven by shared latent variation in observational studies. Extensive simulations demonstrate the superior finite-sample performance across a wide range of correlation structures. Applications to TCGA-BRCA multi-omics data and to China's stock connect study further illustrate the practical utility of the proposed method.",
-      "published": "2026-02-18",
-      "arxiv_id": "2602.16497v1",
-      "abs_url": "https://arxiv.org/abs/2602.16497v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.16497v1",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
