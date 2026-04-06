@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-04-05 02:21 UTC",
+  "last_updated": "2026-04-06 02:23 UTC",
   "papers": [
+    {
+      "title": "Re-analysis of the Human Transcription Factor Atlas Recovers TF-Specific Signatures from Pooled Single-Cell Screens with Missing Controls",
+      "authors": [
+        "Arka Jain",
+        "Umesh Sharma"
+      ],
+      "abstract": "Public pooled single-cell perturbation atlases are valuable resources for studying transcription factor (TF) function, but downstream re-analysis can be limited by incomplete deposited metadata and missing internal controls. Here we re-analyze the human TF Atlas dataset (GSE216481), a MORF-based pooled overexpression screen spanning 3,550 TF open reading frames and 254,519 cells, with a reproducible pipeline for quality control, MORF barcode demultiplexing, per-TF differential expression, and functional enrichment. From 77,018 cells in the pooled screen, we assign 60,997 (79.2\\%) to 87 TF identities. Because the deposited barcode mapping lacks the GFP and mCherry negative controls present in the original library, we use embryoid body (EB) cells as an external baseline and remove shared batch/transduction artifacts by background subtraction. This strategy recovers TF-specific signatures for 59 of 61 testable TFs, compared with 27 detected by one-vs-rest alone, showing that robust TF-level signal can be rescued despite missing intra-pool controls. HOPX, MAZ, PAX6, FOS, and FEZF2 emerge as the strongest transcriptional remodelers, while per-TF enrichment links FEZF2 to regulation of differentiation, EGR1 to Hippo and cardiac programs, FOS to focal adhesion, and NFIC to collagen biosynthesis. Condition-level analyses reveal convergent Wnt, neurogenic, EMT, and Hippo signatures, and Harmony indicates minimal confounding batch effects across pooled replicates. Our per-TF effect sizes significantly agree with Joung et al.'s published rankings (Spearman $\u03c1= -0.316$, $p = 0.013$; negative because lower rank indicates stronger effect). Together, these results show that the deposited TF Atlas data can support validated TF-specific transcriptional and pathway analyses when paired with principled external controls, artifact removal, and reproducible computation.",
+      "published": "2026-04-02",
+      "arxiv_id": "2604.02511v1",
+      "abs_url": "https://arxiv.org/abs/2604.02511v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02511v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN",
+        "q-bio.MN"
+      ]
+    },
     {
       "title": "QuantumXCT: Learning Interaction-Induced State Transformation in Cell-Cell Communication via Quantum Entanglement and Generative Modeling",
       "authors": [
@@ -32,12 +49,30 @@
       ],
       "abstract": "The scale of biological datasets now routinely exceeds system memory, making data access rather than model computation the primary bottleneck in training machine-learning models. This bottleneck is particularly acute in biology, where widely used community data formats must support heterogeneous metadata, sparse and dense assays, and downstream analysis within established computational ecosystems. Here we present annbatch, a mini-batch loader native to anndata that enables out-of-core training directly on disk-backed datasets. Across single-cell transcriptomics, microscopy and whole-genome sequencing benchmarks, annbatch increases loading throughput by up to an order of magnitude and shortens training from days to hours, while remaining fully compatible with the scverse ecosystem. Annbatch establishes a practical data-loading infrastructure for scalable biological AI, allowing increasingly large and diverse datasets to be used without abandoning standard biological data formats. Github: https://github.com/scverse/annbatch",
       "published": "2026-04-02",
-      "arxiv_id": "2604.01949v1",
-      "abs_url": "https://arxiv.org/abs/2604.01949v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01949v1",
+      "arxiv_id": "2604.01949v2",
+      "abs_url": "https://arxiv.org/abs/2604.01949v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.01949v2",
       "categories": [
         "cs.LG",
         "q-bio.GN"
+      ]
+    },
+    {
+      "title": "VeloTree: Inferring single-cell trajectories from RNA velocity fields with varifold distances",
+      "authors": [
+        "Elodie Maignant",
+        "Tim Conrad",
+        "Christoph von Tycowicz"
+      ],
+      "abstract": "Trajectory inference is a critical problem in single-cell transcriptomics, which aims to reconstruct the dynamic process underlying a population of cells from sequencing data. Of particular interest is the reconstruction of differentiation trees. One way of doing this is by estimating the path distance between nodes -- labeled by cells -- based on cell similarities observed in the sequencing data. Recent sequencing techniques make it possible to measure two types of data: gene expression levels, and RNA velocity, a vector that quantifies variation in gene expression. The sequencing data then consist in a discrete vector field in dimension the number of genes of interest. In this article, we present a novel method for inferring differentiation trees from RNA velocity fields using a distance-based approach. In particular, we introduce a cell dissimilarity measure defined as the squared varifold distance between the integral curves of the RNA velocity field, which we show is a robust estimate of the path distance on the target differentiation tree. Upstream of the dissimilarity measure calculation, we also implement comprehensive routines for the preprocessing and integration of the RNA velocity field. Finally, we illustrate the ability of our method to recover differentiation trees with high accuracy on several simulated and real datasets, and compare these results with the state of the art.",
+      "published": "2026-04-01",
+      "arxiv_id": "2604.02380v1",
+      "abs_url": "https://arxiv.org/abs/2604.02380v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02380v1",
+      "categories": [
+        "q-bio.GN",
+        "math.MG",
+        "stat.ME"
       ]
     },
     {
@@ -526,39 +561,6 @@
       "abs_url": "https://arxiv.org/abs/2603.00212v1",
       "pdf_url": "https://arxiv.org/pdf/2603.00212v1",
       "categories": [
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "permApprox: a general framework for accurate permutation p-value approximation",
-      "authors": [
-        "Stefanie Peschel",
-        "Anne-Laure Boulesteix",
-        "Erika von Mutius",
-        "Christian L. M\u00fcller"
-      ],
-      "abstract": "Permutation procedures are common practice in hypothesis testing when distributional assumptions about the test statistic are not met or unknown. With only few permutations, empirical p-values lie on a coarse grid and may even be zero when the observed test statistic exceeds all permuted values. Such zero p-values are statistically invalid and hinder multiple testing correction. Parametric tail modeling with the Generalized Pareto Distribution (GPD) has been proposed to address this issue, but existing implementations can again yield zero p-values when the estimated shape parameter is negative and the fitted distribution has a finite upper bound.   We introduce a method for accurate and zero-free p-value approximation in permutation testing, embedded in the permApprox workflow and R package. Building on GPD tail modeling, the method enforces a support constraint during parameter estimation to ensure valid extrapolation beyond the observed statistic, thereby strictly avoiding zero p-values. The workflow further integrates robust parameter estimation, data-driven threshold selection, and principled handling of hybrid p-values that are discrete in the bulk and continuous in the extreme tail.   Extensive simulations using two-sample t-tests and Wilcoxon rank-sum tests show that permApprox produces accurate, robust, and zero-free p-value approximations across a wide range of sample and effect sizes. Applications to single-cell RNA-seq and microbiome data demonstrate its practical utility: permApprox yields smooth and interpretable p-value distributions even with few permutations. By resolving the zero-p-value problem while preserving accuracy and computational efficiency, permApprox enables reliable permutation-based inference in high-dimensional and computationally intensive settings.",
-      "published": "2026-02-26",
-      "arxiv_id": "2602.22975v1",
-      "abs_url": "https://arxiv.org/abs/2602.22975v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.22975v1",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "What Topological and Geometric Structure Do Biological Foundation Models Learn? Evidence from 141 Hypotheses",
-      "authors": [
-        "Ihor Kendiukhov"
-      ],
-      "abstract": "When biological foundation models such as scGPT and Geneformer process single-cell gene expression, what geometric and topological structure forms in their internal representations? Is that structure biologically meaningful or a training artifact, and how confident should we be in such claims? We address these questions through autonomous large-scale hypothesis screening: an AI-driven executor-brainstormer loop that proposed, tested, and refined 141 geometric and topological hypotheses across 52 iterations, covering persistent homology, manifold distances, cross-model alignment, community structure, and directed topology, all with explicit null controls and disjoint gene-pool splits.   Three principal findings emerge. First, the models learn genuine geometric structure. Gene embedding neighborhoods exhibit non-trivial topology, with persistent homology significant in 11 of 12 transformer layers at p < 0.05 in the weakest domain and 12 of 12 in the other two. A multi-level distance hierarchy shows that manifold-aware metrics outperform Euclidean distance for identifying regulatory gene pairs, and graph community partitions track known transcription factor target relationships. Second, this structure is shared across independently trained models. CCA alignment between scGPT and Geneformer yields canonical correlation of 0.80 and gene retrieval accuracy of 72 percent, yet none of 19 tested methods reliably recover gene-level correspondences. The models agree on the global shape of gene space but not on precise gene placement. Third, the structure is more localized than it first appears. Under stringent null controls applied across all null families, robust signal concentrates in immune tissue, while lung and external lung signals weaken substantially.",
-      "published": "2026-02-25",
-      "arxiv_id": "2602.22289v2",
-      "abs_url": "https://arxiv.org/abs/2602.22289v2",
-      "pdf_url": "https://arxiv.org/pdf/2602.22289v2",
-      "categories": [
-        "q-bio.QM",
-        "cs.LG",
         "q-bio.GN"
       ]
     }
