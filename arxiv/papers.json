@@ -1,6 +1,40 @@
 {
-  "last_updated": "2026-04-06 02:23 UTC",
+  "last_updated": "2026-04-07 02:10 UTC",
   "papers": [
+    {
+      "title": "iLBA: An R package for confidentially disseminating aggregated frequency tables",
+      "authors": [
+        "Jeehyun Hwang",
+        "Dongsun Yoon",
+        "Sungkyu Jung",
+        "Min-Jeong Park",
+        "Inkwon Yeo"
+      ],
+      "abstract": "Statistical agencies frequently release frequency tables derived from microdata, but small frequency cells may lead to disclosure risks. We present \\texttt{iLBA}, an open-source \\textsf{R} package for confidential dissemination of aggregated frequency tables. The package implements the Information-Loss-Bounded Aggregation (iLBA) algorithm, which combines Small Cell Adjustment (SCA) at the finest level table with an aggregation procedure that introduces controlled ambiguity while bounding information loss. The software enables users to construct masked finest level tables, generate confidential aggregated tables for selected variables, and obtain masked frequencies for single-cell queries. By providing an accessible implementation of the iLBA method, the package facilitates reproducible and efficient disclosure control for tabular data derived from microdata.",
+      "published": "2026-04-06",
+      "arxiv_id": "2604.04431v1",
+      "abs_url": "https://arxiv.org/abs/2604.04431v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04431v1",
+      "categories": [
+        "stat.CO"
+      ]
+    },
+    {
+      "title": "Inference for Clustering: Conformal Sets for Cluster Labels",
+      "authors": [
+        "Anirban Nath",
+        "YoonHaeng Hur",
+        "Genevera Allen"
+      ],
+      "abstract": "While clustering is ubiquitously used across science and industry, uncertainty in cluster assignments is rarely quantified with rigorous guarantees. We propose a novel conformal inference framework for clustering that returns confidence sets for cluster labels. The key challenge is that labels are unobserved and estimated from data, so naively using deterministic cluster labels can violate exchangeability and induce severe under-coverage. To address this, we propose split conformal clustering with stochastic labels, which samples labels from soft cluster labels, fits a soft classifier to predict these stochastic labels, and calibrates conformal scores to construct confidence sets for cluster labels at any query point. We establish a finite-sample lower bound on marginal coverage that reveals how under-coverage is controlled by two properties of the clustering algorithm: consistency of estimated soft labels and replace-one stability. Under mild conditions, we prove asymptotic coverage and verify these conditions for correctly specified parametric mixture models. Simulations for mixture models show that our method attains target coverage with informative set sizes, validating our theoretical results. Applications to clustering cell types in single-cell RNA-seq data demonstrate the practical utility and interpretability of our approach to quantifying cluster label uncertainty.",
+      "published": "2026-04-03",
+      "arxiv_id": "2604.03488v1",
+      "abs_url": "https://arxiv.org/abs/2604.03488v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03488v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Re-analysis of the Human Transcription Factor Atlas Recovers TF-Specific Signatures from Pooled Single-Cell Screens with Missing Controls",
       "authors": [
@@ -519,48 +553,6 @@
       "categories": [
         "cs.LG",
         "q-bio.CB",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "HarmonyCell: Automating Single-Cell Perturbation Modeling under Semantic and Distribution Shifts",
-      "authors": [
-        "Wenxuan Huang",
-        "Mingyu Tsoi",
-        "Yanhao Huang",
-        "Xinjie Mao",
-        "Xue Xia",
-        "Hao Wu",
-        "Jiaqi Wei",
-        "Yuejin Yang",
-        "Lang Yu",
-        "Cheng Tan",
-        "Xiang Zhang",
-        "Zhangyang Gao",
-        "Siqi Sun"
-      ],
-      "abstract": "Single-cell perturbation studies face dual heterogeneity bottlenecks: (i) semantic heterogeneity--identical biological concepts encoded under incompatible metadata schemas across datasets; and (ii) statistical heterogeneity--distribution shifts from biological variation demanding dataset-specific inductive biases. We propose HarmonyCell, an end-to-end agent framework resolving each challenge through a dedicated mechanism: an LLM-driven Semantic Unifier autonomously maps disparate metadata into a canonical interface without manual intervention; and an adaptive Monte Carlo Tree Search engine operates over a hierarchical action space to synthesize architectures with optimal statistical inductive biases for distribution shifts. Evaluated across diverse perturbation tasks under both semantic and distribution shifts, HarmonyCell achieves a 95% valid execution rate on heterogeneous input datasets (versus 0% for general agents) while matching or even exceeding expert-designed baselines in rigorous out-of-distribution evaluations. This dual-track orchestration enables scalable automatic virtual cell modeling without dataset-specific engineering.",
-      "published": "2026-03-02",
-      "arxiv_id": "2603.01396v2",
-      "abs_url": "https://arxiv.org/abs/2603.01396v2",
-      "pdf_url": "https://arxiv.org/pdf/2603.01396v2",
-      "categories": [
-        "cs.AI",
-        "cs.CE",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Graph-Based Multi-Omics Integration Improves Subtype Recovery and Survival Prediction Over Classical Integration Strategies in TCGA-BRCA",
-      "authors": [
-        "Taha Ahmad"
-      ],
-      "abstract": "Background. Breast cancer comprises at least five molecular subtypes with distinct prognoses, yet PAM50 classification relies on transcriptomics alone. Whether integrating DNA methylation and copy number data improves subtype recovery and survival prediction over single-omic baselines remains an open question.   Methods. We applied Similarity Network Fusion (SNF) to n = 644 TCGA-BRCA patients with matched RNA-seq, 450k DNA methylation, and GISTIC2 copy number profiles. Per-modality patient similarity networks were iteratively fused (K = 20, T = 20, u = 0.5) and partitioned by spectral clustering; k = 2 was pre-specified on eigengap and silhouette criteria. SNF was benchmarked against RNA-only, CNV-only, methylation-only, and early concatenation baselines using PAM50 NMI for subtype recovery and out-of-fold concordance index (OOF C-index) from a Ridge Cox model with N = 1,000 bootstrap CIs for pairwise comparisons.   Results. SNF produced a stable two-cluster partition (stability ARI = 1.00, silhouette = 0.228), with NMI = 0.495 versus PAM50, exceeding RNA-only (0.428) and early concatenation (0.175). IHC receptor data confirmed cluster biology independently (ER+: 92.8% vs 15.6%; triple-negative: 1.0% vs 45.4%; both p < 10^-100). SNF achieved an OOF C-index of 0.681 (95% CI 0.610-0.760), significantly outperforming CNV-only (Delta = +0.122, CI 0.020-0.211); the advantage over RNA-only (Delta = +0.049, CI -0.036-0.144) did not exclude zero.   Conclusion. Graph-based multi-omics fusion recovers breast cancer subtype biology more faithfully than feature concatenation and outperforms the weakest unimodal baselines in survival prediction. The improvement over RNA-seq alone is positive in direction but not yet statistically conclusive at this cohort size, pointing to the trade-off between integration complexity and the sample sizes needed to quantify its marginal benefit.",
-      "published": "2026-02-27",
-      "arxiv_id": "2603.00212v1",
-      "abs_url": "https://arxiv.org/abs/2603.00212v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.00212v1",
-      "categories": [
         "q-bio.GN"
       ]
     }
