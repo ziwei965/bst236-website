@@ -1,6 +1,78 @@
 {
-  "last_updated": "2026-04-07 02:10 UTC",
+  "last_updated": "2026-04-10 02:24 UTC",
   "papers": [
+    {
+      "title": "A Quasi-Regression Method for the Mediation Analysis of Zero-Inflated Single-Cell Data",
+      "authors": [
+        "Seungjun Ahn",
+        "Donald Porchia",
+        "Panos Roussos",
+        "Maaike van Gerwen",
+        "Qing Lu",
+        "Zhigang Li"
+      ],
+      "abstract": "Recent advances in single-cell technologies have advanced our understanding of gene regulation and cellular heterogeneity at single-cell resolution. Single-cell data contain both gene expression levels and the proportion of expressing cells, which makes them structurally different from bulk data. Currently, methodological work on causal mediation analysis for single-cell data remains limited and often requires specific distributional assumptions. To address this challenge, we present QuasiMed, a mediation framework specialized for single-cell data. Our proposed method comprises three steps, including (i) screening mediator candidates through penalized regression and marginal models (similar to sure independence screening), (ii) estimation of indirect effects through the average expression and the proportion of expressing cells, (iii) and hypothesis testing with multiplicity control. The key benefit of QuasiMed is that it specifies only the mean functions of the mediation models through a quasi-regression framework, thereby relaxing strict distributional assumptions. The method performance was evaluated through the real-data-inspired simulations, and demonstrated high power, false discovery rate control, and computational efficiency. Lastly, we applied QuasiMed to ROSMAP single-cell data to illustrate its potential to identify mediating causal pathways. R package is freely available on GitHub repository at https://github.com/sjahnn/QuasiMed.",
+      "published": "2026-04-09",
+      "arxiv_id": "2604.08507v1",
+      "abs_url": "https://arxiv.org/abs/2604.08507v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08507v1",
+      "categories": [
+        "stat.ME",
+        "q-bio.QM",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Transcriptomic Models for Immunotherapy Response Prediction Show Limited Cross-cohort Generalisability",
+      "authors": [
+        "Yuheng Liang",
+        "Lucy Chuo",
+        "Ahmadreza Argha",
+        "Nona Farbehi",
+        "Lu Chen",
+        "Roohallah Alizadehsani",
+        "Mehdi Hosseinzadeh",
+        "Amin Beheshti",
+        "Thantrira Porntaveetusm",
+        "Youqiong Ye",
+        "Hamid Alinejad-Rokny"
+      ],
+      "abstract": "Immune checkpoint inhibitors (ICIs) have transformed cancer therapy; yet substantial proportion of patients exhibit intrinsic or acquired resistance, making accurate pre-treatment response prediction a critical unmet need. Transcriptomics-based biomarkers derived from bulk and single-cell RNA sequencing (scRNA-seq) offer a promising avenue for capturing tumour-immune interactions, yet the cross-cohort generalisability of existing prediction models remains unclear.We systematically benchmark nine state-of-the-art transcriptomic ICI response predictors, five bulk RNA-seq-based models (COMPASS, IRNet, NetBio, IKCScore, and TNBC-ICI) and four scRNA-seq-based models (PRECISE, DeepGeneX, Tres and scCURE), using publicly available independent datasets unseen during model development. Overall, predictive performance was modest: bulk RNA-seq models performed at or near chance level across most cohorts, while scRNA-seq models showed only marginal improvements. Pathway-level analyses revealed sparse and inconsistent biomarker signals across models. Although scRNA-seq-based predictors converged on immune-related programs such as allograft rejection, bulk RNA-seq-based models exhibited little reproducible overlap. PRECISE and NetBio identified the most coherent immune-related themes, whereas IRNet predominantly captured metabolic pathways weakly aligned with ICI biology. Together, these findings demonstrate the limited cross-cohort robustness and biological consistency of current transcriptomic ICI prediction models, underscoring the need for improved domain adaptation, standardised preprocessing, and biologically grounded model design.",
+      "published": "2026-04-07",
+      "arxiv_id": "2604.05478v1",
+      "abs_url": "https://arxiv.org/abs/2604.05478v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.05478v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MAT-Cell: A Multi-Agent Tree-Structured Reasoning Framework for Batch-Level Single-Cell Annotation",
+      "authors": [
+        "Yehui Yang",
+        "Zelin Zang",
+        "Changxi Chi",
+        "Jingbo Zhou",
+        "Xienan Zheng",
+        "Yuzhe Jia",
+        "Chang Yu",
+        "Jinlin Wu",
+        "Fuji Yang",
+        "Jiebo Luo",
+        "Zhen Lei",
+        "Stan Z. Li"
+      ],
+      "abstract": "Automated cellular reasoning faces a core dichotomy: supervised methods fall into the Reference Trap and fail to generalize to out-of-distribution cell states, while large language models (LLMs), without grounded biological priors, suffer from a Signal-to-Noise Paradox that produces spurious associations. We propose MAT-Cell, a neuro-symbolic reasoning framework that reframes single-cell analysis from black-box classification into constructive, verifiable proof generation. MAT-Cell injects symbolic constraints through adaptive Retrieval-Augmented Generation (RAG) to ground neural reasoning in biological axioms and reduce transcriptomic noise. It further employs a dialectic verification process with homogeneous rebuttal agents to audit and prune reasoning paths, forming syllogistic derivation trees that enforce logical consistency.Across large-scale and cross-species benchmarks, MAT-Cell significantly outperforms state-of-the-art (SOTA) models and maintains robust per-formance in challenging scenarios where baselinemethods severely degrade. Code is available at https://gith ub.com/jiangliu91/MAT-Cell-A-Mul ti-Agent-Tree-Structured-Reasoni ng-Framework-for-Batch-Level-Sin gle-Cell-Annotation.",
+      "published": "2026-04-07",
+      "arxiv_id": "2604.06269v1",
+      "abs_url": "https://arxiv.org/abs/2604.06269v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.06269v1",
+      "categories": [
+        "q-bio.QM",
+        "cs.AI"
+      ]
+    },
     {
       "title": "iLBA: An R package for confidentially disseminating aggregated frequency tables",
       "authors": [
@@ -60,11 +132,11 @@
         "Robert S. Chapkin",
         "James J. Cai"
       ],
-      "abstract": "Inferring cell-cell communication (CCC) from single-cell transcriptomics remains fundamentally limited by reliance on curated ligand-receptor databases, which primarily capture co-expression rather than the system-level effects of signaling on cellular states. Here, we introduce QuantumXCT, a hybrid quantum-classical generative framework that reframes CCC as the problem of learning interaction-induced state transformations between cellular state distributions. By encoding transcriptomic profiles into a high-dimensional Hilbert space, QuantumXCT trains parameterized quantum circuits to learn a unitary transformation that maps a baseline non-interacting cellular state to an interacting state. This approach enables the discovery of communication-driven changes in cellular state distributions without requiring prior biological assumptions. We validate QuantumXCT using both synthetic data with known ground-truth interactions and single-cell RNA-seq data from ovarian cancer-fibroblast co-culture systems. The model accurately recovers complex regulatory dependencies, including feedback structures, and identifies dominant communication hubs such as the PDGFB-PDGFRB-STAT3 axis. Importantly, the learned quantum circuit is interpretable: its entangling topology can be translated into biologically meaningful interaction networks, while post hoc contribution analysis quantifies the relative influence of individual interactions on the observed state transitions. By shifting CCC inference from static interaction lookup to learning data-driven state transformations, QuantumXCT provides a generative framework for modeling intercellular communication. This work establishes a new paradigm for de novo discovery of communication programs in complex biological systems and highlights the potential of quantum machine learning in single-cell biology.",
+      "abstract": "Inferring cell-cell communication (CCC) from single-cell transcriptomics remains fundamentally limited by reliance on curated ligand-receptor databases, which primarily capture co-expression rather than the system-level effects of signaling on cellular states. Here, we introduce QuantumXCT, a hybrid quantum-classical generative framework that reframes CCC as a problem of learning interaction-induced state transformations between cellular state distributions. By encoding transcriptomic profiles into a high-dimensional Hilbert space, QuantumXCT trains parameterized quantum circuits to learn a unitary transformation that maps a baseline non-interacting cellular state to an interacting state. This approach enables the discovery of communication-driven changes in cellular state distributions without requiring prior biological assumptions. We validate QuantumXCT using both synthetic data with known ground-truth interactions and single-cell RNA-seq data from ovarian cancer-fibroblast co-culture model. The QuantumXCT model accurately recovered complex regulatory dependencies, including feedback structures, and identified dominant communication hubs such as the PDGFB-PDGFRB-STAT3 axis. Importantly, the learned quantum circuit is interpretable: its entangling topology was translated into biologically meaningful interaction networks, while post hoc contribution analysis quantified the relative influence of individual interactions on the observed state transitions. Notably, by shifting CCC inference from static interaction lookup to learning data-driven state transformations, QuantumXCT provides a generative framework for modeling intercellular communication. This work establishes a new paradigm for de novo discovery of communication programs in complex biological systems and highlights the potential of quantum machine learning in the context of single-cell biology.",
       "published": "2026-04-02",
-      "arxiv_id": "2604.02203v1",
-      "abs_url": "https://arxiv.org/abs/2604.02203v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02203v1",
+      "arxiv_id": "2604.02203v2",
+      "abs_url": "https://arxiv.org/abs/2604.02203v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.02203v2",
       "categories": [
         "cs.ET",
         "physics.bio-ph",
@@ -496,64 +568,6 @@
       "categories": [
         "q-bio.GN",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT",
-      "authors": [
-        "Ihor Kendiukhov"
-      ],
-      "abstract": "Background: Single-cell foundation models such as Geneformer and scGPT encode rich biological information, but whether this includes causal regulatory logic rather than statistical co-expression remains unclear. Sparse autoencoders (SAEs) can resolve superposition in neural networks by decomposing dense activations into interpretable features, yet they have not been systematically applied to biological foundation models.   Results: We trained TopK SAEs on residual stream activations from all layers of Geneformer V2-316M (18 layers, d=1152) and scGPT whole-human (12 layers, d=512), producing atlases of 82525 and 24527 features, respectively. Both atlases confirm massive superposition, with 99.8 percent of features invisible to SVD. Systematic characterization reveals rich biological organization: 29 to 59 percent of features annotate to Gene Ontology, KEGG, Reactome, STRING, or TRRUST, with U-shaped layer profiles reflecting hierarchical abstraction. Features organize into co-activation modules (141 in Geneformer, 76 in scGPT), exhibit causal specificity (median 2.36x), and form cross-layer information highways (63 to 99.8 percent). When tested against genome-scale CRISPRi perturbation data, only 3 of 48 transcription factors (6.2 percent) show regulatory-target-specific feature responses. A multi-tissue control yields marginal improvement (10.4 percent, 5 of 48 TFs), establishing model representations as the bottleneck.   Conclusions: These models have internalized organized biological knowledge, including pathway membership, protein interactions, functional modules, and hierarchical abstraction, yet they encode minimal causal regulatory logic. We release both feature atlases as interactive web platforms enabling exploration of more than 107000 features across 30 layers of two leading single-cell foundation models.",
-      "published": "2026-03-03",
-      "arxiv_id": "2603.02952v1",
-      "abs_url": "https://arxiv.org/abs/2603.02952v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.02952v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG",
-        "q-bio.CB"
-      ]
-    },
-    {
-      "title": "GPU-accelerated single-cell analysis at scale with rapids-singlecell",
-      "authors": [
-        "Severin Dicks",
-        "Lukas Heumos",
-        "Lilly May",
-        "Sara Jimenez",
-        "Philipp Angerer",
-        "Ilan Gold",
-        "Isaac Virshup",
-        "Felix Fischer",
-        "Michelle Gill",
-        "Melanie Boerries",
-        "Corey J Nolet",
-        "Tiffany J. Chen",
-        "Fabian J. Theis"
-      ],
-      "abstract": "Single-cell sequencing technologies reveal cellular heterogeneity at high resolution, advancing our understanding of biological complexity. As datasets start to scale to tens of millions of cells, computational workflows face substantial bottlenecks, with CPU-based analytical pipelines requiring hours or days for routine processing steps like filtering, normalization, and clustering. These scalability limitations fundamentally restrict common interactive data exploration and iterative hypothesis testing. Here we introduce rapids-singlecell, a GPU-accelerated framework that integrates natively with the scverse ecosystem and operates directly on the AnnData data structure, which delivers orders-of-magnitude speedups for single-cell workflows. Built on CuPy arrays and the NVIDIA CUDA-X Data Science (RAPIDS) ecosystem, rapids-singlecell provides near drop-in GPU replacements for core scanpy-based analysis steps. Across standard single-cell workflows such as preprocessing, dimensionality reduction, neighborhood graph construction, clustering, and batch correction, rapids-singlecell achieves speedups of up to several hundred-fold compared to optimized CPU baselines. This reduces analysis time from hours to minutes on standard hardware, while maintaining consistent biological interpretations. These performance improvements make it possible to analyze large data sets in close to real time, without the need for data splitting. Together with real-time parameter tuning and iterative workflows, rapids-singlecell makes interactive large-scale single-cell analysis possible.",
-      "published": "2026-03-02",
-      "arxiv_id": "2603.02402v1",
-      "abs_url": "https://arxiv.org/abs/2603.02402v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.02402v1",
-      "categories": [
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence",
-      "authors": [
-        "Ihor Kendiukhov"
-      ],
-      "abstract": "Motivation: Sparse autoencoders (SAEs) decompose foundation model activations into interpretable features, but causal feature-to-feature interactions across network depth remain unknown for biological foundation models.   Results: We introduce causal circuit tracing by ablating SAE features and measuring downstream responses, and apply it to Geneformer V2-316M and scGPT whole-human across four conditions (96,892 edges, 80,191 forward passes). Both models show approximately 53 percent biological coherence and 65 to 89 percent inhibitory dominance, invariant to architecture and cell type. scGPT produces stronger effects (mean absolute d = 1.40 vs. 1.05) with more balanced dynamics. Cross-model consensus yields 1,142 conserved domain pairs (10.6x enrichment, p < 0.001). Disease-associated domains are 3.59x more likely to be consensus. Gene-level CRISPRi validation shows 56.4 percent directional accuracy, confirming co-expression rather than causal encoding.",
-      "published": "2026-03-02",
-      "arxiv_id": "2603.01752v2",
-      "abs_url": "https://arxiv.org/abs/2603.01752v2",
-      "pdf_url": "https://arxiv.org/pdf/2603.01752v2",
-      "categories": [
-        "cs.LG",
-        "q-bio.CB",
-        "q-bio.GN"
       ]
     }
   ]
