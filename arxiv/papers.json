@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-04-12 02:26 UTC",
+  "last_updated": "2026-04-13 02:31 UTC",
   "papers": [
+    {
+      "title": "ZINBGT: Exploratory Data Analysis of Single-Cell Transcriptomic Expression Using Mixture Models",
+      "authors": [
+        "Toby Kettlewell",
+        "Yiyi Cheng",
+        "Thomas D. Otto",
+        "Vincent Macaulay",
+        "Mayetri Gupta"
+      ],
+      "abstract": "Single-cell transcriptomic data approximates the abundance of proteins at a high resolution, but its noisiness necessitates transformation by a pipeline of methods before analysis and inference. In the absence of robust validation of these pipelines and methods, it remains unclear how best to process any particular dataset. To compensate for this, popular visualisation methods, e.g., t-SNE and UMAP, are commonly used to produce descriptions of datasets. Such visualisations are incomplete and provide subjective descriptions of samples rather than statistically meaningful statements about technical noise or biology.   In this paper, we introduce the Zero-Inflated Negative-Binomial with Geometric Tail (ZINBGT), a mixture-model-based strategy for producing interpretable visualisations of each gene's expression across cells, along with diagnostic summaries that use Wasserstein distance to highlight outlier genes. These diagnostics are used to reveal an outlier gene within a T. brucei sample. This method is applied to a human immune-cell dataset, highlighting the relationship between sparsity, mean, and spread across genes, as well as revealing an issue with the use of zero-inflated negative-binomial distributions to model single-cell RNA data. An investigation of simulated datasets intended to replicate the immune-cell data revealed discrepancies with the ground truth, establishing purposes for which these simulated datasets are unsuitable. Finally, we list a number of different domains to which this method can be applied.",
+      "published": "2026-04-10",
+      "arxiv_id": "2604.09319v1",
+      "abs_url": "https://arxiv.org/abs/2604.09319v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09319v1",
+      "categories": [
+        "stat.AP"
+      ]
+    },
     {
       "title": "A Quasi-Regression Method for the Mediation Analysis of Zero-Inflated Single-Cell Data",
       "authors": [
@@ -94,15 +112,15 @@
     {
       "title": "Inference for Clustering: Conformal Sets for Cluster Labels",
       "authors": [
-        "Anirban Nath",
         "YoonHaeng Hur",
+        "Anirban Nath",
         "Genevera Allen"
       ],
       "abstract": "While clustering is ubiquitously used across science and industry, uncertainty in cluster assignments is rarely quantified with rigorous guarantees. We propose a novel conformal inference framework for clustering that returns confidence sets for cluster labels. The key challenge is that labels are unobserved and estimated from data, so naively using deterministic cluster labels can violate exchangeability and induce severe under-coverage. To address this, we propose split conformal clustering with stochastic labels, which samples labels from soft cluster labels, fits a soft classifier to predict these stochastic labels, and calibrates conformal scores to construct confidence sets for cluster labels at any query point. We establish a finite-sample lower bound on marginal coverage that reveals how under-coverage is controlled by two properties of the clustering algorithm: consistency of estimated soft labels and replace-one stability. Under mild conditions, we prove asymptotic coverage and verify these conditions for correctly specified parametric mixture models. Simulations for mixture models show that our method attains target coverage with informative set sizes, validating our theoretical results. Applications to clustering cell types in single-cell RNA-seq data demonstrate the practical utility and interpretability of our approach to quantifying cluster label uncertainty.",
       "published": "2026-04-03",
-      "arxiv_id": "2604.03488v1",
-      "abs_url": "https://arxiv.org/abs/2604.03488v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.03488v1",
+      "arxiv_id": "2604.03488v2",
+      "abs_url": "https://arxiv.org/abs/2604.03488v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.03488v2",
       "categories": [
         "stat.ME"
       ]
@@ -543,31 +561,6 @@
       "pdf_url": "https://arxiv.org/pdf/2603.05700v1",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Machine Learning for analysis of Multiple Sclerosis cross-tissue bulk and single-cell transcriptomics data",
-      "authors": [
-        "Francesco Massafra",
-        "Samuele Punzo",
-        "Silvia Giulia Galfr\u00e9",
-        "Alessandro Maglione",
-        "Simone Pernice",
-        "Stefano Forti",
-        "Simona Rolla",
-        "Marco Beccuti",
-        "Marinella Clerico",
-        "Corrado Priami",
-        "Alina S\u00eerbu"
-      ],
-      "abstract": "Multiple Sclerosis (MS) is a chronic autoimmune disease of the central nervous system whose molecular mechanisms remain incompletely understood. In this study, we developed an end-to-end machine learning pipeline to analyze transcriptomic data from peripheral blood mononuclear cells and cerebrospinal fluid, integrating both bulk microarray and single-cell RNA sequencing datasets (concentrating on CD4+ and B-cells). After rigorous preprocessing, batch correction, and gene declustering, XGBoost classifiers were trained to distinguish MS patients from healthy controls. Explainable AI tools, namely SHapley Additive exPlanations (SHAP), were employed to identify key genes driving classification, and results were compared with Differential Expression Analysis (DEA). SHAP-prioritized genes were further investigated through interaction networks and pathway enrichment analyses. The models achieved strong performance, particularly in CSF B-cells (AUC=0.94) and microarray (AUC=0.86). SHAP gene selection proved to be complementary to classical DEA. Gene clusters identified across multiple datasets highlighted immune activation, non-canonical immune checkpoints (ITK, CLEC2D, KLRG1, CEACAM1), ribosomal and translational programs, ubiquitin-proteasome regulation, lipid trafficking, and Epstein-Barr virus-related pathways. Our integrative and explainable framework reveals complementary insights beyond conventional analysis and provides novel mechanistic hypotheses and potential biomarkers for MS pathogenesis.",
-      "published": "2026-03-05",
-      "arxiv_id": "2603.05572v1",
-      "abs_url": "https://arxiv.org/abs/2603.05572v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05572v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG"
       ]
     }
   ]
