@@ -1,6 +1,22 @@
 {
-  "last_updated": "2026-04-13 02:31 UTC",
+  "last_updated": "2026-04-14 02:25 UTC",
   "papers": [
+    {
+      "title": "Inference conditional on selection: a review",
+      "authors": [
+        "Anna Neufeld",
+        "Ronan Perry",
+        "Daniela Witten"
+      ],
+      "abstract": "In this article, we review selective inference, a set of techniques for inference when the statistical question asked is a function of the data. This setting often arises in contemporary scientific workflows, where hypotheses and parameters may be selected from the data, rather than specified in advance. In this setting, classical inferential techniques do not achieve \"classical\" guarantees, such as nominal coverage of confidence intervals. We consider three examples for which selective inference solutions are required: inference on a \"winner\", inference on the mean of a region in a regression tree, and inference on the difference in means between a pair of clusters. We argue that conditional guarantees are of scientific interest in such settings. We then review and draw connections between several approaches that provide such guarantees. Finally, we illustrate these approaches in simulation and through an application to single-cell RNA sequencing data.",
+      "published": "2026-04-10",
+      "arxiv_id": "2604.09779v1",
+      "abs_url": "https://arxiv.org/abs/2604.09779v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09779v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "ZINBGT: Exploratory Data Analysis of Single-Cell Transcriptomic Expression Using Mixture Models",
       "authors": [
@@ -543,24 +559,6 @@
         "cs.LG",
         "q-bio.CB",
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Change Point Detection for Cell Populations Measured via Flow Cytometry",
-      "authors": [
-        "Yik Lun Kei",
-        "Qi Wang",
-        "Paul Parker",
-        "Francois Ribalet",
-        "Sangwon Hyun"
-      ],
-      "abstract": "The ocean is filled with phytoplankton that contribute as much photosynthesis as all land plants combined, making them vital to the carbon cycle and climate system. Recent advances in flow cytometry allow oceanographers to measure the optical traits of individual cells along research cruise tracks, generating single-cell resolution microbial data. In marine microbial ecology, detecting locations of abrupt changes in the environmental response of cytometric plankton distributions is an important task. This manuscript proposes a latent space Gaussian mixture-of-experts model, facilitating change point detection in replicated and clustered phytoplankton observations. Change points are identified through shifts in prior means of low-dimensional representations, with piecewise-constant structure enforced by a group-fused LASSO penalty. The optimization problem is then solved via Alternating Direction Method of Multipliers. Applied to flow cytometry data, the proposed method identifies a scientifically important change point that aligns with a transition zone between two marine provinces.",
-      "published": "2026-03-05",
-      "arxiv_id": "2603.05700v1",
-      "abs_url": "https://arxiv.org/abs/2603.05700v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05700v1",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
