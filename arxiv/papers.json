@@ -1,6 +1,49 @@
 {
-  "last_updated": "2026-04-27 02:36 UTC",
+  "last_updated": "2026-04-28 02:44 UTC",
   "papers": [
+    {
+      "title": "CMGL: Confidence-guided Multi-omics Graph Learning for Cancer Subtype Classification",
+      "authors": [
+        "Boyang Fan",
+        "Hengchuang Yin",
+        "Siyu Yi",
+        "Yifan Wang",
+        "Zhicheng Li",
+        "Leijiyu Zhou",
+        "Jiancheng Lv",
+        "Wei Ju"
+      ],
+      "abstract": "Motivation: Multi-omics integration can improve cancer subtyping, but modality informativeness and noise vary across cancer types and patients. Existing graph-based methods optimize modality weights jointly with the classification objective and therefore lack independent reliability estimates, so low-quality omics distort patient similarity graphs and amplify noise through message passing.   Results: We propose CMGL, a two-stage framework that estimates per-sample modality reliability through evidential deep learning and uses the frozen confidence scores to guide cross-omics fusion and graph construction. On four MLOmics cancer-subtype tasks and the 32-class pan-cancer task, CMGL consistently improves over the strongest baseline, surpassing it by 4.03% in average accuracy on the four single-cancer tasks. Its representations recover the PAM50 intrinsic subtypes of breast invasive carcinoma (BRCA), and the BRCA-trained model transfers without fine-tuning to kidney renal clear cell carcinoma (KIRC), stratifying patients into prognostically distinct groups.",
+      "published": "2026-04-27",
+      "arxiv_id": "2604.24201v1",
+      "abs_url": "https://arxiv.org/abs/2604.24201v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24201v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN",
+        "q-bio.MN"
+      ]
+    },
+    {
+      "title": "Using Importance Sampling to Estimate $p$-values in All-Subset Meta-Analysis, with Applications to Single-Cell eQTL Mapping",
+      "authors": [
+        "Samuel Anyaso-Samuel",
+        "Thong Luong",
+        "Fei Qin",
+        "Jiyeon Choi",
+        "Kai Yu",
+        "Paul S. Albert",
+        "Jianxin Shi"
+      ],
+      "abstract": "Pooling genome-wide association studies of multiple related traits can substantially increase power for detecting genetic variants with pleiotropic effects. ASSET, which exhaustively searches all subsets of studies for association signals, has been widely used to detect modest effects and improve interpretability. Under a normality assumption, ASSET computes p-values via an analytic approximation that accounts for multiple testing. However, this approximation has been evaluated only in limited scenarios and for p-values no smaller than $10^{-3}$. A systematic assessment in the extreme tail is therefore needed, yet na\u00efve Monte Carlo methods would require prohibitively many simulations. We develop a computationally efficient importance-sampling (IS) algorithm that provides accurate ASSET p-value estimates for both independent and overlapping studies, achieving substantial efficiency gains over na\u00efve Monte Carlo, particularly for very small p-values. Using IS, we show that ASSET's analytic approximation is highly accurate across nearly the entire p-value range when normality holds. In contrast, when normality is violated (due to small sample sizes, low-frequency variants, or non-normal traits), ASSET p-values can be inflated or deflated by orders of magnitude, whereas our IS approach remains accurate. We illustrate the method through applications to single-cell eQTL mapping using peripheral blood mononuclear cells from the OneK1K cohort and lung cells from a Korean population.",
+      "published": "2026-04-25",
+      "arxiv_id": "2604.23085v1",
+      "abs_url": "https://arxiv.org/abs/2604.23085v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23085v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Zero-inflated modeling with smoothing on counting tensors",
       "authors": [
@@ -530,42 +573,6 @@
         "cs.LG",
         "math.PR",
         "math.ST"
-      ]
-    },
-    {
-      "title": "Domain Elastic Transform: Bayesian Function Registration for High-Dimensional Scientific Data",
-      "authors": [
-        "Osamu Hirose",
-        "Emanuele Rodola"
-      ],
-      "abstract": "Nonrigid registration is conventionally divided into point set registration, which aligns sparse geometries, and image registration, which aligns continuous intensity fields on regular grids. However, this dichotomy creates a critical bottleneck for emerging scientific data, such as spatial transcriptomics, where high-dimensional vector-valued functions, e.g., gene expression, are defined on irregular, sparse manifolds. Consequently, researchers currently face a forced choice: either sacrifice single-cell resolution via voxelization to utilize image-based tools, or ignore the critical functional signal to utilize geometric tools. To resolve this dilemma, we propose Domain Elastic Transform (DET), a grid-free probabilistic framework that unifies geometric and functional alignment. By treating data as functions on irregular domains, DET registers high-dimensional signals directly without binning. We formulate the problem within a rigorous Bayesian framework, modeling domain deformation as an elastic motion guided by a joint spatial-functional likelihood. The method is fully unsupervised and scalable, utilizing feature-sensitive downsampling to handle massive atlases. We demonstrate that DET achieves 92\\% topological preservation on MERFISH data where state-of-the-art optimal transport methods struggle ($<$5\\%), and successfully registers whole-embryo Stereo-seq atlases across developmental stages -- a task involving massive scale and complex nonrigid growth. The implementation of DET is available on {https://github.com/ohirose/bcpd} (since Mar, 2025).",
-      "published": "2026-03-22",
-      "arxiv_id": "2603.21235v1",
-      "abs_url": "https://arxiv.org/abs/2603.21235v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.21235v1",
-      "categories": [
-        "stat.ML",
-        "cs.AI",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Bivariate deconvolution for cancer detection after surgery",
-      "authors": [
-        "Nuria Senar",
-        "Stavros Makrodimitris",
-        "Michel H. Hof",
-        "Cornelis Verhoef",
-        "Saskia M. Wilting",
-        "Mark A. van de Wiel"
-      ],
-      "abstract": "Detection of minimal residual disease (MRD) in cancer patients after surgery can provide an early marker for disease recurrence and guide subsequent treatment decisions. Accurate and sensitive estimation of tumour burden after cancer surgery may be obtained through liq- uid biopsies, measuring circulating tumour DNA (ctDNA) using, for example, mutation-based Variant Allele Frequency (VAF) values. However, to be applicable to all patients this ei- ther requires tumour-informed, patient-specific mutation panels or sensitive, tumour-agnostic genome-wide measurements. We propose a solution that accounts for patient-specific charac- teristics in genome-wide screens. For that, we introduce a bivariate deconvolution model to estimate tumour proportion from circulating cell-free DNA (cfDNA) methylation profiles of patients before and after surgery. The observations are modelled as a convolution of two bivariate latent variables, corresponding to tumour and background signals, mixed by the tumour proportion at each measurement. This bivariate approach links pre- and post-surgery measurements improving estimation of the tumour proportion after surgery, when the tumour signal is potentially very weak, or absent. We approximate likelihood of the convolution through a discretisation of the bivariate density for each latent variable into a two-dimensional grid for each pair of observations which allows for fast maximum likelihood estimation. We evaluate the predictive performance of the estimated post-surgery tumour proportions based on cfDNA methylation against available mutation-based VAF values in one-year recurrence-free survival.",
-      "published": "2026-03-18",
-      "arxiv_id": "2603.17864v1",
-      "abs_url": "https://arxiv.org/abs/2603.17864v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17864v1",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
