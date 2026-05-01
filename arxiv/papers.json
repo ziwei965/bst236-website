@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-04-30 02:45 UTC",
+  "last_updated": "2026-05-01 02:51 UTC",
   "papers": [
+    {
+      "title": "Better Models, Faster Training: Sigmoid Attention for single-cell Foundation Models",
+      "authors": [
+        "Vijay Sadashivaiah",
+        "Georgios Dasoulas",
+        "Judith Mueller",
+        "Soumya Ghosh"
+      ],
+      "abstract": "Training stable biological foundation models requires rethinking attention mechanisms: we find that using sigmoid attention as a drop in replacement for softmax attention a) produces better learned representations: on six diverse single-cell datasets, sigmoid achieves 25% higher cell-type separation, better cell-type cohesion metrics, and lower validation loss, b) faster training, models with sigmoid attention train up to 10% faster than their softmax counterparts, and c) more stable training by eliminating inherent sources of instability in softmax attention. We establish that sigmoid attention has globally bounded derivatives ($\\leq 0.25$) as opposed to softmax, and a diagonal Jacobian structure in contrast with softmax's dense coupling, which together help alleviate training instabilities. In stress tests on 160M-parameter bidirectional attention models trained without gradient clipping on 8K-token sequences, softmax diverges catastrophically, with gradients exploding by four orders of magnitude, while sigmoid remains stable. Finally, we implement and open-source TritonSigmoid, an efficient GPU kernel that achieves 515 TFLOPS on H100 GPUs, outperforming both FlashAttention-2 and FlashSigmoid, with native padding support, which is essential for biological sequences. Our results establish sigmoid attention as both theoretically grounded and empirically superior for biological foundation models. Code is available at https://github.com/MSDLLCpapers/triton-sigmoid",
+      "published": "2026-04-29",
+      "arxiv_id": "2604.27124v1",
+      "abs_url": "https://arxiv.org/abs/2604.27124v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.27124v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "Hyper Input Convex Neural Networks for Shape Constrained Learning and Optimal Transport",
       "authors": [
@@ -553,26 +571,6 @@
       "categories": [
         "cs.LG",
         "stat.ME"
-      ]
-    },
-    {
-      "title": "A Large-Scale Comparative Analysis of Imputation Methods for Single-Cell RNA Sequencing Data",
-      "authors": [
-        "Yuichiro Iwashita",
-        "Ahtisham Fazeel Abbasi",
-        "Koichi Kise",
-        "Andreas Dengel",
-        "Muhammad Nabeel Asim"
-      ],
-      "abstract": "Background: Single-cell RNA sequencing (scRNA-seq) enables gene expression profiling at cellular resolution but is inherently affected by sparsity caused by dropout events, where expressed genes are recorded as zeros due to technical limitations. These artifacts distort gene expression distributions and compromise downstream analyses. Numerous imputation methods have been proposed to recover latent transcriptional signals. These methods range from traditional statistical models to deep learning (DL)-based methods. However, their comparative performance remains unclear, as existing benchmarks evaluate only a limited subset of methods, datasets, and downstream analyses. Results: We present a comprehensive benchmark of 15 scRNA-seq imputation methods spanning 7 methodological categories, including traditional and DL-based methods. Methods are evaluated across 30 datasets from 10 experimental protocols on 6 downstream analyses. Results show that traditional methods, such as model-based, smoothing-based, and low-rank matrix-based methods, generally outperform DL-based methods, including diffusion-based, GAN-based, GNN-based, and autoencoder-based methods. In addition, strong performance in numerical gene expression recovery does not necessarily translate into improved biological interpretability in downstream analyses, including cell clustering, differential expression analysis, marker gene analysis, trajectory analysis, and cell type annotation. Furthermore, method performance varies substantially across datasets, protocols, and downstream analyses, with no single method consistently outperforming others. Conclusions: Our findings provide practical guidance for selecting imputation methods tailored to specific analytical objectives and underscore the importance of task-specific evaluation when assessing imputation performance in scRNA-seq data analysis.",
-      "published": "2026-03-25",
-      "arxiv_id": "2603.24626v2",
-      "abs_url": "https://arxiv.org/abs/2603.24626v2",
-      "pdf_url": "https://arxiv.org/pdf/2603.24626v2",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
