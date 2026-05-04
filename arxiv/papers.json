@@ -1,6 +1,28 @@
 {
-  "last_updated": "2026-05-03 02:43 UTC",
+  "last_updated": "2026-05-04 02:41 UTC",
   "papers": [
+    {
+      "title": "Beyond Continuity: Simulation-free Reconstruction of Discrete Branching Dynamics from Single-cell Snapshots",
+      "authors": [
+        "Junda Ying",
+        "Yuxuan Wang",
+        "Bowen Yang",
+        "Peijie Zhou",
+        "Lei Zhang"
+      ],
+      "abstract": "Inferring cellular trajectories from destructive snapshots is complicated by the challenges of stochasticity and non-conservative mass dynamics such as cell proliferation and apoptosis. Existing unbalanced Optimal Transport (OT) methods treat mass as a continuous fluid, performing inference at the population level. However, this macroscopic view often fails to capture the discrete, jump-like nature of birth-death events at single-cell resolution, which is essential for understanding lineage branching and fate decisions. We present Unbalanced Schr\u00f6dinger Bridge (USB), a simulation-free framework for learning underlying dynamics that effectively integrates both stochastic and unbalanced effects which also models the discrete, jump-like birth-death dynamics at single-cell resolution. Theoretically, USB provides a tractable solution to the Branching Schr\u00f6dinger Bridge (BSB) problem, offering a rigorous microscopic interpretation where individual cells undergo both Brownian motion and discrete birth-death jumps. Technically, the method implements an efficient solver by introducing a simulation-free training objective that effectively scales to high-dimensional omics data. Empirically, we demonstrate on both simulated and real-world datasets that USB not only achieves trajectory reconstruction performance better than or comparable to deterministic baselines but also uniquely enables realistic discrete simulation of birth-death dynamics at single-cell resolution.",
+      "published": "2026-05-01",
+      "arxiv_id": "2605.00545v1",
+      "abs_url": "https://arxiv.org/abs/2605.00545v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.00545v1",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math-ph",
+        "q-bio.GN",
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "Better Models, Faster Training: Sigmoid Attention for single-cell Foundation Models",
       "authors": [
@@ -554,23 +576,6 @@
         "stat.ME",
         "q-bio.GN",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "i-IF-Learn: Iterative Feature Selection and Unsupervised Learning for High-Dimensional Complex Data",
-      "authors": [
-        "Chen Ma",
-        "Wanjie Wang",
-        "Shuhao Fan"
-      ],
-      "abstract": "Unsupervised learning of high-dimensional data is challenging due to irrelevant or noisy features obscuring underlying structures. It's common that only a few features, called the influential features, meaningfully define the clusters. Recovering these influential features is helpful in data interpretation and clustering. We propose i-IF-Learn, an iterative unsupervised framework that jointly performs feature selection and clustering. Our core innovation is an adaptive feature selection statistic that effectively combines pseudo-label supervision with unsupervised signals, dynamically adjusting based on intermediate label reliability to mitigate error propagation common in iterative frameworks. Leveraging low-dimensional embeddings (PCA or Laplacian eigenmaps) followed by $k$-means, i-IF-Learn simultaneously outputs influential feature subset and clustering labels. Numerical experiments on gene microarray and single-cell RNA-seq datasets show that i-IF-Learn significantly surpasses classical and deep clustering baselines. Furthermore, using our selected influential features as preprocessing substantially enhances downstream deep models such as DeepCluster, UMAP, and VAE, highlighting the importance and effectiveness of targeted feature selection.",
-      "published": "2026-03-25",
-      "arxiv_id": "2603.24025v1",
-      "abs_url": "https://arxiv.org/abs/2603.24025v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.24025v1",
-      "categories": [
-        "cs.LG",
-        "stat.ME"
       ]
     }
   ]
