@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-05-04 02:41 UTC",
+  "last_updated": "2026-05-05 02:34 UTC",
   "papers": [
+    {
+      "title": "ORBIT: Learning Gene Program Co-Activation Structure for Cell-Type-Stratified Pathway Rewiring Analysis in Single-Cell Transcriptomics",
+      "authors": [
+        "Yuechen Wang",
+        "Lina Jia",
+        "Qinglong Wang",
+        "Feng Tian"
+      ],
+      "abstract": "Gene programs co-activate within cells, but existing single-cell methods either treat programs independently or require experimental perturbation data to model their interactions. We introduce ORBIT, a self-supervised transformer that learns asymmetric dependencies among gene programs from observational single-cell RNA-sequencing data alone, quantifying how strongly each program influences every other program. The key mechanism is an intervention-consistent training objective: the model learns each program's directional influence on every other program by predicting how the others change when that program is removed, yielding attention weights that reflect asymmetric influence rather than symmetric co-occurrence. Applied to 191,890 prefrontal cortex nuclei across three pathway vocabularies, ORBIT recovers co-activation structure consistent with established Alzheimer's disease vulnerability signatures, identifies cell-type-specific rewiring invisible to differential expression, and achieves 0.984 macro F1 on cell-type classification from 220 pathway scores, which is within 0.3 points of a state-of-the-art classifier using all 22,088 genes.",
+      "published": "2026-05-04",
+      "arxiv_id": "2605.02142v1",
+      "abs_url": "https://arxiv.org/abs/2605.02142v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02142v1",
+      "categories": [
+        "q-bio.GN"
+      ]
+    },
     {
       "title": "Beyond Continuity: Simulation-free Reconstruction of Discrete Branching Dynamics from Single-cell Snapshots",
       "authors": [
@@ -21,6 +38,24 @@
         "math-ph",
         "q-bio.GN",
         "q-bio.QM"
+      ]
+    },
+    {
+      "title": "CellxPert: Inference-Time MCMC Steering of a Multi-Omics Single-Cell Foundation Model for In-Silico Perturbation",
+      "authors": [
+        "Andac Demir",
+        "Erik W. Anderson",
+        "Jeremy L. Jenkins",
+        "Srayanta Mukherjee"
+      ],
+      "abstract": "In this work, we introduce CellxPert, a scalable multimodal foundation model that unifies single-cell and spatial multi-omics within a common representation space. CellxPert jointly encodes transcriptomic (scRNA-seq), chromatin-accessibility (ATAC-seq), and surface-proteomic (CITE-seq) measurements, while directly incorporating MERFISH and imaging mass-cytometry data as 2D or 3D spatial-visual layers. CellxPert facilitates four key downstream tasks out of the box: (i) cell-type annotation across a broad ontology of 154 largely overlapping identities -- the largest label space addressed to date and a stringent test of fine-grained discrimination, (ii) efficient fine-tuning using Low Rank Adaptation (LoRA), (iii) genome-wide transcriptomic response prediction to in-silico perturbations (ISP), and (iv) seamless multi-omic integration across various assays and platforms. Unlike current single-cell foundation models, which approximate gene perturbations by deleting or reordering tokenized gene expression ranks, CellxPert employs a Metropolis-Hastings sampler whose proposal kernel uses the model's masked conditional distributions to transition to new transcriptomic states conditioned on the perturbed genes. This Markov-chain procedure mitigates out-of-distribution artifacts introduced by abrupt token manipulation and produces trajectories that are biologically interpretable. Evaluations on PBMC68K, Replogle Perturb-seq, Systema, and BMMC benchmarks show that CellxPert surpasses classical and state-of-the-art baselines in cell-type annotation, perturbation response prediction, and multi-omic integration.",
+      "published": "2026-04-30",
+      "arxiv_id": "2605.00930v1",
+      "abs_url": "https://arxiv.org/abs/2605.00930v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.00930v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.AI"
       ]
     },
     {
@@ -535,47 +570,6 @@
       "categories": [
         "q-bio.PE",
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells",
-      "authors": [
-        "Han Zhang",
-        "Guo-Hua Yuan",
-        "Chaohao Yuan",
-        "Tingyang Xu",
-        "Tian Bian",
-        "Hong Cheng",
-        "Wenbing Huang",
-        "Deli Zhao",
-        "Yu Rong"
-      ],
-      "abstract": "Modeling cellular states and predicting their responses to perturbations are central challenges in computational biology and the development of virtual cells. Existing foundation models for single-cell transcriptomics provide powerful static representations, but they do not explicitly model the distribution of cellular states for generative simulation. Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation. By operating directly in a discrete token space that is compatible with the sparse, non-sequential nature of single-cell transcriptomic data, Lingshu-Cell captures complex transcriptome-wide expression dependencies across approximately 18,000 genes without relying on prior gene selection, such as filtering by high variability or ranking by expression level. Across diverse tissues and species, Lingshu-Cell accurately reproduces transcriptomic distributions, marker-gene expression patterns and cell-subtype proportions, demonstrating its ability to capture complex cellular heterogeneity. Moreover, by jointly embedding cell type or donor identity with perturbation, Lingshu-Cell can predict whole-transcriptome expression changes for novel combinations of identity and perturbation. It achieves leading performance on the Virtual Cell Challenge H1 genetic perturbation benchmark and in predicting cytokine-induced responses in human PBMCs. Together, these results establish Lingshu-Cell as a flexible cellular world model for in silico simulation of cell states and perturbation responses, laying the foundation for a new paradigm in biological discovery and perturbation screening.",
-      "published": "2026-03-26",
-      "arxiv_id": "2603.25240v1",
-      "abs_url": "https://arxiv.org/abs/2603.25240v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.25240v1",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Causal Discovery on Dependent Mixed Data with Applications to Gene Regulatory Network Inference",
-      "authors": [
-        "Alex Chen",
-        "Qing Zhou"
-      ],
-      "abstract": "Causal discovery aims to infer causal relationships among variables from observational data, typically represented by a directed acyclic graph (DAG). Most existing methods assume independent and identically distributed observations, an assumption often violated in modern applications. In addition, many datasets contain a mixture of continuous and discrete variables, which further complicates causal modeling when dependence across samples is present. To address these challenges, we propose a de-correlation framework for causal discovery from dependent mixed data. Our approach formulates a structural equation model with latent variables that accommodates both continuous and discrete variables while allowing correlated Gaussian errors across units. We estimate the dependence structure among samples via a pairwise maximum likelihood estimator for the covariance matrix and develop an EM algorithm to impute latent variables underlying discrete observations. A de-correlation transformation of the recovered latent data enables the use of standard causal discovery algorithms to learn the underlying causal graph. Simulation studies demonstrate that the proposed method substantially improves causal graph recovery compared with applying standard methods directly to the original dependent data. We apply our approach to single-cell RNA sequencing data to infer gene regulatory networks governing embryonic stem cell differentiation. The inferred regulatory networks show significantly improved predictive likelihood on test data, and many high-confidence edges are supported by known regulatory interactions reported in the literature.",
-      "published": "2026-03-25",
-      "arxiv_id": "2603.24783v1",
-      "abs_url": "https://arxiv.org/abs/2603.24783v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.24783v1",
-      "categories": [
-        "stat.ME",
-        "q-bio.GN",
-        "stat.AP"
       ]
     }
   ]
