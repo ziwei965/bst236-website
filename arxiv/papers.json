@@ -1,6 +1,78 @@
 {
-  "last_updated": "2026-05-05 02:34 UTC",
+  "last_updated": "2026-05-07 02:41 UTC",
   "papers": [
+    {
+      "title": "When Does Gene Regulatory Network Inference Break? A Controlled Diagnostic Study of Causal and Correlational Methods on Single-Cell Data",
+      "authors": [
+        "Miguel Fernandez-de-Retana",
+        "Ruben Sanchez-Corcuera",
+        "Unai Zulaika",
+        "Aritz Bilbao-Jayo",
+        "Aitor Almeida"
+      ],
+      "abstract": "Despite theoretical advantages, causal methods for Gene Regulatory Network (GRN) inference from single-cell RNA-seq data consistently fail to match or outperform correlation-based baselines in many realistic benchmarks, a persistent puzzle which casts doubt on the value of causality for this task. We argue that existing benchmarks are insufficiently controlled to answer this question because they evaluate on real or semi-real data where multiple pathologies co-occur, confounding failure modes, and obscuring the specific conditions under which different inference methods excel or fail. To address this gap, we introduce a controlled diagnostic framework that isolates seven biologically motivated pathologies (dropout, latent confounders, cell-type mixing, feedback loops, network density, sample size, and pseudotime drift) and measure how six representative methods spanning three inference paradigms degrade as each pathology intensifies. Across 6,120 controlled experiments, we find that causal methods genuinely dominate in clean and structurally favorable regimes, but specific pathologies (notably dropout and latent confounders) selectively neutralize their advantages. We further introduce an error-type decomposition that reveals methods with similar aggregate accuracy commit qualitatively different errors. To probe whether single-pathology effects persist when multiple stressors co-occur, we perform an interaction sweep over the three most impactful pathologies and find that their joint effects are sub-additive, while also exposing density-conditional cross-overs invisible to single-dial analysis. Our findings offer a nuanced understanding of when and why different methods succeed or fail for GRN inference, providing actionable insights for method development and practical guidance for practitioners.",
+      "published": "2026-05-06",
+      "arxiv_id": "2605.04930v1",
+      "abs_url": "https://arxiv.org/abs/2605.04930v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.04930v1",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-bio.GN",
+        "q-bio.QM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "FL-Sailer: Efficient and Privacy-Preserving Federated Learning for Scalable Single-Cell Epigenetic Data Analysis via Adaptive Sampling",
+      "authors": [
+        "Guangyi Zhang",
+        "Yi Dai",
+        "Yiyun He",
+        "Junhao Liu"
+      ],
+      "abstract": "Single-cell ATAC-seq (scATAC-seq) enables high-resolution mapping of chromatin accessibility, yet privacy regulations and data size constraints hinder multi-institutional sharing. Federated learning (FL) offers a privacy-preserving alternative, but faces three fundamental barriers in scATAC-seq analysis: ultra-high dimensionality, extreme sparsity, and severe cross-institutional heterogeneity. We propose FL-Sailer, the first FL framework designed for scATAC-seq data. FL-Sailer integrates two key innovations: (i) adaptive leverage score sampling, which selects biologically interpretable features while reducing dimensionality by 80%, and (ii) an invariant VAE architecture, which disentangles biological signals from technical confounders via mutual information minimization. We provide a convergence guarantee, showing that FL-Sailer converges to an approximate solution of the original high-dimensional problem with bounded error. Extensive experiments on synthetic and real epigenomic datasets demonstrate that FL-Sailer not only enables previously infeasible multi-institutional collaborations but also surpasses centralized methods by leveraging adaptive sampling as an implicit regularizer to suppress technical noise. Our work establishes that federated learning, when tailored to domain-specific challenges, can become a superior paradigm for collaborative epigenomic research.",
+      "published": "2026-05-06",
+      "arxiv_id": "2605.04519v1",
+      "abs_url": "https://arxiv.org/abs/2605.04519v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.04519v1",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Donor-Aware scRNA-seq Benchmarks for IBD Classification",
+      "authors": [
+        "Jonathan Muhire"
+      ],
+      "abstract": "Donor-level disease classification from single-cell RNA sequencing (scRNA-seq) requires strict donor-aware cross-validation: naive pipelines that split cells randomly conflate training and test donors, inflating reported performance through pseudoreplication. We present a donor-aware benchmark evaluating three feature representations across two independent IBD cohorts: centered log-ratio (CLR) transformed cell-type composition, GatedStructuralCFN dependency embeddings, and scVI variational autoencoder latent embeddings. The cohorts are the SCP259 ulcerative colitis atlas (UC vs. Healthy, n=30 donors, 51 cell types) and the Kong 2023 Crohn's disease atlas (CD vs. Healthy, n=71 donors, 55-68 cell types across three intestinal regions).   Compartment-stratified CLR composition achieves AUROC 0.956 +/- 0.061 on SCP259; GatedStructuralCFN on the same features achieves 0.978 +/- 0.050. In the Kong cohort, CFN achieves its best performance in the colon region (0.960 +/- 0.055 after feature filtering), exceeding linear CLR (0.900 +/- 0.100), while terminal ileum classification is dominated by linear models (CatBoost CLR 0.967 +/- 0.075 vs. CFN 0.811 +/- 0.164). Cross-dataset transfer (CD->UC, four shared cell types) achieves AUC 0.833 with XGBoost CLR; the reverse direction performs at chance. CFN edge stability analysis shows that compartment-wise composition eliminates spurious unit-sum-induced instability present in global composition (Jaccard 0.026 vs. top-20 recurrence 1.0). CFN shows a consistent numerical advantage over linear models in the colon region of CD (AUROC 0.960 vs. 0.900), though no inter-method comparison reached statistical significance at n<=34 donors per region. Compartment-aware feature construction is critical for both classification performance and structural interpretability. Code: https://github.com/Jonathan-321/sfn-scrna-study",
+      "published": "2026-05-05",
+      "arxiv_id": "2605.03281v1",
+      "abs_url": "https://arxiv.org/abs/2605.03281v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.03281v1",
+      "categories": [
+        "q-bio.QM",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Structure Learning for Directed Trees with Compositional Nodes",
+      "authors": [
+        "Shuangjie Zhang",
+        "Bani K. Mallick",
+        "Yang Ni"
+      ],
+      "abstract": "Compositional data, which are vectors of proportions constrained to the probability simplex, arise frequently in modern scientific applications, including microbiome relative abundances across body sites and cell-type mixture weights derived from single-cell genomics. While regression methods for compositional data are well developed, no existing graphical model framework addresses the problem of learning conditional dependence structures among multiple compositional vectors. This paper introduces a novel framework for directed tree structure learning over compositional nodes. We employ the Kullback-Leibler divergence as the scoring function and model the conditional expectation of each child composition as a mixture of a baseline composition and a parent-driven component parameterized by a column-stochastic transition matrix. This formulation respects the simplex geometry, handles zero-inflated compositions gracefully, and, combined with a non-degeneracy condition on the transition matrix, ensures identifiability of edge directions from observational data. We prove consistency of structure recovery and derive finite-sample guarantees that characterize the required sample size in terms of the signal gap, node dimension, and penalty level. The efficacy of our approach is demonstrated through simulations and applications to multi-site microbiome data and single-cell data, yielding interpretable directed structures that align with known biological mechanisms.",
+      "published": "2026-05-04",
+      "arxiv_id": "2605.03178v1",
+      "abs_url": "https://arxiv.org/abs/2605.03178v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.03178v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "ORBIT: Learning Gene Program Co-Activation Structure for Cell-Type-Stratified Pathway Rewiring Analysis in Single-Cell Transcriptomics",
       "authors": [
@@ -498,78 +570,6 @@
       "categories": [
         "q-bio.QM",
         "cs.MS"
-      ]
-    },
-    {
-      "title": "Genetic algorithms for multi-omic feature selection: a comparative study in cancer survival analysis",
-      "authors": [
-        "Luca Cattelani",
-        "Vittorio Fortino"
-      ],
-      "abstract": "Multi-omic datasets offer opportunities for improved biomarker discovery in cancer research, but their high dimensionality and limited sample sizes make identifying compact and effective biomarker panels challenging. Feature selection in large-scale omics can be efficiently addressed by combining machine learning with genetic algorithms, which naturally support multi-objective optimization of predictive accuracy and biomarker set size. However, genetic algorithms remain relatively underexplored for multi-omic feature selection, where most approaches concatenate all layers into a single feature space. To address this limitation, we introduce Sweeping*, a multi-view, multi-objective algorithm alternating between single- and multi-view optimization. It employs a nested single-view multi-objective optimizer, and for this study we use the genetic algorithm NSGA3-CHS. It first identifies informative biomarkers within each layer, then jointly evaluates cross-layer interactions; these multi-omic solutions guide the next single-view search. Through repeated sweeps, the algorithm progressively identifies compact biomarker panels capturing cross-modal complementary signals. We benchmark five Sweeping* strategies, including hierarchical and concatenation-based variants, using survival prediction on three TCGA cohorts. Each strategy jointly optimizes predictive accuracy and set size, measured via the concordance index and root-leanness. Overall performance and estimation error are assessed through cross hypervolume and Pareto delta under 5-fold cross-validation. Our results show that Sweeping* can improve the accuracy-complexity trade-off when sufficient survival signal is present and that integrating omic layers can enhance survival prediction beyond clinical-only models, although benefits remain cohort-dependent.",
-      "published": "2026-03-31",
-      "arxiv_id": "2604.00065v1",
-      "abs_url": "https://arxiv.org/abs/2604.00065v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.00065v1",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Hierarchical Sheaf Spectral Embedding Framework for Single-Cell RNA-seq Analysis",
-      "authors": [
-        "Xiang Xiang Wang",
-        "Guo-Wei We"
-      ],
-      "abstract": "Single-cell RNA-seq data analysis typically requires representations that capture heterogeneous local structure across multiple scales while remaining stable and interpretable. In this work, we propose a hierarchical sheaf spectral embedding (HSSE) framework that constructs informative cell-level features based on persistent sheaf Laplacian analysis. Starting from scale-dependent low-dimensional embeddings, we define cell-centered local neighborhoods at multiple resolutions. For each local neighborhood, we construct a data-driven cellular sheaf that encodes local relationships among cells. We then compute persistent sheaf Laplacians over sampled filtration intervals and extract spectral statistics that summarize the evolution of local relational structure across scales. These spectral descriptors are aggregated into a unified feature vector for each cell and can be directly used in downstream learning tasks without additional model training. We evaluate HSSE on twelve benchmark single-cell RNA-seq datasets covering diverse biological systems and data scales. Under a consistent classification protocol, HSSE achieves competitive or improved performance compared with existing multiscale and classical embedding-based methods across multiple evaluation metrics. The results demonstrate that sheaf spectral representations provide a robust and interpretable approach for single-cell RNA-seq data representation learning.",
-      "published": "2026-03-27",
-      "arxiv_id": "2603.26858v1",
-      "abs_url": "https://arxiv.org/abs/2603.26858v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.26858v1",
-      "categories": [
-        "cs.LG",
-        "math.SP",
-        "q-bio.GN",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Making Multi-Axis Models Robust to Multiplicative Noise: How, and Why?",
-      "authors": [
-        "Bailey Andrew",
-        "David R. Westhead",
-        "Luisa Cutillo"
-      ],
-      "abstract": "In this paper we develop a graph-learning algorithm, MED-MAGMA, to fit multi-axis (Kronecker-sum-structured) models corrupted by multiplicative noise. This type of noise is natural in many application domains, such as that of single-cell RNA sequencing, in which it naturally captures technical biases of RNA sequencing platforms. Our work is evaluated against prior work on each and every public dataset in the Single Cell Expression Atlas under a certain size, demonstrating that our methodology learns networks with better local and global structure. MED-MAGMA is made available as a Python package (MED-MAGMA).",
-      "published": "2026-03-27",
-      "arxiv_id": "2603.26327v1",
-      "abs_url": "https://arxiv.org/abs/2603.26327v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.26327v1",
-      "categories": [
-        "stat.ME",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Modeling the mutational dynamics of very short tandem repeats",
-      "authors": [
-        "Amos Onn",
-        "Tzipy Marx",
-        "Liming Tao",
-        "Tamir Biezuner",
-        "Ehud Shapiro",
-        "Christoph A. Klein",
-        "Peter F. Stadler"
-      ],
-      "abstract": "Short tandem repeats (STRs) are low-entropy regions in the genome, consisting of a short (1-6 bp) unit that is consecutively repeated multiple times. They are known for high mutational instability, due to so-called stutter-mutations, in which the number of units in the run increases or descreases. In particular, STRs with repeat unit length of 1-2 bp are prone to mutate even within several cell divisions. The extremely rapid accumulation of variation makes them interesting phylogenetic markers for retrospective single-cell lineage reconstruction. Here we model their mutational dynamics at the level of individual repeat unit type and then aggregate length variations over many STR loci with the aim of obtaining a very fast ``molecular clock''. We calibrate our model based on several datasets with known lineage structure prepared from cultured cells. We find that the mutational dynamics of STRs are reasonably consistent for a given cell line, but vary among different ones. This suggests that the dynamics are not entirely explained by mutations in caretaker genes, rather, various other factors play a role -- possibly tissue origin and differentiation state. Further data and research is necessary to asses their relative effects.",
-      "published": "2026-03-26",
-      "arxiv_id": "2603.25628v1",
-      "abs_url": "https://arxiv.org/abs/2603.25628v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.25628v1",
-      "categories": [
-        "q-bio.PE",
-        "q-bio.GN"
       ]
     }
   ]
