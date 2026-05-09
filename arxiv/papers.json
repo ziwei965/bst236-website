@@ -1,6 +1,30 @@
 {
-  "last_updated": "2026-05-07 02:41 UTC",
+  "last_updated": "2026-05-09 02:40 UTC",
   "papers": [
+    {
+      "title": "BioResearcher: Scenario-Guided Multi-Agent for Translational Medicine",
+      "authors": [
+        "Remigiusz Kinas",
+        "Joanna Krawczyk",
+        "Rafa\u0142 Powalski",
+        "Przemys\u0142aw Pietrzak",
+        "Agnieszka Kowalewska",
+        "Krzysztof Kolmus",
+        "Maciej Sypetkowski",
+        "\u0141ukasz Smoli\u0144ski",
+        "Tomasz Jetka"
+      ],
+      "abstract": "Translational medicine turns underspecified development goals into evidence synthesis that must combine literature, trials, patents, and quantitative multi-omics analysis while preserving identifiers, uncertainty, and retrievable provenance. General-purpose foundation models and off-the-shelf tool-augmented or multi-agent systems are not built for this: they tend to produce single-shot answers or run open-endedly, and fall short on the auditable, scenario-specific workflows that heterogeneous biomedical sources demand.   This paper introduces Ingenix BioResearcher, a scenario-guided multi-agent system that maps queries to versioned research playbooks, delegates to specialized subagents over 30+ tools and machine-learning endpoints, mixes structured database access with sandboxed code for genome-scale analyses, and applies claim-level multi-model reconciliation before editorial assembly.   We evaluate BioResearcher across unit-level capabilities, open-ended biomedical reasoning, and end-to-end clinical discovery. It leads evaluated baselines on 109 single-step tests (83.49% pass rate; 0.892 average score), achieves strong biomedical benchmark performance (89.33% on BixBench-Verified-50 and the top 0.758 mean score on BaisBench Scientific Discovery), and leads on a 30-query clinical end-to-end benchmark with the highest positive hit rate (74.7% $\\pm$ 3.3%) and negative clear rate (96.8% $\\pm$ 0.2%). These results show broad, competitive performance across unit-level, open-ended, and end-to-end clinical evaluations.",
+      "published": "2026-05-07",
+      "arxiv_id": "2605.05985v1",
+      "abs_url": "https://arxiv.org/abs/2605.05985v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05985v1",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "When Does Gene Regulatory Network Inference Break? A Controlled Diagnostic Study of Causal and Correlational Methods on Single-Cell Data",
       "authors": [
@@ -58,7 +82,7 @@
       ]
     },
     {
-      "title": "Structure Learning for Directed Trees with Compositional Nodes",
+      "title": "Structure Learning for Directed Trees with Zero-Inflated Compositional Nodes",
       "authors": [
         "Shuangjie Zhang",
         "Bani K. Mallick",
@@ -66,9 +90,9 @@
       ],
       "abstract": "Compositional data, which are vectors of proportions constrained to the probability simplex, arise frequently in modern scientific applications, including microbiome relative abundances across body sites and cell-type mixture weights derived from single-cell genomics. While regression methods for compositional data are well developed, no existing graphical model framework addresses the problem of learning conditional dependence structures among multiple compositional vectors. This paper introduces a novel framework for directed tree structure learning over compositional nodes. We employ the Kullback-Leibler divergence as the scoring function and model the conditional expectation of each child composition as a mixture of a baseline composition and a parent-driven component parameterized by a column-stochastic transition matrix. This formulation respects the simplex geometry, handles zero-inflated compositions gracefully, and, combined with a non-degeneracy condition on the transition matrix, ensures identifiability of edge directions from observational data. We prove consistency of structure recovery and derive finite-sample guarantees that characterize the required sample size in terms of the signal gap, node dimension, and penalty level. The efficacy of our approach is demonstrated through simulations and applications to multi-site microbiome data and single-cell data, yielding interpretable directed structures that align with known biological mechanisms.",
       "published": "2026-05-04",
-      "arxiv_id": "2605.03178v1",
-      "abs_url": "https://arxiv.org/abs/2605.03178v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.03178v1",
+      "arxiv_id": "2605.03178v2",
+      "abs_url": "https://arxiv.org/abs/2605.03178v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.03178v2",
       "categories": [
         "stat.ME"
       ]
@@ -411,10 +435,10 @@
       "authors": [
         "Yehui Yang",
         "Zelin Zang",
-        "Changxi Chi",
-        "Jingbo Zhou",
         "Xienan Zheng",
         "Yuzhe Jia",
+        "Changxi Chi",
+        "Jingbo Zhou",
         "Chang Yu",
         "Jinlin Wu",
         "Fuji Yang",
@@ -422,11 +446,11 @@
         "Zhen Lei",
         "Stan Z. Li"
       ],
-      "abstract": "Automated cellular reasoning faces a core dichotomy: supervised methods fall into the Reference Trap and fail to generalize to out-of-distribution cell states, while large language models (LLMs), without grounded biological priors, suffer from a Signal-to-Noise Paradox that produces spurious associations. We propose MAT-Cell, a neuro-symbolic reasoning framework that reframes single-cell analysis from black-box classification into constructive, verifiable proof generation. MAT-Cell injects symbolic constraints through adaptive Retrieval-Augmented Generation (RAG) to ground neural reasoning in biological axioms and reduce transcriptomic noise. It further employs a dialectic verification process with homogeneous rebuttal agents to audit and prune reasoning paths, forming syllogistic derivation trees that enforce logical consistency.Across large-scale and cross-species benchmarks, MAT-Cell significantly outperforms state-of-the-art (SOTA) models and maintains robust per-formance in challenging scenarios where baselinemethods severely degrade. Code is available at https://gith ub.com/jiangliu91/MAT-Cell-A-Mul ti-Agent-Tree-Structured-Reasoni ng-Framework-for-Batch-Level-Sin gle-Cell-Annotation.",
+      "abstract": "Automated single-cell annotation is difficult when the most abundant genes are not the most discriminative ones, or when a target state is poorly covered by a fixed reference atlas. GPTCelltype-style one-shot prompting allows large language models (LLMs) to produce plausible labels from generic expression signals, while reference-based annotators can force unfamiliar states into the nearest known category. We propose MAT-Cell, a prompt-driven framework for batch-level single-cell annotation that separates evidence grounding from label decision. MAT-Cell first uses Reverse Verification Query (RVQ) to combine tissue context, observed differentially expressed genes, and LLM-elicited biological priors into structured candidate-specific premises. Verifier agents then convert these premises into explicit premise-to-claim reasoning trees, and bounded multi-round debate compares,challenges, and revises the resulting claims before consensus or final adjudication.The returned Syllogistic Derivation Tree (SDT) provides an auditable debate trace rather than a formal proof of the annotation. In open-candidate benchmarks across five datasets, a locally deployed Qwen3-30B model with MAT-Cell achieves 75.5% average accuracy, compared with 64.2% for the strongest evaluated CoT baseline and 51.9% for the strongest evaluated scPilot variant. In oracle-candidate bench-marks across three species,MAT-Cell remains competitive across backbones, and local inference substantially reduces monetary cost for batch annotation. Code is available at: https://anonymous.4open.science/r/MATCell-4067",
       "published": "2026-04-07",
-      "arxiv_id": "2604.06269v1",
-      "abs_url": "https://arxiv.org/abs/2604.06269v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06269v1",
+      "arxiv_id": "2604.06269v2",
+      "abs_url": "https://arxiv.org/abs/2604.06269v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.06269v2",
       "categories": [
         "q-bio.QM",
         "cs.AI"
@@ -555,21 +579,6 @@
       "categories": [
         "cs.CV",
         "q-bio.QM"
-      ]
-    },
-    {
-      "title": "ParetoEnsembles.jl: A Julia Package for Multiobjective Parameter Estimation Using Pareto Optimal Ensemble Techniques",
-      "authors": [
-        "Jeffrey D. Varner"
-      ],
-      "abstract": "Mathematical models of natural and man-made systems often have many adjustable parameters that must be estimated from multiple, potentially conflicting datasets. Rather than reporting a single best-fit parameter vector, it is often more informative to generate an ensemble of parameter sets that collectively map out the trade-offs among competing objectives. This paper presents ParetoEnsembles.jl, an open-source Julia package that generates such ensembles using Pareto Optimal Ensemble Techniques (POETs), a simulated-annealing-based algorithm that requires no gradient information. The implementation corrects the original dominance relation from weak to strict Pareto dominance, reduces the per-iteration ranking cost from $O(n^2 m)$ to $O(nm)$ through an incremental update scheme, and adds multi-chain parallel execution for improved front coverage. We demonstrate the package on a cell-free gene expression model fitted to experimental data and a blood coagulation cascade model with ten estimated rate constants and three objectives. A controlled synthetic-data study reveals parameter identifiability structure, with individual rate constants off by several-fold yet model predictions accurate to 7%. A five-replicate coverage analysis confirms that timing features are reliably covered while peak amplitude is systematically overconfident. Validation against published experimental thrombin generation data demonstrates that the ensemble predicts held-out conditions to within 10% despite inherent model approximation error. By making ensemble generation lightweight and accessible, ParetoEnsembles.jl aims to lower the barrier to routine uncertainty characterization in mechanistic modeling.",
-      "published": "2026-03-31",
-      "arxiv_id": "2603.29986v1",
-      "abs_url": "https://arxiv.org/abs/2603.29986v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.29986v1",
-      "categories": [
-        "q-bio.QM",
-        "cs.MS"
       ]
     }
   ]
