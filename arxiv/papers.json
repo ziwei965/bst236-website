@@ -1,6 +1,43 @@
 {
-  "last_updated": "2026-05-10 02:46 UTC",
+  "last_updated": "2026-05-11 02:55 UTC",
   "papers": [
+    {
+      "title": "PPI-Net connects molecular protein interactions to functional processes in disease",
+      "authors": [
+        "Kyle Higgins",
+        "Guadalupe Gonzalez",
+        "Dennis Veselkov",
+        "Ivan Laponogov",
+        "Kirill Veselkov"
+      ],
+      "abstract": "Understanding how molecular alterations propagate across biological systems to drive disease remains a central challenge. Although high-throughput profiling enables comprehensive characterization of tumor states, most models neglect structured biological relationships or lack interpretability across scales. Here we present PPI-Net, a hierarchical graph neural network that integrates protein-protein interaction (PPI) networks with pathway-level representations to model disease from molecular interactions to functional processes. Patient-specific molecular profiles are embedded within a shared interaction network from STRING and propagated through a multi-layer Reactome hierarchy using graph attention, enabling aggregation of gene-level signals into higher-order biological programs. Across RNA-seq data from ten cancer types from The Cancer Genome Atlas, PPI-Net achieves robust predictive performance, with balanced accuracy exceeding 90% in multiple cohorts. Comparative analysis on RNA-Seq data from breast cancer demonstrated that PPI-Net's integration of the Reactome hierarchy improved balanced accuracy by 6.7% relative to a PPI-only model, while hierarchical multi-level supervision improved balanced accuracy by 12.3% relative to using only a single top-level prediction head. Applying a multi-omics approach using RNA-seq and methylation data improves model interpretation, recovering canonical oncogenic modules, including TP53-AKT signaling and stress response pathways, while revealing convergence onto coherent programs such as ion signaling and cellular responses to stimuli. These results demonstrate that integrating interaction networks with pathway hierarchies enables accurate prediction while providing mechanistic insight into cancer biology.",
+      "published": "2026-05-08",
+      "arxiv_id": "2605.07838v1",
+      "abs_url": "https://arxiv.org/abs/2605.07838v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.07838v1",
+      "categories": [
+        "q-bio.QM",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Flow Matching for Count Data",
+      "authors": [
+        "Ganchao Wei",
+        "John Pearson"
+      ],
+      "abstract": "High-dimensional count data arise in applications such as single-cell RNA sequencing and neural spike trains, where mapping between distributions across successive batches or time points form critical components of data analysis. The recent success of diffusion- and flow-based deep generative models for images, video, and text motivates extending these ideas to count-valued settings, but many existing methods either treat each count as a categorical state or transform counts into a continuous space, neither of which is natural or efficient when the count range is large. We propose count-FM, a flow-matching framework for count data based on a continuous-time birth-death process with local unit jumps. Count-FM learns marginal transitions efficiently in count space through simulation-free training of conditional transition rates, allowing transport between arbitrary count-distributed source and target populations. In simulation, count-FM achieves better sample quality than representative baselines while using substantially fewer parameters. We further apply count-FM to scRNA-seq and neural spike-train data for unconditional generation, transport, and conditional generation. Across these tasks, count-FM yields improved sample quality, greater modeling efficiency, and interpretable transport paths.",
+      "published": "2026-05-08",
+      "arxiv_id": "2605.07746v1",
+      "abs_url": "https://arxiv.org/abs/2605.07746v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.07746v1",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "BioResearcher: Scenario-Guided Multi-Agent for Translational Medicine",
       "authors": [
@@ -544,41 +581,6 @@
       "categories": [
         "cs.LG",
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "VeloTree: Inferring single-cell trajectories from RNA velocity fields with varifold distances",
-      "authors": [
-        "Elodie Maignant",
-        "Tim Conrad",
-        "Christoph von Tycowicz"
-      ],
-      "abstract": "Trajectory inference is a critical problem in single-cell transcriptomics, which aims to reconstruct the dynamic process underlying a population of cells from sequencing data. Of particular interest is the reconstruction of differentiation trees. One way of doing this is by estimating the path distance between nodes -- labeled by cells -- based on cell similarities observed in the sequencing data. Recent sequencing techniques make it possible to measure two types of data: gene expression levels, and RNA velocity, a vector that quantifies variation in gene expression. The sequencing data then consist in a discrete vector field in dimension the number of genes of interest. In this article, we present a novel method for inferring differentiation trees from RNA velocity fields using a distance-based approach. In particular, we introduce a cell dissimilarity measure defined as the squared varifold distance between the integral curves of the RNA velocity field, which we show is a robust estimate of the path distance on the target differentiation tree. Upstream of the dissimilarity measure calculation, we also implement comprehensive routines for the preprocessing and integration of the RNA velocity field. Finally, we illustrate the ability of our method to recover differentiation trees with high accuracy on several simulated and real datasets, and compare these results with the state of the art.",
-      "published": "2026-04-01",
-      "arxiv_id": "2604.02380v1",
-      "abs_url": "https://arxiv.org/abs/2604.02380v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02380v1",
-      "categories": [
-        "q-bio.GN",
-        "math.MG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "UCell: rethinking generalizability and scaling of bio-medical vision models",
-      "authors": [
-        "Nicholas Kuang",
-        "Vanessa Scalon",
-        "Ji Yu"
-      ],
-      "abstract": "The modern deep learning field is a scale-centric one. Larger models have been shown to consistently perform better than smaller models of similar architecture. In many sub-domains of biomedical research, however, the model scaling is bottlenecked by the amount of available training data, and the high cost associated with generating and validating additional high quality data. Despite the practical hurdle, the majority of the ongoing research still focuses on building bigger foundation models, whereas the alternative of improving the ability of small models has been under-explored. Here we experiment with building models with 10-30M parameters, tiny by modern standards, to perform the single-cell segmentation task. An important design choice is the incorporation of a recursive structure into the model's forward computation graph, leading to a more parameter-efficient architecture. We found that for the single-cell segmentation, on multiple benchmarks, our small model, UCell, matches the performance of models 10-20 times its size, and with a similar generalizability to unseen out-of-domain data. More importantly, we found that ucell can be trained from scratch using only a set of microscopy imaging data, without relying on massive pretraining on natural images, and therefore decouples the model building from any external commercial interests. Finally, we examined and confirmed the adaptability of ucell by performing a wide range of one-shot and few-shot fine tuning experiments on a diverse set of small datasets. Implementation is available at https://github.com/jiyuuchc/ucell",
-      "published": "2026-03-31",
-      "arxiv_id": "2604.00243v1",
-      "abs_url": "https://arxiv.org/abs/2604.00243v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.00243v1",
-      "categories": [
-        "cs.CV",
-        "q-bio.QM"
       ]
     }
   ]
