@@ -1,6 +1,53 @@
 {
-  "last_updated": "2026-05-12 02:47 UTC",
+  "last_updated": "2026-05-14 02:55 UTC",
   "papers": [
+    {
+      "title": "scShapeBench: Discovering geometry from high dimensional scRNAseq data",
+      "authors": [
+        "Andrew J Steindl",
+        "Jo\u00e3o Felipe Rocha",
+        "Brian Tshilengi Di Bassinga",
+        "Zachary Warren",
+        "Matthew Scicluna",
+        "C\u00e9sar Miguel Valdez C\u00f3rdova",
+        "Shabarni Gupta",
+        "Leire Torices",
+        "Daniel Neumann",
+        "Timothy J. Mann",
+        "Ihuan Gunawan",
+        "Dhananjay Bhaskar",
+        "John G Lock",
+        "Christine L Chaffer",
+        "Guy Wolf",
+        "Smita Krishnaswamy"
+      ],
+      "abstract": "High-dimensional point cloud data arise across many scientific domains, especially single-cell biology. The shapes or topologies of these datasets determine the types of information that can be extracted. For example, clustered data supports cell-type identification, trajectory structures support transition analysis, and archetypal structures capture continua of cellular behaviors. Existing analysis pipelines often assume a specific shape. The standard Seurat pipeline combines UMAP visualization with Louvain clustering and therefore assumes clustered data, while tools such as Monocle and SPADE assume tree-like structures, and flow-based models such as MIOFlow and Conditional Flow Matching target trajectories. Choosing which pipeline to apply is therefore often left to bioinformaticians who visually inspect datasets before selecting an analysis strategy. With the rise of agentic AI scientists, automating shape detection is increasingly important for selecting downstream analysis pipelines. To address this problem, we introduce scShapeBench, a benchmark dataset for shape detection containing both synthetic and expert-annotated single-cell datasets. Synthetic datasets are sampled from ground-truth skeleton graphs with controlled variance. Real single-cell datasets are curated from diverse sources and annotated by experts into four categories: clusters, single trajectory, multi-branching, and archetypal. We additionally introduce scReebTower, a baseline method that uses diffusion geometry to extract Reeb graphs and connect visualization with pipeline selection. We provide topology-aware evaluation metrics and compare scReebTower against PAGA and Mapper on synthetic and real data. Our results indicate that scReebTower outperforms existing baselines. Overall, our contributions span benchmarks, evaluation metrics, and a baseline for automated shape detection in single-cell data.",
+      "published": "2026-05-12",
+      "arxiv_id": "2605.12662v1",
+      "abs_url": "https://arxiv.org/abs/2605.12662v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12662v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "Exact Stiefel Optimization for Probabilistic PLS: Closed-Form Updates, Error Bounds, and Calibrated Uncertainty",
+      "authors": [
+        "Haoran Hu",
+        "Xingce Wang"
+      ],
+      "abstract": "Probabilistic partial least squares (PPLS) is a central likelihood-based model for two-view learning when one needs both interpretable latent factors and calibrated uncertainty. Building on the identifiable parameterization of Bouhaddani et al.\\ (2018), existing fitting pipelines still face two practical bottlenecks: noise--signal coupling under joint EM/ECM updates and nontrivial handling of orthogonality constraints. Following the fixed-noise scalar-likelihood line of Hu et al.\\ (2025), we develop an end-to-end framework that combines noise pre-estimation, constrained likelihood optimization, and prediction calibration in one pipeline. Relative to Hu et al.\\ (2025), we replace full-spectrum noise averaging with noise-subspace estimation and replace interior-point penalty handling with exact Stiefel-manifold optimization. The noise-subspace estimator attains a signal-strength-independent leading finite-sample rate and matches a minimax lower bound, while the full-spectrum estimator is shown to be inconsistent under the same model. We further extend the framework to sub-Gaussian settings via optional Gaussianization and provide closed-form standard errors through a block-structured Fisher analysis. Across synthetic high-noise settings and two multi-omics benchmarks (TCGA-BRCA and PBMC CITE-seq), the method achieves near-nominal coverage without post-hoc recalibration, reaches Ridge-level point accuracy on TCGA-BRCA at rank $r=3$, matches or exceeds PO2PLS on cross-view prediction while providing native calibrated uncertainty, and improves stability of parameter recovery.",
+      "published": "2026-05-12",
+      "arxiv_id": "2605.11607v1",
+      "abs_url": "https://arxiv.org/abs/2605.11607v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.11607v1",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "PPI-Net connects molecular protein interactions to functional processes in disease",
       "authors": [
@@ -336,9 +383,9 @@
       ],
       "abstract": "Genome engineering has achieved remarkable sequence-level precision, yet predicting the transcriptomic state that a cell will occupy after perturbation remains an open problem. Single-cell CRISPR screens measure how far cells move from their unperturbed state, but this effect magnitude ignores a fundamental question: do the cells move together? Two perturbations with identical magnitude can produce qualitatively different outcomes if one drives cells coherently along a shared trajectory while the other scatters them across expression space. We introduce a geometric stability metric, Shesha, that quantifies the directional coherence of single-cell perturbation responses as the mean cosine similarity between individual cell shift vectors and the mean perturbation direction. Across five CRISPR datasets (2,200+ perturbations spanning CRISPRa, CRISPRi, and pooled screens), stability correlates strongly with effect magnitude (Spearman $\u03c1=0.75-0.97$), with a calibrated cross-dataset correlation of 0.97. Crucially, discordant cases where the two metrics decouple expose regulatory architecture: pleiotropic master regulators such as CEBPA and GATA1 pay a \"geometric tax,\" producing large but incoherent shifts, while lineage-specific factors such as KLF1 produce tightly coordinated responses. After controlling for magnitude, geometric instability is independently associated with elevated chaperone activation (HSPA5/BiP; $\u03c1_{partial}=-0.34$ and $-0.21$ across datasets), and the high-stability/high-stress quadrant is systematically depleted. The magnitude-stability relationship persists in scGPT foundation model embeddings, confirming it is a property of biological state space rather than linear projection. Perturbation stability provides a complementary axis for hit prioritization in screens, phenotypic quality control in cell manufacturing, and evaluation of in silico perturbation predictions.",
       "published": "2026-04-17",
-      "arxiv_id": "2604.16642v1",
-      "abs_url": "https://arxiv.org/abs/2604.16642v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.16642v1",
+      "arxiv_id": "2604.16642v2",
+      "abs_url": "https://arxiv.org/abs/2604.16642v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.16642v2",
       "categories": [
         "q-bio.QM",
         "q-bio.CB",
@@ -542,45 +589,6 @@
         "cs.LG",
         "q-bio.GN",
         "q-bio.MN"
-      ]
-    },
-    {
-      "title": "QuantumXCT: Learning Interaction-Induced State Transformation in Cell-Cell Communication via Quantum Entanglement and Generative Modeling",
-      "authors": [
-        "Selim Romero",
-        "Shreyan Gupta",
-        "Robert S. Chapkin",
-        "James J. Cai"
-      ],
-      "abstract": "Inferring cell-cell communication (CCC) from single-cell transcriptomics remains fundamentally limited by reliance on curated ligand-receptor databases, which primarily capture co-expression rather than the system-level effects of signaling on cellular states. Here, we introduce QuantumXCT, a hybrid quantum-classical generative framework that reframes CCC as a problem of learning interaction-induced state transformations between cellular state distributions. By encoding transcriptomic profiles into a high-dimensional Hilbert space, QuantumXCT trains parameterized quantum circuits to learn a unitary transformation that maps a baseline non-interacting cellular state to an interacting state. This approach enables the discovery of communication-driven changes in cellular state distributions without requiring prior biological assumptions. We validate QuantumXCT using both synthetic data with known ground-truth interactions and single-cell RNA-seq data from ovarian cancer-fibroblast co-culture model. The QuantumXCT model accurately recovered complex regulatory dependencies, including feedback structures, and identified dominant communication hubs such as the PDGFB-PDGFRB-STAT3 axis. Importantly, the learned quantum circuit is interpretable: its entangling topology was translated into biologically meaningful interaction networks, while post hoc contribution analysis quantified the relative influence of individual interactions on the observed state transitions. Notably, by shifting CCC inference from static interaction lookup to learning data-driven state transformations, QuantumXCT provides a generative framework for modeling intercellular communication. This work establishes a new paradigm for de novo discovery of communication programs in complex biological systems and highlights the potential of quantum machine learning in the context of single-cell biology.",
-      "published": "2026-04-02",
-      "arxiv_id": "2604.02203v2",
-      "abs_url": "https://arxiv.org/abs/2604.02203v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.02203v2",
-      "categories": [
-        "cs.ET",
-        "physics.bio-ph",
-        "physics.data-an",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "annbatch unlocks terabyte-scale training of biological data in anndata",
-      "authors": [
-        "Ilan Gold",
-        "Felix Fischer",
-        "Lucas Arnoldt",
-        "F. Alexander Wolf",
-        "Fabian J. Theis"
-      ],
-      "abstract": "The scale of biological datasets now routinely exceeds system memory, making data access rather than model computation the primary bottleneck in training machine-learning models. This bottleneck is particularly acute in biology, where widely used community data formats must support heterogeneous metadata, sparse and dense assays, and downstream analysis within established computational ecosystems. Here we present annbatch, a mini-batch loader native to anndata that enables out-of-core training directly on disk-backed datasets. Across single-cell transcriptomics, microscopy and whole-genome sequencing benchmarks, annbatch increases loading throughput by up to an order of magnitude and shortens training from days to hours, while remaining fully compatible with the scverse ecosystem. Annbatch establishes a practical data-loading infrastructure for scalable biological AI, allowing increasingly large and diverse datasets to be used without abandoning standard biological data formats. Github: https://github.com/scverse/annbatch",
-      "published": "2026-04-02",
-      "arxiv_id": "2604.01949v2",
-      "abs_url": "https://arxiv.org/abs/2604.01949v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.01949v2",
-      "categories": [
-        "cs.LG",
-        "q-bio.GN"
       ]
     }
   ]
