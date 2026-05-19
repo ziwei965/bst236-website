@@ -1,6 +1,62 @@
 {
-  "last_updated": "2026-05-16 02:43 UTC",
+  "last_updated": "2026-05-19 02:58 UTC",
   "papers": [
+    {
+      "title": "StateXDiff: Cell State-Contextualized Multimodal Diffusion for Single-Cell Perturbation Prediction",
+      "authors": [
+        "Peiting Shi",
+        "Ningfeng Que",
+        "Xianzhe Huang",
+        "Xiaofei Wang",
+        "Jianzhong Jeff Xi"
+      ],
+      "abstract": "Predicting drug-induced cellular state changes at single-cell resolution remains a central challenge in virtual cell modeling, particularly under out-of-distribution (OOD) conditions. Current approaches predominantly rely on RNA-based assays, which often fail to adequately capture the diverse cellular states underlying drug responses. Moreover, conditional distribution shifts and low signal-to-noise ratios frequently cause models to learn spurious correlations rather than genuine state transitions. To address these limitations, we introduce StateXDiff, a cell State-contextualized multimodal (X) Diffusion framework for predicting single-cell responses to drug perturbations. The framework operates sequentially: first, it learns a disentangled, multimodal representation of cellular state by integrating transcriptomic profiles with inferred protein features; second, it employs a conditional diffusion model to generate perturbation-specific changes. Our approach introduces a Virtual Multimodal Cell State, which augments RNA-based representations with protein-level context, and a Mechanism-aware Drug-Gene Template, which consolidates multi-source biological knowledge for accurate drug representation. Generation is driven by a latent-space diffusion Transformer, regularized through quality-aware triplet constraints, including positive drug-protein pairs or protein-drug mismatched pairs, and explicit protein-reliability weighting. Extensive evaluation demonstrates that StateXDiff consistently enhances generalization performance across three challenging settings: unseen cell lines, unseen drugs, and combinatorial perturbations.",
+      "published": "2026-05-15",
+      "arxiv_id": "2605.16104v1",
+      "abs_url": "https://arxiv.org/abs/2605.16104v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16104v1",
+      "categories": [
+        "q-bio.GN",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Representation Without Reward: A JEPA Audit for LLM Fine-Tuning",
+      "authors": [
+        "Biswa Sengupta"
+      ],
+      "abstract": "Joint-embedding predictive architectures (JEPAs) propose that a model should learn more useful abstractions when trained to predict latent representations rather than observed outputs. For autoregressive language-model fine-tuning the principle entails a stricter requirement: the induced hidden-state geometry must reach the language-model head \\emph{and} improve the decoded task metric. We test that requirement under a fixed Llama-3.2-1B-Instruct LoRA harness on natural-language-to-regex generation, comparing twenty-two training-time auxiliaries across trajectory-shape regularisation, distributional constraints, predictor/target asymmetry, Fisher-metric Jacobi residuals, and a decoder-visible JEPA objective constructed to lie in cross-entropy's positive cone. The empirical answer is a structured null: several auxiliaries clear single-cell paired $\u03b1= 0.10$ without correction (T3-Local at $\u0394= +2.53$~pp, $p = 0.003$ being the strongest), but none survives Bonferroni or Holm--Bonferroni at the relevant family-wise threshold, even though many change curvature, anisotropy, variance, and gradient direction. Decoder-visible JEPA yields the first positive auxiliary--cross-entropy gradient cosine in the study, yet exact match remains inside seed noise; a full-fine-tuning replication of the same auxiliary at $n = 5$ seeds reproduces the null on both benchmarks (TURK: $\u0394= +0.04$~pp, $p_{\\text{paired}} = 0.96$; SYNTH: $\u0394= +0.52$~pp, $p_{\\text{paired}} = 0.28$), so the null is robust across LoRA and full fine-tuning for the decoder-visible construction. Hidden-state representation work and decoded-task accuracy are therefore weakly coupled in this regime; we accordingly reframe LLM-domain JEPA evaluation as a coupling problem, in which the operative question is under which metrics useful hidden geometry becomes decoder-visible task signal.",
+      "published": "2026-05-14",
+      "arxiv_id": "2605.15394v1",
+      "abs_url": "https://arxiv.org/abs/2605.15394v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15394v1",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "BaySC: Uncovering Tissue Architecture in Spatial Multi-Omics via Probabilistic Spatial Clustering",
+      "authors": [
+        "Xin Li",
+        "Xiaofei Dong",
+        "Zhenke Duan",
+        "Lulu Shang",
+        "Xiao Wang",
+        "Xinyuan Song",
+        "Hanwen Ning",
+        "Guanyu Hu"
+      ],
+      "abstract": "Spatial domain identification requires jointly modeling molecular signatures and physical coordinates, yet current tools frequently over-smooth biological boundaries, require user-specified cluster numbers, and lack principled multimodal integration. We introduce BaySC, an integrative Bayesian spatial clustering framework for spatial domain identification. BaySC inherently learns the true number of spatial domains from the data by employing a Mixture of Finite Mixtures (MFM) prior. Tissue topology is modeled via a Markov Random Field (MRF) applied to discrete cellular assignments, a strategy that enforces local spatial coherence without distorting the underlying gene expression features. This enables BaySC to accurately map contiguous tissue layers as well as geographically scattered, transcriptionally identical cell populations. Furthermore, BaySC handles spatial multi-omics data through a weighted log-likelihood fusion mechanism executed via Gibbs sampling. This approach assigns interpretable weights to each modality, allowing users to quantify the biological relevance of different data layers to the final tissue map. Validated across ten single-modal spatial transcriptomics and two spatial multi-omics datasets, BaySC yields highly interpretable probabilistic outputs. It demonstrates competitive accuracy on standard clustering metrics and consistently outperforms existing tools in preserving spatial topography, as measured by spatially-aware Adjusted Rand Index (spARI).",
+      "published": "2026-05-14",
+      "arxiv_id": "2605.15291v1",
+      "abs_url": "https://arxiv.org/abs/2605.15291v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15291v1",
+      "categories": [
+        "stat.AP"
+      ]
+    },
     {
       "title": "Wahkon: A Statistically Principled Deep RKHS Superposition Network",
       "authors": [
@@ -521,75 +577,6 @@
         "stat.ME",
         "q-bio.QM",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "Transcriptomic Models for Immunotherapy Response Prediction Show Limited Cross-cohort Generalisability",
-      "authors": [
-        "Yuheng Liang",
-        "Lucy Chhuo",
-        "Ahmadreza Argha",
-        "Nona Farbehi",
-        "Lu Chen",
-        "Roohallah Alizadehsani",
-        "Mehdi Hosseinzadeh",
-        "Amin Beheshti",
-        "Thantrira Porntaveetusm",
-        "Youqiong Ye",
-        "Hamid Alinejad-Rokny"
-      ],
-      "abstract": "Immune checkpoint inhibitors (ICIs) have transformed cancer therapy; yet substantial proportion of patients exhibit intrinsic or acquired resistance, making accurate pre-treatment response prediction a critical unmet need. Transcriptomics-based biomarkers derived from bulk and single-cell RNA sequencing (scRNA-seq) offer a promising avenue for capturing tumour-immune interactions, yet the cross-cohort generalisability of existing prediction models remains unclear.We systematically benchmark nine state-of-the-art transcriptomic ICI response predictors, five bulk RNA-seq-based models (COMPASS, IRNet, NetBio, IKCScore, and TNBC-ICI) and four scRNA-seq-based models (PRECISE, DeepGeneX, Tres and scCURE), using publicly available independent datasets unseen during model development. Overall, predictive performance was modest: bulk RNA-seq models performed at or near chance level across most cohorts, while scRNA-seq models showed only marginal improvements. Pathway-level analyses revealed sparse and inconsistent biomarker signals across models. Although scRNA-seq-based predictors converged on immune-related programs such as allograft rejection, bulk RNA-seq-based models exhibited little reproducible overlap. PRECISE and NetBio identified the most coherent immune-related themes, whereas IRNet predominantly captured metabolic pathways weakly aligned with ICI biology. Together, these findings demonstrate the limited cross-cohort robustness and biological consistency of current transcriptomic ICI prediction models, underscoring the need for improved domain adaptation, standardised preprocessing, and biologically grounded model design.",
-      "published": "2026-04-07",
-      "arxiv_id": "2604.05478v3",
-      "abs_url": "https://arxiv.org/abs/2604.05478v3",
-      "pdf_url": "https://arxiv.org/pdf/2604.05478v3",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MAT-Cell: A Multi-Agent Tree-Structured Reasoning Framework for Batch-Level Single-Cell Annotation",
-      "authors": [
-        "Yehui Yang",
-        "Zelin Zang",
-        "Xienan Zheng",
-        "Yuzhe Jia",
-        "Changxi Chi",
-        "Jingbo Zhou",
-        "Chang Yu",
-        "Jinlin Wu",
-        "Fuji Yang",
-        "Jiebo Luo",
-        "Zhen Lei",
-        "Stan Z. Li"
-      ],
-      "abstract": "Automated single-cell annotation is difficult when the most abundant genes are not the most discriminative ones, or when a target state is poorly covered by a fixed reference atlas. GPTCelltype-style one-shot prompting allows large language models (LLMs) to produce plausible labels from generic expression signals, while reference-based annotators can force unfamiliar states into the nearest known category. We propose MAT-Cell, a prompt-driven framework for batch-level single-cell annotation that separates evidence grounding from label decision. MAT-Cell first uses Reverse Verification Query (RVQ) to combine tissue context, observed differentially expressed genes, and LLM-elicited biological priors into structured candidate-specific premises. Verifier agents then convert these premises into explicit premise-to-claim reasoning trees, and bounded multi-round debate compares,challenges, and revises the resulting claims before consensus or final adjudication.The returned Syllogistic Derivation Tree (SDT) provides an auditable debate trace rather than a formal proof of the annotation. In open-candidate benchmarks across five datasets, a locally deployed Qwen3-30B model with MAT-Cell achieves 75.5% average accuracy, compared with 64.2% for the strongest evaluated CoT baseline and 51.9% for the strongest evaluated scPilot variant. In oracle-candidate bench-marks across three species,MAT-Cell remains competitive across backbones, and local inference substantially reduces monetary cost for batch annotation. Code is available at: https://anonymous.4open.science/r/MATCell-4067",
-      "published": "2026-04-07",
-      "arxiv_id": "2604.06269v2",
-      "abs_url": "https://arxiv.org/abs/2604.06269v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.06269v2",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "iLBA: An R package for confidentially disseminating aggregated frequency tables",
-      "authors": [
-        "Jeehyun Hwang",
-        "Dongsun Yoon",
-        "Sungkyu Jung",
-        "Min-Jeong Park",
-        "Inkwon Yeo"
-      ],
-      "abstract": "Statistical agencies frequently release frequency tables derived from microdata, but small frequency cells may lead to disclosure risks. We present \\texttt{iLBA}, an open-source \\textsf{R} package for confidential dissemination of aggregated frequency tables. The package implements the Information-Loss-Bounded Aggregation (iLBA) algorithm, which combines Small Cell Adjustment (SCA) at the finest level table with an aggregation procedure that introduces controlled ambiguity while bounding information loss. The software enables users to construct masked finest level tables, generate confidential aggregated tables for selected variables, and obtain masked frequencies for single-cell queries. By providing an accessible implementation of the iLBA method, the package facilitates reproducible and efficient disclosure control for tabular data derived from microdata.",
-      "published": "2026-04-06",
-      "arxiv_id": "2604.04431v1",
-      "abs_url": "https://arxiv.org/abs/2604.04431v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.04431v1",
-      "categories": [
-        "stat.CO"
       ]
     }
   ]
