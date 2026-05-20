@@ -1,6 +1,43 @@
 {
-  "last_updated": "2026-05-19 02:58 UTC",
+  "last_updated": "2026-05-20 03:24 UTC",
   "papers": [
+    {
+      "title": "Semi-Parametric Bayesian Additive Regression Trees for Risk Prediction with High-Dimensional Epigenetic Signatures and Low-Dimensional Covariates",
+      "authors": [
+        "Saurabh Bhandari",
+        "Brian C. -H. Chiu",
+        "Parveen Bhatti",
+        "Yuan Ji"
+      ],
+      "abstract": "In the era of precision medicine, genome-wide epigenetic modifications offer rich data that could inform risk prediction. However, these data are high-dimensional and exhibit complex dependence structures, which makes it difficult to jointly model them with low-dimensional covariates when the goal is to obtain interpretable effect estimates for covariate adjustment. Standard Bayesian additive regression trees (BART) provide strong predictive performance but treat all predictors uniformly within the tree ensemble, obscuring the contributions of significant covariates and complicating variable selection in high-dimensional settings. We propose a semi-parametric BART model (spBART) that addresses this limitation by modeling low-dimensional covariates through a parametric component with interpretable coefficients, while capturing complex nonlinear associations among high-dimensional predictors through the tree ensemble. To perform stable variable selection, we develop a cross-validation-based procedure that aggregates posterior inclusion probabilities across folds and applies Bayesian false discovery rate control. We apply the proposed method to a pooled case--control analysis of high-dimensional genome-wide 5-hydroxymethylcytosine profiles derived from circulating cell-free DNA in two multiple myeloma studies ($N = 869$). The approach identifies a parsimonious set of candidate loci and achieves strong out-of-sample discrimination (AUC $= 0.96$) in a held-out validation set. Overall, spBART provides a unified framework for combining interpretable covariate inference with flexible modeling and variable selection in high-dimensional biomedical studies.",
+      "published": "2026-05-19",
+      "arxiv_id": "2605.20143v1",
+      "abs_url": "https://arxiv.org/abs/2605.20143v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.20143v1",
+      "categories": [
+        "stat.AP",
+        "stat.CO",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "PACE: Geometry-Aware Bridge Transport for Single-Cell Trajectory Inference",
+      "authors": [
+        "Chenglei Yu*",
+        "Chuanrui Wang*",
+        "Bangyan Liao",
+        "Tailin Wu"
+      ],
+      "abstract": "Single-cell trajectory inference from destructive time-course snapshots is fundamentally ill-posed: neither cross-time cell correspondences nor continuous trajectories are observed, so the snapshot distributions alone do not uniquely determine the underlying dynamics. Existing optimal transport and flow-based methods typically couple cells by Euclidean proximity at observed clock times, which can misalign trajectories when development is asynchronous and cells sampled at the same experimental time occupy different latent pseudotime stages. We propose PACE, a trajectory inference framework that recovers geometry-consistent continuous transport dynamics from destructive time-course snapshots through three coupled components. First, PACE constructs a state- and time-dependent anisotropic Riemannian metric that assigns low transport cost along locally supported tangent directions while penalizing normal velocity components. Second, it alternates between refining cross-time couplings under the induced path-action cost and fitting endpoint-preserving neural bridges between adjacent snapshots. Third, it distills the learned bridge dynamics into a global continuous-time velocity field over cellular states. Across seven controlled and biological datasets covering nine held-out reconstruction experiments, PACE achieves the strongest overall reconstruction performance, reducing MMD, Wasserstein-1 distance, and Wasserstein-2 distance by 23.7% on average relative to the strongest competing baseline. PACE also improves RNA-velocity alignment by 15.4% on an embryoid body differentiation benchmark, without requiring explicit cell pairing, lineage tracing, or RNA-velocity supervision during training. Code is available at https://github.com/AI4Science-WestlakeU/PACE.",
+      "published": "2026-05-18",
+      "arxiv_id": "2605.18587v1",
+      "abs_url": "https://arxiv.org/abs/2605.18587v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18587v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG"
+      ]
+    },
     {
       "title": "StateXDiff: Cell State-Contextualized Multimodal Diffusion for Single-Cell Perturbation Prediction",
       "authors": [
@@ -538,45 +575,6 @@
       "pdf_url": "https://arxiv.org/pdf/2604.09779v1",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "ZINBGT: Exploratory Data Analysis of Single-Cell Transcriptomic Expression Using Mixture Models",
-      "authors": [
-        "Toby Kettlewell",
-        "Yiyi Cheng",
-        "Thomas D. Otto",
-        "Vincent Macaulay",
-        "Mayetri Gupta"
-      ],
-      "abstract": "Single-cell transcriptomic data approximates the abundance of proteins at a high resolution, but its noisiness necessitates transformation by a pipeline of methods before analysis and inference. In the absence of robust validation of these pipelines and methods, it remains unclear how best to process any particular dataset. To compensate for this, popular visualisation methods, e.g., t-SNE and UMAP, are commonly used to produce descriptions of datasets. Such visualisations are incomplete and provide subjective descriptions of samples rather than statistically meaningful statements about technical noise or biology.   In this paper, we introduce the Zero-Inflated Negative-Binomial with Geometric Tail (ZINBGT), a mixture-model-based strategy for producing interpretable visualisations of each gene's expression across cells, along with diagnostic summaries that use Wasserstein distance to highlight outlier genes. These diagnostics are used to reveal an outlier gene within a T. brucei sample. This method is applied to a human immune-cell dataset, highlighting the relationship between sparsity, mean, and spread across genes, as well as revealing an issue with the use of zero-inflated negative-binomial distributions to model single-cell RNA data. An investigation of simulated datasets intended to replicate the immune-cell data revealed discrepancies with the ground truth, establishing purposes for which these simulated datasets are unsuitable. Finally, we list a number of different domains to which this method can be applied.",
-      "published": "2026-04-10",
-      "arxiv_id": "2604.09319v1",
-      "abs_url": "https://arxiv.org/abs/2604.09319v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.09319v1",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "A Quasi-Regression Method for the Mediation Analysis of Zero-Inflated Single-Cell Data",
-      "authors": [
-        "Seungjun Ahn",
-        "Donald Porchia",
-        "Panos Roussos",
-        "Maaike van Gerwen",
-        "Qing Lu",
-        "Zhigang Li"
-      ],
-      "abstract": "Recent advances in single-cell technologies have advanced our understanding of gene regulation and cellular heterogeneity at single-cell resolution. Single-cell data contain both gene expression levels and the proportion of expressing cells, which makes them structurally different from bulk data. Currently, methodological work on causal mediation analysis for single-cell data remains limited and often requires specific distributional assumptions. To address this challenge, we present QuasiMed, a mediation framework specialized for single-cell data. Our proposed method comprises three steps, including (i) screening mediator candidates through penalized regression and marginal models (similar to sure independence screening), (ii) estimation of indirect effects through the average expression and the proportion of expressing cells, (iii) and hypothesis testing with multiplicity control. The key benefit of QuasiMed is that it specifies only the mean functions of the mediation models through a quasi-regression framework, thereby relaxing strict distributional assumptions. The method performance was evaluated through the real-data-inspired simulations, and demonstrated high power, false discovery rate control, and computational efficiency. Lastly, we applied QuasiMed to ROSMAP single-cell data to illustrate its potential to identify mediating causal pathways. R package is freely available on GitHub repository at https://github.com/sjahnn/QuasiMed.",
-      "published": "2026-04-09",
-      "arxiv_id": "2604.08507v1",
-      "abs_url": "https://arxiv.org/abs/2604.08507v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08507v1",
-      "categories": [
-        "stat.ME",
-        "q-bio.QM",
-        "stat.AP"
       ]
     }
   ]
