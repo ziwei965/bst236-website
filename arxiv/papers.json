@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-23 02:48 UTC",
+  "last_updated": "2026-05-25 03:37 UTC",
   "papers": [
     {
       "title": "Modeling Temporal scRNA-seq Data with Latent Gaussian Process and Optimal Transport",
@@ -36,15 +36,15 @@
       "title": "Semi-Parametric Bayesian Additive Regression Trees for Risk Prediction with High-Dimensional Epigenetic Signatures and Low-Dimensional Covariates",
       "authors": [
         "Saurabh Bhandari",
-        "Brian C. -H. Chiu",
         "Parveen Bhatti",
+        "Brian C. -H. Chiu",
         "Yuan Ji"
       ],
       "abstract": "In the era of precision medicine, genome-wide epigenetic modifications offer rich data that could inform risk prediction. However, these data are high-dimensional and exhibit complex dependence structures, which makes it difficult to jointly model them with low-dimensional covariates when the goal is to obtain interpretable effect estimates for covariate adjustment. Standard Bayesian additive regression trees (BART) provide strong predictive performance but treat all predictors uniformly within the tree ensemble, obscuring the contributions of significant covariates and complicating variable selection in high-dimensional settings. We propose a semi-parametric BART model (spBART) that addresses this limitation by modeling low-dimensional covariates through a parametric component with interpretable coefficients, while capturing complex nonlinear associations among high-dimensional predictors through the tree ensemble. To perform stable variable selection, we develop a cross-validation-based procedure that aggregates posterior inclusion probabilities across folds and applies Bayesian false discovery rate control. We apply the proposed method to a pooled case--control analysis of high-dimensional genome-wide 5-hydroxymethylcytosine profiles derived from circulating cell-free DNA in two multiple myeloma studies ($N = 869$). The approach identifies a parsimonious set of candidate loci and achieves strong out-of-sample discrimination (AUC $= 0.96$) in a held-out validation set. Overall, spBART provides a unified framework for combining interpretable covariate inference with flexible modeling and variable selection in high-dimensional biomedical studies.",
       "published": "2026-05-19",
-      "arxiv_id": "2605.20143v1",
-      "abs_url": "https://arxiv.org/abs/2605.20143v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20143v1",
+      "arxiv_id": "2605.20143v2",
+      "abs_url": "https://arxiv.org/abs/2605.20143v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.20143v2",
       "categories": [
         "stat.AP",
         "stat.CO",
