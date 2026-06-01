@@ -1,6 +1,79 @@
 {
-  "last_updated": "2026-05-25 03:37 UTC",
+  "last_updated": "2026-06-01 03:51 UTC",
   "papers": [
+    {
+      "title": "Active Timepoint Selection for Learning Measure-Valued Trajectories",
+      "authors": [
+        "Nicolas Huynh",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "Inferring continuous probability paths from sparse snapshots is a fundamental challenge in domains like single-cell biology, where high-fidelity data acquisition is often destructive and constrained by prohibitive sequencing costs. This motivates the need for active learning strategies to strategically select optimal measurement times. However, designing active learning policies for this setting remains an open problem: the target objects reside on the infinite dimensional Wasserstein space where standard Euclidean metrics are ill-defined, and current interpolation methods lack epistemic uncertainty quantification. We introduce a framework which extends active experimentation to the space of measures. By leveraging Linearized Optimal Transport (LOT), we map distributional snapshots into a tangent space amenable to Gaussian Process modeling, allowing us to construct a tractable probabilistic surrogate for the underlying probability path. This yields an acquisition policy that iteratively selects measurement times to minimize uncertainty. Empirical results demonstrate that our strategy outperforms uncertainty-agnostic baselines on both synthetic and real-world datasets.",
+      "published": "2026-05-28",
+      "arxiv_id": "2605.30625v1",
+      "abs_url": "https://arxiv.org/abs/2605.30625v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.30625v1",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "MoSAIC: Multi-Resolution Spatial Regression Analysis of Cellular Colocalizations in Cancer Imaging",
+      "authors": [
+        "Jessica Aldous",
+        "Michele Peruzzi",
+        "Maria Masotti",
+        "Aaron Udager",
+        "Allison May",
+        "Evan Keller",
+        "Veerabhadran Baladandayuthapani"
+      ],
+      "abstract": "Hierarchical multiplex imaging approaches generate spatially resolved single-cell measurements across multiple, spatially organized fields of view (FOVs) within patient tumor specimens, thereby enabling systematic investigation of how the organization of the tumor microenvironment varies along biologically meaningful intratumoral gradients. Existing approaches fail to jointly address this multi-resolution data structure needed to recover true biological signals. We propose MoSAIC: multi-resolution spatial regression analysis of cell colocalizations, a hierarchical Bayesian spatial regression model designed for multi-resolution spatial data. MoSAIC decomposes the joint variation into three model components: (i) global tumor-gradient effects, (ii) patient-specific effects to capture inter-patient variability, and (iii) Gaussian process models to account for spatial dependence between FOVs within each patient tumor tissue. Simulations demonstrate MoSAIC has improved prediction and model fit compared to existing spatial and non-spatial model alternatives. Our method is motivated by and applied to a renal cell carcinoma multiplex imaging cohort to investigate immune-tumor colocalization patterns across the epithelial-to-mesenchymal transition (EMT) gradient. MoSAIC identifies increased macrophage-tumor colocalization and decreased cytotoxic T-tumor colocalization progressing across the increasing EMT gradient, consistent with EMT-associated immune suppression and spatially varying immune engagement. Overall, MoSAIC provides an interpretable, multi-resolution framework for quantifying spatial tumor-gradient effects in cancer imaging studies. Software is available on GitHub at jcaldous/MoSAIC.",
+      "published": "2026-05-28",
+      "arxiv_id": "2605.30287v1",
+      "abs_url": "https://arxiv.org/abs/2605.30287v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.30287v1",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Training Ecosystems: A Computational Approach to Uncovering Learning Behavior in Unconventional Contexts",
+      "authors": [
+        "Adrita Samanta",
+        "Hananel Hazan",
+        "Michael Levin"
+      ],
+      "abstract": "Recent progress in diverse intelligence has shown simple learning capacities below the organism level - single cells and even molecular networks. However, there are still many knowledge gaps around learning capacity above the organism level, and about memory implemented purely by dynamical interactions without explicit memory media. We demonstrate that minimal ecological dynamics (in silico) are sufficient for several kinds of learning, assayed as changes in both, magnitude of response, and of recovery time. Systematic exploration of over 220,000 parameter combinations in a simulated classic predator-prey model revealed that, when perturbed by stimuli, recovery time exhibits habituation, sensitization, and a form of discrete number learning in a scale-invariant manner. Robustness analysis revealed that habituation and sensitization persist under stochastic perturbations, while discrete number learning is disrupted even at low noise levels. Dimensionality reduction revealed that the incidence of learning capacity is primarily determined by ecological interaction strengths. Clear, unique clustering patterns in parameter space allow high prediction accuracy for novel parameter combinations that enable learning. Response magnitude revealed a striking asymmetry: 90.6% of parameter combinations exhibited recovery time sensitization paired with habituation of response magnitude, while the opposite pattern was extremely rare. These findings highlight a set of phenomena at the intersection of ecology, basal cognition, and mathematics with many implications for a wide range of systems describable by similar kinds of equations. These properties provide numerous efforts in biology and engineering with a substrate that has considerable, pre-patterned, propensity for learning, which ultimately arises from mathematics, not depending on the details of physics or biology.",
+      "published": "2026-05-28",
+      "arxiv_id": "2605.30109v1",
+      "abs_url": "https://arxiv.org/abs/2605.30109v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.30109v1",
+      "categories": [
+        "q-bio.PE",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Geometry-First Generative Spatial Single-Cell Reconstruction",
+      "authors": [
+        "Ehtesamul Azim",
+        "Muhtasim Noor Alif",
+        "Tae Hyun Hwang",
+        "Yanjie Fu",
+        "Wei Zhang"
+      ],
+      "abstract": "Single-cell RNA sequencing (scRNA-seq) profiles large numbers of cells but loses spatial context, whereas spatial transcriptomics (ST) preserves partial spatial structure at lower resolution. Most existing integration methods either deconvolve spot mixtures or map cells onto a measured spot lattice, which ties reconstructions to a fixed grid and slide-specific coordinate systems, a limitation that is especially problematic in unpaired settings. We propose GEARS, a geometry-first framework that reconstructs an intrinsic single-cell spatial geometry guided by ST, without relying on cell-type labels, histological images, or cell-to-spot assignment. GEARS first learns a domain-invariant expression encoder that aligns ST spots and dissociated cells, and then trains a permutation-equivariant generator with a diffusion-based refiner with EDM-style preconditioning to generate local spatial geometries under pose-invariant supervision derived from ST coordinates. At inference, GEARS reconstructs geometry on many overlapping subsets of scRNA-seq cells, aggregates predicted pairwise distances across subsets, and solves a global distance-geometry problem to obtain canonical two-dimensional coordinates and a dense distance matrix. Extensive quantitative and qualitative experiments, including cross-section generalization, show that GEARS consistently improves global distance preservation, local neighborhood fidelity, and spatial distribution alignment compared to strong spatial mapping and deconvolution baselines.",
+      "published": "2026-05-27",
+      "arxiv_id": "2605.28200v1",
+      "abs_url": "https://arxiv.org/abs/2605.28200v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.28200v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN"
+      ]
+    },
     {
       "title": "Modeling Temporal scRNA-seq Data with Latent Gaussian Process and Optimal Transport",
       "authors": [
@@ -54,16 +127,16 @@
     {
       "title": "PACE: Geometry-Aware Bridge Transport for Single-Cell Trajectory Inference",
       "authors": [
-        "Chenglei Yu*",
-        "Chuanrui Wang*",
+        "Chenglei Yu",
+        "Chuanrui Wang",
         "Bangyan Liao",
         "Tailin Wu"
       ],
       "abstract": "Single-cell trajectory inference from destructive time-course snapshots is fundamentally ill-posed: neither cross-time cell correspondences nor continuous trajectories are observed, so the snapshot distributions alone do not uniquely determine the underlying dynamics. Existing optimal transport and flow-based methods typically couple cells by Euclidean proximity at observed clock times, which can misalign trajectories when development is asynchronous and cells sampled at the same experimental time occupy different latent pseudotime stages. We propose PACE, a trajectory inference framework that recovers geometry-consistent continuous transport dynamics from destructive time-course snapshots through three coupled components. First, PACE constructs a state- and time-dependent anisotropic Riemannian metric that assigns low transport cost along locally supported tangent directions while penalizing normal velocity components. Second, it alternates between refining cross-time couplings under the induced path-action cost and fitting endpoint-preserving neural bridges between adjacent snapshots. Third, it distills the learned bridge dynamics into a global continuous-time velocity field over cellular states. Across seven controlled and biological datasets covering nine held-out reconstruction experiments, PACE achieves the strongest overall reconstruction performance, reducing MMD, Wasserstein-1 distance, and Wasserstein-2 distance by 23.7% on average relative to the strongest competing baseline. PACE also improves RNA-velocity alignment by 15.4% on an embryoid body differentiation benchmark, without requiring explicit cell pairing, lineage tracing, or RNA-velocity supervision during training. Code is available at https://github.com/AI4Science-WestlakeU/PACE.",
       "published": "2026-05-18",
-      "arxiv_id": "2605.18587v1",
-      "abs_url": "https://arxiv.org/abs/2605.18587v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18587v1",
+      "arxiv_id": "2605.18587v2",
+      "abs_url": "https://arxiv.org/abs/2605.18587v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.18587v2",
       "categories": [
         "q-bio.GN",
         "cs.LG"
@@ -491,86 +564,6 @@
       "categories": [
         "stat.ME",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "SMART: A Spectral Transfer Approach to Multi-Task Learning",
-      "authors": [
-        "Boxin Zhao",
-        "Mladen Kolar",
-        "Jinchi Lv"
-      ],
-      "abstract": "Multi-task learning is effective for related applications, but its performance can deteriorate when the target sample size is small. Transfer learning can borrow strength from related studies; yet, many existing methods rely on restrictive bounded-difference assumptions between the source and target models. We propose SMART, a spectral transfer method for multi-task linear regression that instead assumes spectral similarity: the target left and right singular subspaces lie within the corresponding source subspaces and are sparsely aligned with the source singular bases. Such an assumption is natural when studies share latent structures and enables transfer beyond the bounded-difference settings. SMART estimates the target coefficient matrix through structured regularization that incorporates spectral information from a source study. Importantly, it requires only a fitted source model rather than the raw source data, making it useful when data sharing is limited. Although the optimization problem is nonconvex, we develop a practical ADMM-based algorithm. We establish general, non-asymptotic error bounds and a minimax lower bound in the noiseless-source regime. Under additional regularity conditions, these results yield near-minimax Frobenius error rates up to logarithmic factors. Simulations confirm improved estimation accuracy and robustness to negative transfer, and analysis of multi-modal single-cell data demonstrates better predictive performance. The Python implementation of SMART, along with the code to reproduce all experiments in this paper, is publicly available at https://github.com/boxinz17/smart.",
-      "published": "2026-04-22",
-      "arxiv_id": "2604.20161v1",
-      "abs_url": "https://arxiv.org/abs/2604.20161v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20161v1",
-      "categories": [
-        "cs.LG",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "scpFormer: A Foundation Model for Unified Representation and Integration of the Single-Cell Proteomics",
-      "authors": [
-        "Qifeng Zhou",
-        "Lei Yu",
-        "Yuzhi Guo",
-        "Yuwei Miao",
-        "Hehuan Ma",
-        "Wenliang Zhong",
-        "Lin Xu",
-        "Junzhou Huang"
-      ],
-      "abstract": "The integration of single-cell proteomic data is often hindered by the fragmented nature of targeted antibody panels. To address this limitation, we introduce scpFormer, a transformer-based foundation model designed for single-cell proteomics. Pre-trained on over 390 million cells, scpFormer replaces standard index-based tokenization with a continuous, sequence-anchored approach. By combining Evolutionary Scale Modeling (ESM) with value-aware expression embeddings, it dynamically maps variable panels into a shared semantic space without artificial discretization. We demonstrate that scpFormer generates global cell representations that perform competitively in large-scale batch integration and unsupervised clustering. Moreover, its open-vocabulary architecture facilitates in silico panel expansion, assisting in the reconstruction of biological manifolds in sparse clinical datasets. Finally, this learned protein co-expression logic is transferable to bulk-omics tasks, supporting applications like cancer drug response prediction. scpFormer provides a versatile, panel-agnostic framework to facilitate scalable biomarker discovery and precision oncology.",
-      "published": "2026-04-21",
-      "arxiv_id": "2604.20003v1",
-      "abs_url": "https://arxiv.org/abs/2604.20003v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20003v1",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Geometric coherence of single-cell CRISPR perturbations reveals regulatory architecture and predicts cellular stress",
-      "authors": [
-        "Prashant C. Raju"
-      ],
-      "abstract": "Genome engineering has achieved remarkable sequence-level precision, yet predicting the transcriptomic state that a cell will occupy after perturbation remains an open problem. Single-cell CRISPR screens measure how far cells move from their unperturbed state, but this effect magnitude ignores a fundamental question: do the cells move together? Two perturbations with identical magnitude can produce qualitatively different outcomes if one drives cells coherently along a shared trajectory while the other scatters them across expression space. We introduce a geometric stability metric, Shesha, that quantifies the directional coherence of single-cell perturbation responses as the mean cosine similarity between individual cell shift vectors and the mean perturbation direction. Across five CRISPR datasets (2,200+ perturbations spanning CRISPRa, CRISPRi, and pooled screens), stability correlates strongly with effect magnitude (Spearman $\u03c1=0.75-0.97$), with a calibrated cross-dataset correlation of 0.97. Crucially, discordant cases where the two metrics decouple expose regulatory architecture: pleiotropic master regulators such as CEBPA and GATA1 pay a \"geometric tax,\" producing large but incoherent shifts, while lineage-specific factors such as KLF1 produce tightly coordinated responses. After controlling for magnitude, geometric instability is independently associated with elevated chaperone activation (HSPA5/BiP; $\u03c1_{partial}=-0.34$ and $-0.21$ across datasets), and the high-stability/high-stress quadrant is systematically depleted. The magnitude-stability relationship persists in scGPT foundation model embeddings, confirming it is a property of biological state space rather than linear projection. Perturbation stability provides a complementary axis for hit prioritization in screens, phenotypic quality control in cell manufacturing, and evaluation of in silico perturbation predictions.",
-      "published": "2026-04-17",
-      "arxiv_id": "2604.16642v2",
-      "abs_url": "https://arxiv.org/abs/2604.16642v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.16642v2",
-      "categories": [
-        "q-bio.QM",
-        "q-bio.CB",
-        "q-bio.GN",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "oxo-call: Documentation-grounded Skill Augmentation for Accurate Bioinformatics Command-line Generation with Large Language Models",
-      "authors": [
-        "Yun Peng",
-        "Yujun Sun",
-        "Jia Ding",
-        "Bin Yan",
-        "Zhangyu Wang",
-        "Chunyang Wang",
-        "Chenyang Shu",
-        "Jian-Guo Zhou",
-        "Shixiang Wang"
-      ],
-      "abstract": "Command-line bioinformatics tools remain essential for genomic analysis, yet their diversity in syntax and parameterization presents a persistent barrier to productive research. We present oxo-call, a Rust-based command-line assistant that translates natural-language task descriptions into accurate tool invocations through two complementary strategies: documentation-first grounding, which provides the large language model (LLM) with the complete, version-specific help text of each target tool, and curated skill augmentation, which primes the model with domain-expert concepts, common pitfalls, and worked examples. oxo-call (v0.10) ships >150 built-in skills covering 44 analytical categories, from variant calling and genome assembly to single-cell transcriptomics, compiled into a single, statically linked binary. Every generated command is logged with provenance metadata to support reproducible research. oxo-call also provides a DAG-based workflow engine, extensibility through user-defined and community skills via the Model Context Protocol, and support for local LLM inference to address data-privacy requirements. oxo-call is freely available for academic use at https://traitome.github.io/oxo-call/.",
-      "published": "2026-04-14",
-      "arxiv_id": "2604.12387v1",
-      "abs_url": "https://arxiv.org/abs/2604.12387v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.12387v1",
-      "categories": [
-        "q-bio.GN"
       ]
     }
   ]
