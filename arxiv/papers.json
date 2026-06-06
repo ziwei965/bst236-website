@@ -1,6 +1,109 @@
 {
-  "last_updated": "2026-06-01 03:51 UTC",
+  "last_updated": "2026-06-06 02:55 UTC",
   "papers": [
+    {
+      "title": "On the Promises and Limits of Multi-omics Integration for Deconvolution: The HADACA3 Benchmark",
+      "authors": [
+        "Hugo Barbot",
+        "Elise Amblard",
+        "Nicolas Homberg",
+        "Lucie Lamothe",
+        "Morgane T\u00e9r\u00e9zol",
+        "Hadaca Consortium",
+        "Mira Ayadi",
+        "Aur\u00e9lia Baur\u00e8s",
+        "Yasmina Kermezli",
+        "Carl Herrmann",
+        "Sebastien Dejean",
+        "Lionel Spinelli",
+        "David Causeur",
+        "Florent Chuffart",
+        "Ana\u00efs Baudot",
+        "Yuna Blum",
+        "Magali Richard"
+      ],
+      "abstract": "Understanding the cellular composition of complex tissues, such as tumors, is a key challenge in biology and medicine. A common approach, known as deconvolution, aims to estimate the cellular composition from bulk molecular measurements. With the growing availability of multiple types of molecular data, it is often assumed that combining data sources should improve deconvolution performance. Here, we present HADACA3, a community-driven benchmark designed to evaluate this assumption. We conducted a four-day collaborative competition followed by a large-scale computational benchmark, testing more than 250,000 analysis pipelines across nine datasets with matched DNA methylation (DNAm) and RNA profiles, representing a wide range of biological and experimental conditions. Our framework jointly evaluates the impact of preprocessing, feature selection, modeling, and integration strategies. We find that DNAm alone achieves the highest median performance across datasets, making it the most stable and reliable single-modality approach. However, multi-omics integration strategies can regularly achieve higher top performance in specific datasets and pipeline configurations. Among the tested strategies, late integration based on error-weighted averaging provides a strong and reliable baseline, while non-linear early integration methods, such as optimal transport, show promising results on real biological datasets. Overall, our results show that multi-omics integration does not systematically improve average performance over DNAm alone, but can improve best-case performance in specific settings. This highlights a trade-off between robustness and peak performance, and emphasizes the importance of aligning integration strategies with the statistical properties of the data. All data, code, and evaluation tools are publicly available to support reproducible research and future method development.",
+      "published": "2026-06-04",
+      "arxiv_id": "2606.05980v1",
+      "abs_url": "https://arxiv.org/abs/2606.05980v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.05980v1",
+      "categories": [
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Sparse Functional Singular Value Decomposition for Biclustering and Triclustering Longitudinal Data",
+      "authors": [
+        "Yue Zhao",
+        "Thierry Chekouo",
+        "Sandra Safo"
+      ],
+      "abstract": "Identifying subtypes of complex conditions, such as Inflammatory Bowel Disease (IBD), often requires capturing latent patterns in longitudinal omics data. However, these data are typically high-dimensional, sparsely sampled, and irregularly observed over time, posing substantial challenges for conventional (bi)clustering and functional data analysis methods. We propose Tri-SfSVD, a unified sparse functional Singular Value Decomposition framework for discovering biclusters and triclusters in longitudinal data. Unlike existing functional biclustering methods that rely on ad hoc imputation or enforce restrictive shape-homogeneity assumptions, Tri-SfSVD integrates continuous trajectory estimation with simultaneous subject, feature, and temporal selection within a single optimization framework. By imposing sparse penalties across subjects, variables, and temporal subregions, the proposed method works directly on observed data to uncover localized structures at the subject, subject-feature, and subject-feature-time levels. Extensive simulations demonstrate that Tri-SfSVD outperforms existing approaches in high-dimensional settings. Applied to IBD multi-omics data, the method identified three biclusters linking sample clusters with distinct IBD-related clinical characteristics to microbial pathway groups associated with specific bacterial taxa, providing interpretable subject-pathway associations for characterizing disease heterogeneity. Applied to multi-channel EEG data, the method identified three triclusters linking sample clusters with distinct alcohol-related phenotypes to localized brain activity patterns, including subgroup differences separated by temporal subregions within the same spatial region.",
+      "published": "2026-06-03",
+      "arxiv_id": "2606.05488v1",
+      "abs_url": "https://arxiv.org/abs/2606.05488v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.05488v1",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Multimarginal flow matching with optimal transport potentials",
+      "authors": [
+        "Raghav Kansal",
+        "David Crair",
+        "Nghia Nguyen",
+        "Scott Pope",
+        "Bradley Parry"
+      ],
+      "abstract": "Flow matching (FM) has emerged as a powerful framework for learning dynamic transport maps between two empirical distributions. However, less explored is the setting with intermediate observed marginals that can help constrain the flows between the endpoints. This \"multimarginal\" regime is central to modeling temporal evolution in dynamical systems in many scientific domains that can sample sequential distributions. We tackle this problem with a novel approach that leverages the connection between FM and dynamic optimal transport (OT), softly steering the flow towards the intermediate marginals through potential terms in the dynamic OT action. By extending the conditional FM learning target to incorporate these potentials, we derive an efficient, simulation-free algorithm for multimarginal FM that offers considerable flexibility in the spatiotemporal dynamics of the learned flows. We demonstrate state-of-the-art performance and training efficiency of OT-potential FM (OTP-FM) on diverse single-cell RNA sequencing, oceanographic, and meteorological datasets. Our code is available at https://github.com/Bexorg-Inc/OTP-FM.",
+      "published": "2026-06-03",
+      "arxiv_id": "2606.05327v1",
+      "abs_url": "https://arxiv.org/abs/2606.05327v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.05327v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Computation-Aware Kalman Filtering with Model Selection for Neural Dynamics",
+      "authors": [
+        "JR Huml",
+        "Jonathan Wenger",
+        "John P. Cunningham"
+      ],
+      "abstract": "Due to their explicit priors and ability to model uncertainty, Bayesian methods have played a major role in dynamical latent variable modeling of single-cell neural recordings. However, modern-sized datasets have made overparameterized deep networks the preferred methods of choice due to their predictive power and favorable computational scaling. While many posterior approximations exist, all incur approximation errors. Recent work accounts for this error in the form of computational uncertainty but comes at the cost of quadratic complexity and assumes fixed model hyperparameters. Here we extend this development to model selection, including a novel training loss and optimization scheme, which yields tractable inference in large state-spaces. We introduce a framework, the Computation-Aware State-Space Model (CASSM), specifically designed for the scale-imbalanced regime, where the number of trials is significantly lower than the number of recorded neurons. In this regime, for both synthetic and real data, we show that our method is competitive with data-hungry deep networks, with significantly improved uncertainty calibration over previous attempts to scale Bayesian methods. Our experiments provide a roadmap to neuroscience researchers in choosing from a host of potential dynamical latent variable models given key dataset properties and constraints.",
+      "published": "2026-05-31",
+      "arxiv_id": "2606.01468v1",
+      "abs_url": "https://arxiv.org/abs/2606.01468v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.01468v1",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "On the Recoverability of Causal Relations from Bulk Gene Expression Data",
+      "authors": [
+        "Gongxu Luo",
+        "Boyang Sun",
+        "Kun Zhang"
+      ],
+      "abstract": "Bulk gene expression profiling, which aggregates pooled RNA across cells within a biological sample, remains important in the single-cell era because it is typically less noisy, more sensitive, and more cost-effective than single-cell assays. Accordingly, a growing body of computational methods seeks to recover causal relations among genes from bulk expression data. However, aggregation is a lossy, non-invertible coarsening of the underlying cellular system, and it remains unclear whether and under what conditions causal relations are recoverable from aggregated bulk gene expression data. To answer this, we formalize recoverability under aggregation through two notions of consistency: functional-form consistency and conditional-independence consistency. We then derive necessary and sufficient conditions for recoverability, showing that these properties are preserved only under linear aggregations (e.g., sum/mean) coupled with affine structural equations. To assess the practical plausibility of these conditions, analyses of four bulk and four single-cell gene expression datasets further reveal that the estimated pairwise regulatory functions among genes deviate from linearity in both data types, providing limited empirical support for the linearity assumptions required for recoverability. Together, these results caution against recovering causal relations from aggregated bulk expression data without strong additional assumptions.",
+      "published": "2026-05-30",
+      "arxiv_id": "2606.00568v1",
+      "abs_url": "https://arxiv.org/abs/2606.00568v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.00568v1",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN"
+      ]
+    },
     {
       "title": "Active Timepoint Selection for Learning Measure-Valued Trajectories",
       "authors": [
@@ -268,11 +371,11 @@
         "Haoran Hu",
         "Xingce Wang"
       ],
-      "abstract": "Probabilistic partial least squares (PPLS) is a central likelihood-based model for two-view learning when one needs both interpretable latent factors and calibrated uncertainty. Building on the identifiable parameterization of Bouhaddani et al.\\ (2018), existing fitting pipelines still face two practical bottlenecks: noise--signal coupling under joint EM/ECM updates and nontrivial handling of orthogonality constraints. Following the fixed-noise scalar-likelihood line of Hu et al.\\ (2025), we develop an end-to-end framework that combines noise pre-estimation, constrained likelihood optimization, and prediction calibration in one pipeline. Relative to Hu et al.\\ (2025), we replace full-spectrum noise averaging with noise-subspace estimation and replace interior-point penalty handling with exact Stiefel-manifold optimization. The noise-subspace estimator attains a signal-strength-independent leading finite-sample rate and matches a minimax lower bound, while the full-spectrum estimator is shown to be inconsistent under the same model. We further extend the framework to sub-Gaussian settings via optional Gaussianization and provide closed-form standard errors through a block-structured Fisher analysis. Across synthetic high-noise settings and two multi-omics benchmarks (TCGA-BRCA and PBMC CITE-seq), the method achieves near-nominal coverage without post-hoc recalibration, reaches Ridge-level point accuracy on TCGA-BRCA at rank $r=3$, matches or exceeds PO2PLS on cross-view prediction while providing native calibrated uncertainty, and improves stability of parameter recovery.",
+      "abstract": "Probabilistic partial least squares (PPLS) is a central likelihood-based model for two-view learning when one needs both interpretable latent factors and calibrated uncertainty. Building on the identifiable parameterization of Bouhaddani et al.\\ (2018), existing fitting pipelines still face two practical bottlenecks: noise--signal coupling under joint EM/ECM updates and nontrivial handling of orthogonality constraints. Following the fixed-noise scalar-likelihood protocol, we develop an end-to-end framework that combines noise pre-estimation, constrained likelihood optimization, and prediction calibration in one pipeline. We estimate the observation noise from the low-eigenvalue noise subspace and enforce orthogonality through exact Stiefel-manifold optimization. The noise-subspace estimator attains a signal-strength-independent leading finite-sample rate and matches a minimax lower bound, whereas a full-spectrum noise estimator carries a deterministic bias under the same model. We further extend the framework to sub-Gaussian settings via optional Gaussianization and provide closed-form standard errors through a block-structured Fisher analysis. Across synthetic high-noise settings and two multi-omics benchmarks (TCGA-BRCA and PBMC CITE-seq), the method achieves near-nominal coverage without post-hoc recalibration, reaches Ridge-level point accuracy on TCGA-BRCA at rank $r=3$, matches or exceeds PO2PLS on cross-view prediction while providing native calibrated uncertainty, and improves stability of parameter recovery.",
       "published": "2026-05-12",
-      "arxiv_id": "2605.11607v1",
-      "abs_url": "https://arxiv.org/abs/2605.11607v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.11607v1",
+      "arxiv_id": "2605.11607v2",
+      "abs_url": "https://arxiv.org/abs/2605.11607v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.11607v2",
       "categories": [
         "stat.ML",
         "cs.AI",
@@ -467,103 +570,6 @@
       "categories": [
         "q-bio.GN",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Better Models, Faster Training: Sigmoid Attention for single-cell Foundation Models",
-      "authors": [
-        "Vijay Sadashivaiah",
-        "Georgios Dasoulas",
-        "Judith Mueller",
-        "Soumya Ghosh"
-      ],
-      "abstract": "Training stable biological foundation models requires rethinking attention mechanisms: we find that using sigmoid attention as a drop in replacement for softmax attention a) produces better learned representations: on six diverse single-cell datasets, sigmoid achieves 25% higher cell-type separation, better cell-type cohesion metrics, and lower validation loss, b) faster training, models with sigmoid attention train up to 10% faster than their softmax counterparts, and c) more stable training by eliminating inherent sources of instability in softmax attention. We establish that sigmoid attention has globally bounded derivatives ($\\leq 0.25$) as opposed to softmax, and a diagonal Jacobian structure in contrast with softmax's dense coupling, which together help alleviate training instabilities. In stress tests on 160M-parameter bidirectional attention models trained without gradient clipping on 8K-token sequences, softmax diverges catastrophically, with gradients exploding by four orders of magnitude, while sigmoid remains stable. Finally, we implement and open-source TritonSigmoid, an efficient GPU kernel that achieves 515 TFLOPS on H100 GPUs, outperforming both FlashAttention-2 and FlashSigmoid, with native padding support, which is essential for biological sequences. Our results establish sigmoid attention as both theoretically grounded and empirically superior for biological foundation models. Code is available at https://github.com/MSDLLCpapers/triton-sigmoid",
-      "published": "2026-04-29",
-      "arxiv_id": "2604.27124v1",
-      "abs_url": "https://arxiv.org/abs/2604.27124v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.27124v1",
-      "categories": [
-        "cs.LG",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Hyper Input Convex Neural Networks for Shape Constrained Learning and Optimal Transport",
-      "authors": [
-        "Shayan Hundrieser",
-        "Insung Kong",
-        "Johannes Schmidt-Hieber"
-      ],
-      "abstract": "We introduce Hyper Input Convex Neural Networks (HyCNNs), a novel neural network architecture designed for learning convex functions. HyCNNs combine the principles of Maxout networks with input convex neural networks (ICNNs) to create a neural network that is always convex in the input, theoretically capable of leveraging depth, and performs reliable when trained at scale compared to ICNNs. Concretely, we prove that HyCNNs require exponentially fewer parameters than ICNNs to approximate quadratic functions up to a given precision. Throughout a series of synthetic experiments, we demonstrate that HyCNNs outperform existing ICNNs and MLPs in terms of predictive performance for convex regression and interpolation tasks. We further apply HyCNNs to learn high-dimensional optimal transport maps for synthetic examples and for single-cell RNA sequencing data, where they oftentimes outperform ICNN-based neural optimal transport methods and other baselines across a wide range of settings.",
-      "published": "2026-04-29",
-      "arxiv_id": "2604.26942v1",
-      "abs_url": "https://arxiv.org/abs/2604.26942v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26942v1",
-      "categories": [
-        "cs.LG",
-        "math.ST",
-        "q-bio.GN",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "CMGL: Confidence-guided Multi-omics Graph Learning for Cancer Subtype Classification",
-      "authors": [
-        "Boyang Fan",
-        "Hengchuang Yin",
-        "Siyu Yi",
-        "Yifan Wang",
-        "Zhicheng Li",
-        "Leijiyu Zhou",
-        "Jiancheng Lv",
-        "Wei Ju"
-      ],
-      "abstract": "Motivation: Multi-omics integration can improve cancer subtyping, but modality informativeness and noise vary across cancer types and patients. Existing graph-based methods optimize modality weights jointly with the classification objective and therefore lack independent reliability estimates, so low-quality omics distort patient similarity graphs and amplify noise through message passing.   Results: We propose CMGL, a two-stage framework that estimates per-sample modality reliability through evidential deep learning and uses the frozen confidence scores to guide cross-omics fusion and graph construction. On four MLOmics cancer-subtype tasks and the 32-class pan-cancer task, CMGL consistently improves over the strongest baseline, surpassing it by 4.03% in average accuracy on the four single-cancer tasks. Its representations recover the PAM50 intrinsic subtypes of breast invasive carcinoma (BRCA), and the BRCA-trained model transfers without fine-tuning to kidney renal clear cell carcinoma (KIRC), stratifying patients into prognostically distinct groups.",
-      "published": "2026-04-27",
-      "arxiv_id": "2604.24201v1",
-      "abs_url": "https://arxiv.org/abs/2604.24201v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24201v1",
-      "categories": [
-        "cs.LG",
-        "q-bio.GN",
-        "q-bio.MN"
-      ]
-    },
-    {
-      "title": "Using Importance Sampling to Estimate $p$-values in All-Subset Meta-Analysis, with Applications to Single-Cell eQTL Mapping",
-      "authors": [
-        "Samuel Anyaso-Samuel",
-        "Thong Luong",
-        "Fei Qin",
-        "Jiyeon Choi",
-        "Kai Yu",
-        "Paul S. Albert",
-        "Jianxin Shi"
-      ],
-      "abstract": "Pooling genome-wide association studies of multiple related traits can substantially increase power for detecting genetic variants with pleiotropic effects. ASSET, which exhaustively searches all subsets of studies for association signals, has been widely used to detect modest effects and improve interpretability. Under a normality assumption, ASSET computes p-values via an analytic approximation that accounts for multiple testing. However, this approximation has been evaluated only in limited scenarios and for p-values no smaller than $10^{-3}$. A systematic assessment in the extreme tail is therefore needed, yet na\u00efve Monte Carlo methods would require prohibitively many simulations. We develop a computationally efficient importance-sampling (IS) algorithm that provides accurate ASSET p-value estimates for both independent and overlapping studies, achieving substantial efficiency gains over na\u00efve Monte Carlo, particularly for very small p-values. Using IS, we show that ASSET's analytic approximation is highly accurate across nearly the entire p-value range when normality holds. In contrast, when normality is violated (due to small sample sizes, low-frequency variants, or non-normal traits), ASSET p-values can be inflated or deflated by orders of magnitude, whereas our IS approach remains accurate. We illustrate the method through applications to single-cell eQTL mapping using peripheral blood mononuclear cells from the OneK1K cohort and lung cells from a Korean population.",
-      "published": "2026-04-25",
-      "arxiv_id": "2604.23085v1",
-      "abs_url": "https://arxiv.org/abs/2604.23085v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.23085v1",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Zero-inflated modeling with smoothing on counting tensors",
-      "authors": [
-        "Elena Tuzhilina",
-        "Yaoming Zhen"
-      ],
-      "abstract": "We propose a unified probabilistic framework for sparse count tensors with excess zeros, motivated by single-cell Hi-C data. The observed data are naturally represented as a three-way tensor indexed by genomic loci pairs and cells, exhibiting pronounced sparsity, zero inflation, and cell-to-cell heterogeneity. We introduce a zero-inflated Poisson tensor model that integrates low-rank CP structure, cluster-specific latent embeddings, and smoothness along ordered genomic loci, thereby jointly capturing multiway dependence, heterogeneity, and structured variation.   We develop a Bayes-optimal procedure for distinguishing structural from technical zeros, enabling principled inference and uncertainty quantification. We establish identifiability of the model parameters and derive consistency rates for the proposed estimators in a high-dimensional regime. Simulation studies and analyses of single-cell Hi-C data demonstrate improved performance in zero detection, latent structure recovery, and downstream tasks such as clustering and 3D chromatin organization inference.   The proposed framework provides a flexible approach for multiway count data with excess zeros and structured dependencies, and suggests several directions for future work, including mixture-based modeling of cell populations and scalable computation for large-scale applications.",
-      "published": "2026-04-23",
-      "arxiv_id": "2604.22088v1",
-      "abs_url": "https://arxiv.org/abs/2604.22088v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.22088v1",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
