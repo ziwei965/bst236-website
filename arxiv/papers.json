@@ -1,6 +1,103 @@
 {
-  "last_updated": "2026-06-14 03:51 UTC",
+  "last_updated": "2026-06-23 02:58 UTC",
   "papers": [
+    {
+      "title": "HERO: Hypothesis-Driven Evidence Retrieval from Omics for Multi-Task Breast Cancer Analysis",
+      "authors": [
+        "Xiangyu Li",
+        "Ran Su"
+      ],
+      "abstract": "Matched multi-omics can improve WSI-based biomarker and prognosis prediction, but most existing pipelines use omics as a paral lel feature stream or textual context rather than as an explicit retrieval constraint. HERO asks whether observed omics can be a testable mor phology hypothesis: a sparse pathway-to-morphology prior maps DNA methylation and miRNA into a K-dimensional intent vector m (K=16), TF-IDF retrieval over structured 10 captions selects endpoint-relevant regions, and a cosine gate c=cos(m,v) triggers deterministic deficit driven repair when c<\u03c4c. This closed-loop design bounds VLM calls, reduces reliance on embedding-based semantic matching, and makes every retrieval and verification step lexically auditable. On TCGA-BRCA (930WSIs, patient-level 5-fold CV), HERO sets new state-of-the-art across ER, PR, HER2, subtype, and risk prediction, outperforming both multimodal fusion and VLM-based baselines.",
+      "published": "2026-06-19",
+      "arxiv_id": "2606.21174v1",
+      "abs_url": "https://arxiv.org/abs/2606.21174v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.21174v1",
+      "categories": [
+        "cs.CV",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "scGTN: Deep Siamese Graph Transformer Network for Single-cell RNA Sequencing Clustering",
+      "authors": [
+        "Jinke Wu",
+        "Yifan Wang",
+        "Siyu Yi",
+        "Caiyang Yu",
+        "Ziyue Qiao",
+        "Nan Yin",
+        "Jiancheng Lv",
+        "Wei Ju"
+      ],
+      "abstract": "Single-cell RNA sequencing (scRNA-seq) serves a pivotal role in characterizing gene expression at the cellular level, enabling the identification of cell types and advancing the understanding of cellular heterogeneity. Despite the significant progress in scRNA-seq data clustering, we argue that current methods always ignore the sparsity and noise, as well as the complex intercellular structural information inherent in scRNA-seq data. Toward this end, in this paper, we propose a novel single-cell RNA-seq clustering framework via deep Siamese Graph Transformer Network (termed scGTN), which explicitly integrates gene expression profile and intercellular structural dependencies for cell clustering. In particular, we formulate scRNA-seq data as a graph and construct two augmented graph views that serve as dual views to capture complementary intercellular information. Then, a Siamese graph transformer network is employed to explicitly incorporate shortest-path information and node-wise distances for capturing richer structural relationships between cells. Finally, we employ an optimal transport strategy to guide the cell clustering in a self-supervised manner. Extensive experiments on multiple benchmark scRNA-seq datasets demonstrate that our scGTN consistently outperforms existing methods. Our code is available at https://github.com/W-RMSL/scGTN.",
+      "published": "2026-06-17",
+      "arxiv_id": "2606.18672v1",
+      "abs_url": "https://arxiv.org/abs/2606.18672v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18672v1",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "Can neurons speak? Semantic narration of vision at single-cell resolution",
+      "authors": [
+        "Arnau Marin-Llobet",
+        "Richard Hakim",
+        "Sara Matias",
+        "Venkatesh N. Murthy",
+        "Na Li",
+        "Demba Ba"
+      ],
+      "abstract": "Identifying what individual neurons encode in higher-order visual cortex is an open problem. Responses resist intuitive parameterization, and the deep-network embeddings used in their place are black boxes. Here, we introduce NEURRATOR, a framework that decodes spiking activity into free-form natural-language narration of the viewed scene at single-neuron resolution. A learned encoder maps spike trains from arbitrary subsets of simultaneously-recorded neurons into the patch-embedding space of a frozen CLIP, from which a multimodal language model and sparse autoencoder generates and validates a description with no language-side training. Applied to Neuropixel recordings of mouse visual cortex during natural-movie viewing, NEURRATOR narrates from thousands of neurons, singular cortical regions, local populations, or from a molecularly-defined cell-types. We use this property to (i) quantify how decoding fidelity scales with population size and cortical region, and (ii) \"neurrate\", in plain language, what individual neurons and genetically-tagged inhibitory cell-types contribute to visual representation. This recasts cell identity from a classification target into a functional probe of the visual system, providing a new unit of biological insights in neural systems.",
+      "published": "2026-06-17",
+      "arxiv_id": "2606.18667v1",
+      "abs_url": "https://arxiv.org/abs/2606.18667v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18667v1",
+      "categories": [
+        "q-bio.NC",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "DART: A design-aware microfluidic chip paradigm for real-time live-cell image analysis",
+      "authors": [
+        "Johannes Seiffarth",
+        "Matthias Pesch",
+        "Lukas Scholtes",
+        "Dietrich Kohlheyer",
+        "Hanno Scharr",
+        "Katharina N\u00f6h"
+      ],
+      "abstract": "High-throughput microfluidic live-cell imaging generates rich single-cell data. Yet semi-automated procedures for locating regions of interest (RoIs), each containing one cell population, and removing surrounding microfluidic structures from recorded images, scale with the number of RoIs. This prevents real-time image analysis and delays time-to-insight by hours to days. We introduce the Design-Aware and Real-Time capable (DART) paradigm for microfluidic cultivation chips, which aligns the CAD blueprint with the physical chip and thereby enables throughput-independent localization of all RoIs and fully automated image processing across diverse RoI geometries and chip layouts. DART establishes this alignment through embedded fiducial markers and deep-learning-based marker detection. We validate DART using the Swiss Army Knife chip, which combines eight structurally distinct RoI designs across 1164 RoI locations. DART localizes all RoIs in five minutes, removes microfluidic structures from raw microscopy images in 40 ms, and performs fully automated image analysis, including cell segmentation, in under 1.1 s per image. Together, these capabilities establish DART as an end-to-end hardware-software paradigm with real-time-capable analysis that paves the way toward closed-loop and outcome-driven smart microscopy.",
+      "published": "2026-06-16",
+      "arxiv_id": "2606.18523v1",
+      "abs_url": "https://arxiv.org/abs/2606.18523v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18523v1",
+      "categories": [
+        "q-bio.QM",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Cluster LOCO: Feature Importance For Interpreting Clusters",
+      "authors": [
+        "Claire M. He",
+        "Genevera I. Allen"
+      ],
+      "abstract": "Clustering is widely used for exploratory analysis and scientific discovery, driving insights from market segmentation to biological data analysis, but its outputs can be difficult to interpret, audit, and reproduce as modern datasets become increasingly large and complex. Reliable use of clustering requires understanding which features drive the discovered structure, yet feature-level explanations for clustering remain scarce compared with methods in supervised learning. Furthermore, existing clustering feature importance scores are often tied to specific algorithms and data assumptions. To address these challenges, we propose Cluster LOCO (Leave-One-Covariate-Out), a family of model-agnostic feature importance scores for clustering. Cluster LOCO is built on feature occlusion and clustering generalizability, defined as whether cluster labels learned on one subset of the data can be accurately predicted on held-out samples. For any chosen clustering algorithm, Cluster LOCO quantifies a feature's importance by measuring how much its removal degrades generalizability. We first introduce Cluster LOCO-Split, which relies on data splitting, and then extend it to Cluster LOCO-MP, a minipatch ensemble-based version designed for large-scale data. Across synthetic simulations and an application to cell-type discovery in single-cell transcriptomics, we show that Cluster LOCO more reliably recovers informative features than existing clustering feature importance methods.",
+      "published": "2026-06-12",
+      "arxiv_id": "2606.14592v1",
+      "abs_url": "https://arxiv.org/abs/2606.14592v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.14592v1",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
     {
       "title": "OCOO-T : A Simple and Scalable Virtual Cell Model for Transcriptional Perturbation Response Prediction",
       "authors": [
@@ -19,6 +116,24 @@
         "cs.AI",
         "cs.LG",
         "q-bio.GN"
+      ]
+    },
+    {
+      "title": "CisTransCell: Single-Cell Perturbation Prediction via Gene Function, Regulatory Control, and Cellular Context",
+      "authors": [
+        "Wei Zhang",
+        "Xun Jiang",
+        "Yuesi Xi",
+        "Ming Tang"
+      ],
+      "abstract": "Predicting cellular transcriptional responses to genetic perturbations is a central problem in single-cell biology, especially in the zero-shot setting where the perturbed gene or gene combination is unseen during training. A major difficulty is that perturbation effects are not determined by expression state alone: they depend on how the perturbed gene product influences other genes and proteins, how those downstream factors act on cis-regulatory elements, and which regulatory programs are active in the current cell state. To better capture this biological complexity, we propose CisTransCell, a cell-conditioned multi-modal framework for single-cell perturbation prediction that augments each gene with two complementary priors: a regulatory-sequence prior that captures how the gene is controlled, and a coding-sequence prior that captures what the gene product does. By integrating these priors with cellular expression state, CisTransCell models perturbation response as a cascade from gene function to regulatory control to downstream transcriptional change. Experiments on benchmark single-cell perturbation datasets show that CisTransCell achieves strong performance in zero-shot perturbation prediction.",
+      "published": "2026-06-10",
+      "arxiv_id": "2606.13713v1",
+      "abs_url": "https://arxiv.org/abs/2606.13713v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13713v1",
+      "categories": [
+        "q-bio.GN",
+        "cs.AI"
       ]
     },
     {
@@ -459,124 +574,6 @@
       "categories": [
         "cs.LG",
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Exact Stiefel Optimization for Probabilistic PLS: Closed-Form Updates, Error Bounds, and Calibrated Uncertainty",
-      "authors": [
-        "Haoran Hu",
-        "Xingce Wang"
-      ],
-      "abstract": "Probabilistic partial least squares (PPLS) is a central likelihood-based model for two-view learning when one needs both interpretable latent factors and calibrated uncertainty. Building on the identifiable parameterization of Bouhaddani et al.\\ (2018), existing fitting pipelines still face two practical bottlenecks: noise--signal coupling under joint EM/ECM updates and nontrivial handling of orthogonality constraints. Following the fixed-noise scalar-likelihood protocol, we develop an end-to-end framework that combines noise pre-estimation, constrained likelihood optimization, and prediction calibration in one pipeline. We estimate the observation noise from the low-eigenvalue noise subspace and enforce orthogonality through exact Stiefel-manifold optimization. The noise-subspace estimator attains a signal-strength-independent leading finite-sample rate and matches a minimax lower bound, whereas a full-spectrum noise estimator carries a deterministic bias under the same model. We further extend the framework to sub-Gaussian settings via optional Gaussianization and provide closed-form standard errors through a block-structured Fisher analysis. Across synthetic high-noise settings and two multi-omics benchmarks (TCGA-BRCA and PBMC CITE-seq), the method achieves near-nominal coverage without post-hoc recalibration, reaches Ridge-level point accuracy on TCGA-BRCA at rank $r=3$, matches or exceeds PO2PLS on cross-view prediction while providing native calibrated uncertainty, and improves stability of parameter recovery.",
-      "published": "2026-05-12",
-      "arxiv_id": "2605.11607v2",
-      "abs_url": "https://arxiv.org/abs/2605.11607v2",
-      "pdf_url": "https://arxiv.org/pdf/2605.11607v2",
-      "categories": [
-        "stat.ML",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "PPI-Net connects molecular protein interactions to functional processes in disease",
-      "authors": [
-        "Kyle Higgins",
-        "Guadalupe Gonzalez",
-        "Dennis Veselkov",
-        "Ivan Laponogov",
-        "Kirill Veselkov"
-      ],
-      "abstract": "Understanding how molecular alterations propagate across biological systems to drive disease remains a central challenge. Although high-throughput profiling enables comprehensive characterization of tumor states, most models neglect structured biological relationships or lack interpretability across scales. Here we present PPI-Net, a hierarchical graph neural network that integrates protein-protein interaction (PPI) networks with pathway-level representations to model disease from molecular interactions to functional processes. Patient-specific molecular profiles are embedded within a shared interaction network from STRING and propagated through a multi-layer Reactome hierarchy using graph attention, enabling aggregation of gene-level signals into higher-order biological programs. Across RNA-seq data from ten cancer types from The Cancer Genome Atlas, PPI-Net achieves robust predictive performance, with balanced accuracy exceeding 90% in multiple cohorts. Comparative analysis on RNA-Seq data from breast cancer demonstrated that PPI-Net's integration of the Reactome hierarchy improved balanced accuracy by 6.7% relative to a PPI-only model, while hierarchical multi-level supervision improved balanced accuracy by 12.3% relative to using only a single top-level prediction head. Applying a multi-omics approach using RNA-seq and methylation data improves model interpretation, recovering canonical oncogenic modules, including TP53-AKT signaling and stress response pathways, while revealing convergence onto coherent programs such as ion signaling and cellular responses to stimuli. These results demonstrate that integrating interaction networks with pathway hierarchies enables accurate prediction while providing mechanistic insight into cancer biology.",
-      "published": "2026-05-08",
-      "arxiv_id": "2605.07838v1",
-      "abs_url": "https://arxiv.org/abs/2605.07838v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.07838v1",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Flow Matching for Count Data",
-      "authors": [
-        "Ganchao Wei",
-        "John Pearson"
-      ],
-      "abstract": "High-dimensional count data arise in applications such as single-cell RNA sequencing and neural spike trains, where mapping between distributions across successive batches or time points form critical components of data analysis. The recent success of diffusion- and flow-based deep generative models for images, video, and text motivates extending these ideas to count-valued settings, but many existing methods either treat each count as a categorical state or transform counts into a continuous space, neither of which is natural or efficient when the count range is large. We propose count-FM, a flow-matching framework for count data based on a continuous-time birth-death process with local unit jumps. Count-FM learns marginal transitions efficiently in count space through simulation-free training of conditional transition rates, allowing transport between arbitrary count-distributed source and target populations. In simulation, count-FM achieves better sample quality than representative baselines while using substantially fewer parameters. We further apply count-FM to scRNA-seq and neural spike-train data for unconditional generation, transport, and conditional generation. Across these tasks, count-FM yields improved sample quality, greater modeling efficiency, and interpretable transport paths.",
-      "published": "2026-05-08",
-      "arxiv_id": "2605.07746v1",
-      "abs_url": "https://arxiv.org/abs/2605.07746v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.07746v1",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "BioResearcher: Scenario-Guided Multi-Agent for Translational Medicine",
-      "authors": [
-        "Remigiusz Kinas",
-        "Joanna Krawczyk",
-        "Rafa\u0142 Powalski",
-        "Przemys\u0142aw Pietrzak",
-        "Agnieszka Kowalewska",
-        "Krzysztof Kolmus",
-        "Maciej Sypetkowski",
-        "\u0141ukasz Smoli\u0144ski",
-        "Tomasz Jetka"
-      ],
-      "abstract": "Translational medicine turns underspecified development goals into evidence synthesis that must combine literature, trials, patents, and quantitative multi-omics analysis while preserving identifiers, uncertainty, and retrievable provenance. General-purpose foundation models and off-the-shelf tool-augmented or multi-agent systems are not built for this: they tend to produce single-shot answers or run open-endedly, and fall short on the auditable, scenario-specific workflows that heterogeneous biomedical sources demand.   This paper introduces Ingenix BioResearcher, a scenario-guided multi-agent system that maps queries to versioned research playbooks, delegates to specialized subagents over 30+ tools and machine-learning endpoints, mixes structured database access with sandboxed code for genome-scale analyses, and applies claim-level multi-model reconciliation before editorial assembly.   We evaluate BioResearcher across unit-level capabilities, open-ended biomedical reasoning, and end-to-end clinical discovery. It leads evaluated baselines on 109 single-step tests (83.49% pass rate; 0.892 average score), achieves strong biomedical benchmark performance (89.33% on BixBench-Verified-50 and the top 0.758 mean score on BaisBench Scientific Discovery), and leads on a 30-query clinical end-to-end benchmark with the highest positive hit rate (74.7% $\\pm$ 3.3%) and negative clear rate (96.8% $\\pm$ 0.2%). These results show broad, competitive performance across unit-level, open-ended, and end-to-end clinical evaluations.",
-      "published": "2026-05-07",
-      "arxiv_id": "2605.05985v1",
-      "abs_url": "https://arxiv.org/abs/2605.05985v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.05985v1",
-      "categories": [
-        "cs.AI",
-        "cs.MA",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "When Does Gene Regulatory Network Inference Break? A Controlled Diagnostic Study of Causal and Correlational Methods on Single-Cell Data",
-      "authors": [
-        "Miguel Fernandez-de-Retana",
-        "Ruben Sanchez-Corcuera",
-        "Unai Zulaika",
-        "Aritz Bilbao-Jayo",
-        "Aitor Almeida"
-      ],
-      "abstract": "Despite theoretical advantages, causal methods for Gene Regulatory Network (GRN) inference from single-cell RNA-seq data consistently fail to match or outperform correlation-based baselines in many realistic benchmarks, a persistent puzzle which casts doubt on the value of causality for this task. We argue that existing benchmarks are insufficiently controlled to answer this question because they evaluate on real or semi-real data where multiple pathologies co-occur, confounding failure modes, and obscuring the specific conditions under which different inference methods excel or fail. To address this gap, we introduce a controlled diagnostic framework that isolates seven biologically motivated pathologies (dropout, latent confounders, cell-type mixing, feedback loops, network density, sample size, and pseudotime drift) and measure how six representative methods spanning three inference paradigms degrade as each pathology intensifies. Across 6,120 controlled experiments, we find that causal methods genuinely dominate in clean and structurally favorable regimes, but specific pathologies (notably dropout and latent confounders) selectively neutralize their advantages. We further introduce an error-type decomposition that reveals methods with similar aggregate accuracy commit qualitatively different errors. To probe whether single-pathology effects persist when multiple stressors co-occur, we perform an interaction sweep over the three most impactful pathologies and find that their joint effects are sub-additive, while also exposing density-conditional cross-overs invisible to single-dial analysis. Our findings offer a nuanced understanding of when and why different methods succeed or fail for GRN inference, providing actionable insights for method development and practical guidance for practitioners.",
-      "published": "2026-05-06",
-      "arxiv_id": "2605.04930v1",
-      "abs_url": "https://arxiv.org/abs/2605.04930v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.04930v1",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "q-bio.GN",
-        "q-bio.QM",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "FL-Sailer: Efficient and Privacy-Preserving Federated Learning for Scalable Single-Cell Epigenetic Data Analysis via Adaptive Sampling",
-      "authors": [
-        "Guangyi Zhang",
-        "Yi Dai",
-        "Yiyun He",
-        "Junhao Liu"
-      ],
-      "abstract": "Single-cell ATAC-seq (scATAC-seq) enables high-resolution mapping of chromatin accessibility, yet privacy regulations and data size constraints hinder multi-institutional sharing. Federated learning (FL) offers a privacy-preserving alternative, but faces three fundamental barriers in scATAC-seq analysis: ultra-high dimensionality, extreme sparsity, and severe cross-institutional heterogeneity. We propose FL-Sailer, the first FL framework designed for scATAC-seq data. FL-Sailer integrates two key innovations: (i) adaptive leverage score sampling, which selects biologically interpretable features while reducing dimensionality by 80%, and (ii) an invariant VAE architecture, which disentangles biological signals from technical confounders via mutual information minimization. We provide a convergence guarantee, showing that FL-Sailer converges to an approximate solution of the original high-dimensional problem with bounded error. Extensive experiments on synthetic and real epigenomic datasets demonstrate that FL-Sailer not only enables previously infeasible multi-institutional collaborations but also surpasses centralized methods by leveraging adaptive sampling as an implicit regularizer to suppress technical noise. Our work establishes that federated learning, when tailored to domain-specific challenges, can become a superior paradigm for collaborative epigenomic research.",
-      "published": "2026-05-06",
-      "arxiv_id": "2605.04519v1",
-      "abs_url": "https://arxiv.org/abs/2605.04519v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.04519v1",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
