@@ -1,9 +1,9 @@
 name: Update arXiv Papers
 
 on:
-  schedule:
-    - cron: '0 0 * * *'   # midnight UTC daily
-  workflow_dispatch:         # allow manual trigger
+  #schedule:
+  #  - cron: '0 0 * * *'   # midnight UTC daily
+  #workflow_dispatch:         # allow manual trigger
 
 jobs:
   update:
